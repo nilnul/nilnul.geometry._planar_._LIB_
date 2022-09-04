@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="nilnul.geometry.planar.ISub" Collapsed="true">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISub.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.sub_.INonempty" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>sub_\Nonempty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IDrawable" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDrawable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.crux_.IUniformDimension" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>crux_\IUniformDimension.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ITope" Collapsed="true">
+    <Position X="3.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITope.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IZone" Collapsed="true">
+    <Position X="7.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zone.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.zone_.ISimple" Collapsed="true">
+    <Position X="11" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>facet_\Simple.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IFacet" Collapsed="true">
+    <Position X="13.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFacet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.surface_.IBoundarable" Collapsed="true">
+    <Position X="14.75" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>surface_\Boundarable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ISurface" Collapsed="true">
+    <Position X="12" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISurface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.spread_.INonroadable" Collapsed="true">
+    <Position X="14.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>spread_\INonroadable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ISpread" Collapsed="true">
+    <Position X="15" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISpread.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.manifold_.IDimTwo" Collapsed="true">
+    <Position X="12.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>manifold_\DimTwo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IManifold" Collapsed="true">
+    <Position X="10" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IManifold.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.manifold_.ISimple" Collapsed="true">
+    <Position X="5.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>manifold_\Simple.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.tope_.IBoundaried" Collapsed="true">
+    <Position X="1" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tope_\Boundaried.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.tope_.IBloc" Collapsed="true">
+    <Position X="3.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tope_\IBloc.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.tope_.ITwoDim" Collapsed="true">
+    <Position X="5.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tope_\TwoDim.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ICurve" Collapsed="true">
+    <Position X="20.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICurve.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.manifold_.IDimOne" Collapsed="true">
+    <Position X="18.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>manifold_\IDimOne.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ICrux" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICrux.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IPoint" Collapsed="true">
+    <Position X="1" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPoint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.drawable_.IConnected" Collapsed="true">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>drawable_\Connected.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ITract" Collapsed="true">
+    <Position X="7.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITract.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.tract_.IBoundaried" Collapsed="true">
+    <Position X="3.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tract_\Boundaried.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.sub_.IConnected" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>sub_\Connected.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.sub_.connected_.IRoadable" Collapsed="true">
+    <Position X="16.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>sub_\connected_\Roadable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.drawable_.IBoundaried" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>drawable_\Boundinged.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.surface_.ISimple" Collapsed="true">
+    <Position X="10.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>surface_\Simple.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

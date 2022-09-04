@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace nilnul.geometry.planar
+{
+
+	public interface ILoop :
+		trace_.IEndAtStart
+		,
+		ILasso
+		,
+		ILoom
+		
+	{}
+
+}
