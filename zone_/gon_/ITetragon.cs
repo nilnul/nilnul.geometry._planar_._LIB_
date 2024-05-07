@@ -9,7 +9,8 @@ namespace nilnul.geometry.planar.zone_.gon_
 	/// <see cref="planar.cycle_.gon_.ITetragon"/>
 	/// </summary>
 	public interface  ITetragon
-
 	{
 	}
+
+
 }

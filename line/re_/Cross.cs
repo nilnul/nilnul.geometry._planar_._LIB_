@@ -20,7 +20,7 @@ namespace nilnul.geometry.planar.line.re_
 			var vector2 = b.points.en.end - b.points.en.begin;
 
 			return nilnul.num.real.be_.Nil.Singleton.be(  
-				new nilnul.num.real.matrix_.square_.Two_Two(
+				new nilnul.num.real.matrix_.square_.Secondary(
 					vector1.x, vector1.y
 					,
 					vector2.x,vector2.y

@@ -10,6 +10,15 @@ namespace nilnul.geometry.planar.tope_
 	/// 
 	/// </summary>
 	/// promoted as: <see cref="planar.ICrux"/>
+	/// alias:
+	///		diag
+	///		sweep
+	///		pull
+	///		push
+	///		elastic
+	///		geoAlgebra
+	///		bivector
+	///	<see cref="planar.IFlank"/>
 	public interface IBoundaried
 		:
 	ITope

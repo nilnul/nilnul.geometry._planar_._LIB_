@@ -11,7 +11,7 @@ namespace nilnul.geometry.linear
 	/// when applying equalityComparer, the order of the points are unimportant
 	/// </summary>
 	///
-	//[Obsolete(nameof(linear.SpanDbl))]
+	[Obsolete(nameof(linear.ITend))]
 	public class Span : point.Twin
 	{
 		public Span(Tuple<Point, Point> tuple) : base(tuple.Item1,tuple.Item2)

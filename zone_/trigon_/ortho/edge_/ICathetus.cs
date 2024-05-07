@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.zone_.trigon_.perpend.edge_
+namespace nilnul.geometry.planar.zone_.trigon_.ortho.edge_
 {
 	/// <summary>
 	/// one of two of the shortest legs.

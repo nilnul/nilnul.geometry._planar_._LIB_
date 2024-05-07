@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 
 namespace nilnul.geometry.planar
@@ -65,6 +66,10 @@ namespace nilnul.geometry.planar
 		{
 		}
 
+		public Point4dbl(Complex c):this(c.Real,c.Imaginary)
+		{
+		}
+
 		public double distanceFroOrigin() {
 			return geometry.planar.point._DeviationX.Deviation(this);
 		}
@@ -90,6 +95,10 @@ namespace nilnul.geometry.planar
 			return new Point(
 				(int)x, (int)y
 				);
+		}
+
+		static public implicit operator Point4dbl(Complex c) {
+			return new Point4dbl(c.Real,c.Imaginary);
 		}
 
 
@@ -277,6 +286,11 @@ namespace nilnul.geometry.planar
 		}
 		 public PointF coerce2float() {
 			return Coerce2float(this);
+		}
+
+		public static Point4dbl Of(Complex c)
+		{
+			return new Point4dbl(c.Real, c.Imaginary);
 		}
 	}
 }

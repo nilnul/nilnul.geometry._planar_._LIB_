@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar_.measured._bloc.size_.paper_
 {
-	
-		/*A5
+
+	/*A5
 This matches the standard, ISO dimensions: 148mm x 210mm.
 A4
 This matches the standard, ISO dimensions: 210mm x 297mm. (most frequently used dimensions for personal printing.)
@@ -27,13 +27,18 @@ legal
 This keyword is a equivalent to the dimensions of legal papers in North America i.e. 8.5in x 14in.
 ledger
 This keyword is a equivalent to the dimensions of ledger pages in North America i.e. 11in x 17in.*/
-		static public class A4
-		{
-			public const int WidthMm = 210;
-			public const int HeightMm = 297;
+	/// <summary>
+	/// 
+	/// </summary>
+	///
+	[Obsolete("shall be moved to nilnul.img?")]
+	static public class A4
+	{
+		public const int WidthMm = 210;
+		public const int HeightMm = 297;
 
-		}
+	}
 
 
-	
+
 }

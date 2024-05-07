@@ -14,23 +14,34 @@ using nilnul.num.real_;
 namespace nilnul.geometry.linear_._measured.unit_.eng_.inches_
 {
 	/// <summary>
-	/// point. used in font
+	/// point. used in font;
 	/// </summary>
-	public class Pt:
+	/// alias:
+	///		pt
+	///			,to avoid ambiguity of Point
+	public class Pt4dbl:
 		_measured.unit_.eng_.InInches4Dbl
 		
 	{
 		public const int Pts_Per_Inch = 72;
 
-		public Pt() : base(1d/Pts_Per_Inch)
+		static public double _Inches_0points(double points) {
+			return points / Pts_Per_Inch;
+		}
+		static public double _Points_0inchs(double inches) {
+			return inches * Pts_Per_Inch;
+		}
+
+
+		public Pt4dbl() : base(1d/Pts_Per_Inch)
 		{
 		}
 
-		static public Pt Singleton
+		static public Pt4dbl Singleton
 		{
 			get
 			{
-				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<Pt>.Instance;
+				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<Pt4dbl>.Instance;
 			}
 		}
 

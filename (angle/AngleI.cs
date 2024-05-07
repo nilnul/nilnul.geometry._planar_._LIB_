@@ -16,6 +16,11 @@ namespace nilnul.geometry.planar
 	/// angle is a geometric object on the coordinated plane, different from rotation, which is a scalar value
 	/// 
 	/// </summary>
+	/// <remarks>
+	/// 
+	/// </remarks>
+	/// alias:
+	///		corner
 	public interface IAngle : _angle_.InitialI, _angle_.AzimuthI
 	{
 	}

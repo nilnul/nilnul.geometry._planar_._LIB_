@@ -26,9 +26,13 @@ namespace nilnul.geometry.planar
 	/// alias:
 	///		manifold
 	///			"m"easure by length, or area, and the measure changes according tothe zoom rate. If the length changes in such way, it's 1d. if the area changes in such a way, it's 2d.
-	/// <see cref="planar.ITope"/>
+	/// vs:
+	///		<see cref="planar.ITope"/>, which allows a zone with a tend as a tail, and the zone is 2d while the tail is 1d, this doesnot allow it as this requires the dimensionality to be uniform.
 	public interface IManifold
-		:crux_.IUniformDimension
+		:
+		tope_.IDimensionUniform
+		,
+		crux_.IUniformDimension
 	{
 		
 	}

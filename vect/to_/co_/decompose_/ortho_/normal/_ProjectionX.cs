@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.vect.to_.co_.decompose
 {
 	/// <summary>
-	/// the decomposed of, say a force (the vector), along the given <see cref="planar.ILeadDbl"/> as a basis/axis. or the coord at the given axis, which passes thru the old origin. (this is <see cref="nilnul.geometry.planar.trans_.rebase_.IShearOnly"/> of the axis)
+	/// the decomposed of, say a force (the vector), along the given <see cref="planar.ILeadDbl"/> as a basis/axis. or the coord at the given axis, which passes thru the old origin. (this is <see cref="nilnul.geometry.planar.morph_.matrixed_.IShearOnly"/> of the axis)
 	/// </summary>
 	/// <remarks>
 	///	the decomposed component of the primary axis is called projection

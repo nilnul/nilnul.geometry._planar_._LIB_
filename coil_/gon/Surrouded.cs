@@ -78,10 +78,21 @@ namespace nilnul.geometry.planar.coil_.gon
 			);
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="points">
+		/// at least two points.
+		/// </param>
+		/// <returns></returns>
 		static public double Stokes(this IEnumerable<Point4dblI> points) {
-			return (
-				_GradsX.Grads(  points).Select(x => x.Stokes()).Sum()
-			);
+
+			return planar.cloze_.gon._SurroundedX._Surround_0started(points);
+		}
+		public static double _Surround_0coil(IEnumerable<Grad4dbl_byPointsI> c)
+		{
+			return planar.cloze_.gon._SurroundedX._Surround_0cloze(c);
+
 		}
 
 		static public double Stokes(params Point4dbl[] points) {
@@ -99,22 +110,18 @@ namespace nilnul.geometry.planar.coil_.gon
 		public static double Area(IEnumerable<Point4dbl> ee)
 		{
 			return nilnul.num.real_.nonneg.coerce_._AbsX.Doub(  Stokes(ee) );
-
 		}
 
 		public static double Area(TrioD ee)
 		{
 			return Area((IEnumerable<Point4dbl>)ee);
-
 		}
 
 		static public double Stokes(IEnumerable<planar.Grad4dbl> duos)
 		{
-
 			return duos.Sum(x =>
-				planar.grad._StokesX.Stokes(x)
-
-			);
+				planar.grad.shade.rect._SurroundX.Surround(x)
+			)/2;
 		}
 
 		static public double Area(IEnumerable<planar.Grad4dbl> duos)

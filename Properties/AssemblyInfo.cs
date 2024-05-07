@@ -6,12 +6,21 @@ using System.Runtime.InteropServices;
 ///
 ///base on time, as the moving point trajectory, or the direction of a curve/cloze, is defined using time, the one-direction one-dimensional continuous parameter.
 ///
-/// vs: nilnul.num.Complex
-///		nilnul.num.Complex can be merged into this project, which is virtually visualization of Complex numbers.
 ///
 /// vs: nilnul.Img
 ///		nilnul.geometry.planar can be regarded as visual num.Complex; So this is about graphics, not color, or rasterization.
 ///		nilnu.Img, adds color/rasterization/fileFormat to nilnul.num.Complex.
+
+/*
+ /// vs: nilnul.num.Complex
+ ///	reasons to merge:
+///			nilnul.num.Complex can be merged into this project, which is virtually visualization of Complex numbers.
+///		cons:
+///			this shall be viewed as time->complex. not simple complex; analoguely, geometry.linear shall be viewed as time->real, not simply a rewording of real;
+
+ */
+
+
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information

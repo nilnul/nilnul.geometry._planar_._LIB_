@@ -14,6 +14,8 @@ namespace nilnul.geometry.planar.tend_
 	/// alias:
 	///		seg
 	///		edge
+	///		span
+	///		bar
 	///		
 	public interface IEdge
 		:ITend

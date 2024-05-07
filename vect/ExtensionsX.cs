@@ -11,12 +11,12 @@ namespace nilnul.geometry.planar.vect
 		static public double InnerProduct(this planar.Vect4dblI a, planar.Vect4dblI b) {
 			return vect.co.to_.real_._DotProductX.Dbl(a, b);
 		}
-		static public double InnerProduct(this planar.Point4dblI a) {
+		static public double Drag(this planar.Point4dblI a) {
 			return a.x*a.y;
 		}
 
-		static public double InnerProduct(this planar.Vect4dblI a) {
-			return InnerProduct(a.point);
+		static public double Drag(this planar.Vect4dblI a) {
+			return Drag(a.point);
 		}
 
 		static public double Dot(this planar.Vect4dblI a, planar.Vect4dblI b) {

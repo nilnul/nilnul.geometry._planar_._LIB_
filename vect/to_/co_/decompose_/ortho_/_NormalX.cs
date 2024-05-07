@@ -17,12 +17,12 @@ namespace nilnul.geometry.planar.vect.to_.co_.decompose_.ortho_
 		static public (Vect4dblI,Vect4dblI) Decompose(
 			planar.Vect4dblI vect
 			,
-			double basis
+			double basisAzimuth
 		) {
 
 			var projection = decompose._ProjectionX.Project(
 				vect,
-				basis
+				basisAzimuth
 			);
 
 			return (projection, planar.vect.op_.binary_._MinusX.Op(vect,projection));

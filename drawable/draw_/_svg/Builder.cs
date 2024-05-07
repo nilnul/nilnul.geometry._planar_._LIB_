@@ -20,38 +20,88 @@ namespace nilnul.geometry.planar.drawable.draw_._svg
 			get { return _document; }
 		}
 		public Builder(
+			double x,double y
+			,
+			planar.tope_._bloc.SpreadDbl bloc
+			,
+			double strokeWidth = 1
+		)
+		{
+			createDocument(x,y,bloc, strokeWidth);
+			//addStyle();
+		}
+
+		public Builder(
+			double x,double y
+			,
+			double width,double height
+			,
+			double strokeWidth = 1
+		):this(
+			x,y, new tope_._bloc.SpreadDbl(width,height),strokeWidth
+		)
+		{
+		}
+
+
+		public Builder(
 			planar.tope_._bloc.SpreadDbl
 bloc
 			,
 			double strokeWidth = 1)
+			:this(0,0,bloc,strokeWidth)
 		{
-			createDocument(bloc, strokeWidth);
-			//addStyle();
 		}
 
-//		void addStyle()
-//		{
-//			_document.Root.Add(
-//new nilnul.web.css.Style(
-//				 web.css.rule_.sel_._ClassOfCssX.OfClassNameNoDot(
-//					"noframe"
-//					,
-//					new web.css.Props(
-//						new web.css.Prop(
-//						"display"
-//						,
-//						"invalidVal")
+
+		//		void addStyle()
+		//		{
+		//			_document.Root.Add(
+		//new nilnul.web.css.Style(
+		//				 web.css.rule_.sel_._ClassOfCssX.OfClassNameNoDot(
+		//					"noframe"
+		//					,
+		//					new web.css.Props(
+		//						new web.css.Prop(
+		//						"display"
+		//						,
+		//						"invalidVal")
 
 
-//					)
+		//					)
 
-//				)
-//			).toEl()
-//			);
+		//				)
+		//			).toEl()
+		//			);
 
 
 
-//		}
+		//		}
+
+
+		static public Builder OfCentered(double width,double height) {
+			return new Builder(
+				-width/2
+				,
+				-height/2
+				,
+				width
+				,
+				height
+			);
+		}
+		static public Builder OfCentered(double width,double height,double strokeWidth) {
+			return new Builder(
+				-width/2
+				,
+				-height/2
+				,
+				width
+				,
+				height
+				,strokeWidth
+			);
+		}
 
 		public Builder(double v1, double v2,
 			double strokeWidth = 1) : this(
@@ -61,14 +111,19 @@ bloc
 		{
 		}
 
-		void createDocument(
-		   planar.tope_._bloc.SpreadDbl
-bloc
-			, double strokeWidth = 1
-	   )
+		private void createDocument(tope_._bloc.SpreadDbl bloc, double strokeWidth = 1)
 		{
+			createDocument(0,0,bloc, strokeWidth);
+		}
 
 
+
+		void createDocument(
+		   double x, double y,
+		   planar.tope_._bloc.SpreadDbl bloc
+			,
+		   double strokeWidth = 1
+		){
 
 
 
@@ -88,12 +143,6 @@ xn + "svg"
 			xDoc.Add(
 				rtEle
 			);
-
-
-
-
-			var x = 0;
-			var y = 0;
 			var w = bloc.width;
 			var h = bloc.height;
 

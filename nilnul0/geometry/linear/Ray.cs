@@ -8,16 +8,6 @@ using nilnul.num;
 namespace nilnul.geometry.linear
 {
 
-	public interface RayI
-	{
-		/// <summary>
-		/// </summary>
-		 nilnul.num.RealI start { get; }
-		bool direction { get; }
-
-
-	}
-
 	public class Ray : RayI
 	{
 		private RealI _start;

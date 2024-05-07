@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 
 namespace nilnul.geometry.planar.grad.re_
@@ -13,7 +14,7 @@ namespace nilnul.geometry.planar.grad.re_
 	{
 		public bool re(Grad4dbl_byPointsI a, Grad4dbl_byPointsI b)
 		{
-			return planar.point.EqDbl.Singleton.Equals(a.basis, a.finish)
+			return planar.point.EqDbl.Singleton.Equals(a.basis, b.finish)
 				&&
 				planar.point.EqDbl.Singleton.Equals(
 					a.finish
@@ -23,6 +24,13 @@ namespace nilnul.geometry.planar.grad.re_
 			;
 			//throw new NotImplementedException();
 		}
+
+		public bool re((Complex start, Complex stop) x, (Complex start, Complex stop) y)
+		{
+			return x.start == y.stop && x.stop == y.start;
+
+		}
+
 		static public Opposite4dbl Singleton
 		{
 			get

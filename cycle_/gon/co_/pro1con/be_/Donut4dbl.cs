@@ -25,7 +25,7 @@ namespace nilnul.geometry.planar.cycle_.gon.co_.pro1con.be_
 					outer,
 				inner.ee.vertexes.First()
 			) != true
-				)
+			)
 			{
 				return false;
 			}

@@ -20,21 +20,16 @@ namespace nilnul.geometry.planar.curve_.quotient_
 	public class Agnesi
 
 	{
-		
-			static public Expression<Func<double, double>> Func(double x)
-			{
-				Expression<Func<double, double>> l =
-					y =>
-					1
-					/
-					(
-						1 +  nilnul.num.real.op_.unary_.Square.Singleton.op(y)
-					)
-				;
-				return l;
 
+		static public Expression<Func<double, double>> Func(double x)
+		{
+			return y =>
+				1
+				/
+				(
+					1 + nilnul.num.real.op_.unary_.Square.Singleton.op(y)
+				);
 
-		
 		}
 	}
 }

@@ -3,6 +3,7 @@ using nilnul.geometry.planar.point;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace nilnul.geometry.planar.lead.vsPoint
 					lead.arrow.points.ee.component
 					,
 					lead.arrow.points.ee.component1
-					,c
+					, c
 				)
 			);
 
@@ -28,22 +29,22 @@ namespace nilnul.geometry.planar.lead.vsPoint
 		public static bool? LeewayFalse(RayI sectingLead, PointI1 pointI1)
 		{
 			return LeewayFalse(
-				new planar.lead_.OvRay(sectingLead),pointI1
+				new planar.lead_.OvRay(sectingLead), pointI1
 			);
 
 		}
 		#region dbl
 
 		[Obsolete("compute angle is expensive, unnecessary.")]
-		static public bool? LeewayFalse(planar.ILeadDbl lead,  Point4dbl x)
+		static public bool? LeewayFalse(planar.ILeadDbl lead, Point4dbl x)
 		{
-			var angle =  geometry.planar.angle_.Points4dbl.OfPivotIniEnd(lead.arrow.begin, lead.arrow.end, x).angle;
+			var angle = geometry.planar.angle_.Points4dbl.OfPivotIniEnd(lead.arrow.begin, lead.arrow.end, x).angle;
 
 			var beNil = nilnul.num.real.be_.AboutNil4Dbl.Injected;
 
 			var approx = nilnul.num.real.re_.approx_.ByInjected.Singleton;
 
-			if (approx.re( angle , Math.PI) || beNil.be( angle))
+			if (approx.re(angle, Math.PI) || beNil.be(angle))
 			{
 				return null;
 			}
@@ -72,7 +73,7 @@ namespace nilnul.geometry.planar.lead.vsPoint
 			(Point4dblI, Point4dblI) _assumeDif, Point4dblI point
 		)
 		{
-			return _LeewayTrue_assumeLead(_assumeDif.Item1,_assumeDif.Item2,point);
+			return _LeewayTrue_assumeLead(_assumeDif.Item1, _assumeDif.Item2, point);
 		}
 		private static bool? LeewayTrue(Skid4dblI skid, Point4dblI x)
 		{
@@ -85,7 +86,7 @@ namespace nilnul.geometry.planar.lead.vsPoint
 			);
 
 		}
-		static public bool? LeewayTrue(planar.Lead4dblI lead,  Point4dblI x)
+		static public bool? LeewayTrue(planar.Lead4dblI lead, Point4dblI x)
 		{
 
 			return LeewayTrue(
@@ -97,14 +98,30 @@ namespace nilnul.geometry.planar.lead.vsPoint
 
 
 
+
 		[Obsolete()]
 		public static bool? LeewayFalse(IRayDbl dirShoot, Point4dbl begin)
 		{
 			return LeewayFalse(
-				new planar.lead_.OvRayDbl(dirShoot),begin
+				new planar.lead_.OvRayDbl(dirShoot), begin
 			);
 		}
 
+
 		#endregion
+
+		///// <summary>
+		///// <see cref="be_._ProWindX"/>
+		///// </summary>
+		///// <param name="leftLower"></param>
+		///// <param name="max"></param>
+		///// <param name="x"></param>
+		///// <returns></returns>
+		///// <exception cref="NotImplementedException"></exception>
+		//public static bool _LeewayTrue_assumeLead(Complex leftLower, Complex max, Complex x)
+		//{
+		//	throw new NotImplementedException();
+		//}
+
 	}
 }

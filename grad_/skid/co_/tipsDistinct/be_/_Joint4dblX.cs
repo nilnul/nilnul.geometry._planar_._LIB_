@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.grad_.step.co_.tipsDistinct.be_
+namespace nilnul.geometry.planar.grad_.skid.co_.tipsDistinct.be_
 {
 	
 	/// <summary>

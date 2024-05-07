@@ -1,5 +1,6 @@
 ﻿using nilnul.geometry.linear_._measured;
 using nilnul.geometry.linear_._measured;
+using nilnul.num;
 using nilnul.num.real_;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,10 @@ namespace nilnul.geometry.linear_.measured.span
 		public Distance(int i, UnitI unit):this(new Nonneg(i),unit)
 		{
 
+		}
+
+		public Distance(RealI amount, UnitI unit) : base(amount, unit)
+		{
 		}
 	}
 }

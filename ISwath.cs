@@ -7,9 +7,17 @@ namespace nilnul.geometry.planar
 {
 	/// <summary>
 	/// eg:
-	///		x isin (0,1]
+	///		x is in (0,1]
 	/// </summary>
-	public interface ISwath : surface_.ISimple, ITope
+	/// alias:
+	///		swath
+	///			,like swarm, hence no hole;
+	///		stretch
+	///		
+	public interface ISwath
+		:
+		surface_.ISimple
+		///, ITope
 	{
 	}
 }

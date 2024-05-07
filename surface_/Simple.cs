@@ -11,8 +11,13 @@ namespace nilnul.geometry.planar.surface_
 	/// excluding:
 	///		donut
 	/// </summary>
+	/// <remarks>
+	/// for twoD, we dont need consider self intrasecting.
+	/// </remarks>
 	/// <see cref="planar.IZone"/>
-	public interface ISimple:ISurface
+	/// alias
+	/// stretch
+	public interface ISimple:ISpread
 	{
 	}
 }

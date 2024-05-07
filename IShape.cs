@@ -19,6 +19,7 @@ namespace nilnul.geometry.planar
 	/// alias:
 	///		simpleton
 	///		figure
+	///		shape
 
 	public interface IConnected:
 		drawable_.IConnected

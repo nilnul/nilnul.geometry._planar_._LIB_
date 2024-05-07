@@ -14,4 +14,11 @@ namespace nilnul.geometry.planar.zone_.trigon
 	{
 		///the radius of this is called inradius.
 	}
+
+	/// <summary>
+	/// the distance of all edges;
+	/// </summary>
+	/// 周长
+	interface IPerimeter { }
+
 }

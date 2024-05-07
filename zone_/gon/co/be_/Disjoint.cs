@@ -26,7 +26,7 @@ namespace nilnul.geometry.planar.zone_.gon.co.be_
 				return false;
 			}
 
-			return cycle_.gon.co_.nonjoint.be_._Nondonut4dblX._Be_assumeNonjoint(
+			return cycle_.gon.co_.nonjoint.be_._Nontorus4dblX._Be_assumeNonjoint(
 				component
 				,
 				component1

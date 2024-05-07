@@ -18,14 +18,14 @@
     <Position X="8" Y="13.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trace_\Bounded.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trail_\Bounded.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.trace_.ISpanned" Collapsed="true">
     <Position X="12" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trace_\ISpanned.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trail_\ISpanned.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.IPoint" Collapsed="true">
@@ -39,7 +39,7 @@
     <Position X="10.5" Y="18.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\seg_\IEdge.cs</FileName>
+      <FileName>nilnul0\geometry\linear\tend_\IEdge.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.trail.IIgnoreDirection" Collapsed="true">
@@ -53,7 +53,7 @@
     <Position X="15" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trace_\IUnbounded.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trail_\IUnbounded.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.ILine" Collapsed="true">

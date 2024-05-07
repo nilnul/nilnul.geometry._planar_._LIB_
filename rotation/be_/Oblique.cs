@@ -5,10 +5,11 @@ using System.Text;
 
 namespace nilnul.geometry.planar.rotation.be_
 {
-	public partial class Oblique
+	public  class Oblique
 	{
 		static public bool Be(double radian) {
 			return ! ObliqueNot.Be( radian / ( Math.PI / 2) );
 		}
 	}
+
 }

@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar._rotation.unit_
 {
-	/// <summary>
-	/// one degree =  1/360 round.
-	/// </summary>
-	public class Degree : UnitI
+	public class Degree : UnitI,IDegree
 	{
 
 		public const double Radian_Per_Degree = 1 / Degree_Per_Radian;

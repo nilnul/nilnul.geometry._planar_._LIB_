@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.zone_.trigon
 {
+	
 	/// <summary>
 	/// a special case of <see cref="zone_.gon_.quad.Caliper"/>, as we can take the 4th point from the opposite edge, or from the extension of the opposite edge to make a convex quodrilater where one leg(two edge back and fouth are in the same line) is trivia.
 	/// </summary>
@@ -26,6 +27,9 @@ namespace nilnul.geometry.planar.zone_.trigon
 		/// the two points connected is taken as the basis.
 		/// then perpendicular to this ray, we place a caliber/clampRuler to measure the height.
 		/// </summary>
+		/// <remarks>
+		///
+		/// </remarks>
 		private double _dir;
 		public double dir
 		{

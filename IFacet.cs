@@ -13,6 +13,9 @@ namespace nilnul.geometry.planar
 	/// </summary>
 	/// <seealso cref="planar.ICrux"/>
 	/// alias:
+	///		pattern
+	///		mask
+	///		clip
 	///		facet
 	///			surface means full, hence without "sur", it's bounded
 	///			if it's a point, it's called vertex
@@ -22,6 +25,12 @@ namespace nilnul.geometry.planar
 	///			there is no hole, as if there were a hole, for a 3d solid shape like polygon, there might be other facets down in the hole.
 	///			holed zones is not simple. We can compose holed zones by simpletons.
 	///		piece:
+	///		plate
+	///		splatter
+	///		side
+	///		flank
+	///		spatter
+
 	///		
 	public interface IFacet
 		:

@@ -1,8 +1,9 @@
 ﻿using nilnul.geometry.planar.point.str_;
-using nilnul.geometry.planar.trail_.piecewise_._polyseg_;
+using nilnul.geometry.planar.trav_.piecewise_._polyseg_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,12 @@ namespace nilnul.geometry.planar.cloze_
 
 		public Polygon4dbl(IEnumerable<Point4dblI> enumerable)
 			:this(new Started4dbl(enumerable) )
+		{
+		}
+
+		public Polygon4dbl(IEnumerable<Complex> enumerable):this(
+			enumerable.Select(c=> new Point4dbl(c) )
+		)
 		{
 		}
 

@@ -8,8 +8,8 @@ namespace nilnul.geometry.planar.curve_.algebraics_.spline_
 {
 
 	/// <summary>
-	///  is natural in that outpolated cuve would have to be linear
 	/// </summary>
+	/// <see cref="INatural"/>
 	public interface IUnnatural:ISpline
 	{
 	}

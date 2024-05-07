@@ -8,6 +8,7 @@ namespace nilnul.geometry.linear
 {
 
 	/// <summary>
+	/// point or a curve.
 	/// </summary>
 	/// <remarks>
 	/// <see cref="linear.IShape"/>
@@ -17,7 +18,12 @@ namespace nilnul.geometry.linear
 	///		trail
 	///			somewhat similar in part to rail/sequential
 	///		traject
-	public interface ITrail : crux_.IDirected
+	///		chase
+	///		
+	public interface ITrail
+		:
+		trav.IUnDirected
+		//crux_.IDirected
 	//:trace_.IDirected
 	{
 	}

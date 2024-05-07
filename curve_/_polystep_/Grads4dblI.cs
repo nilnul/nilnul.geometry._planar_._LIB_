@@ -9,7 +9,7 @@ namespace nilnul.geometry.planar.curve_._polystep_
 {
 	public interface Grads4dblI
 		:
-		trail_._polyseg_.Grads4dblI
+		trav_._polyseg_.Grads4dblI
 		
 	{
 

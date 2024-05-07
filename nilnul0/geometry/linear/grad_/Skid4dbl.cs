@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.linear.grad_
 {
+	public interface ISkid:IGrad { }
 	public class Skid4dbl :
 		linear.GradDbl
 	{

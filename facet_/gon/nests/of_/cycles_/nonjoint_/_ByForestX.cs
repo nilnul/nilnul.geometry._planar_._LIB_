@@ -13,6 +13,12 @@ namespace nilnul.geometry.planar.facet_.gon.nests.of_.cycles_.nonjoint_
 	static public class _ByForestX
 	{
 
+		/// <summary>
+		/// of glyph
+		/// </summary>
+		/// <param name="c"></param>
+		/// <param name="font"></param>
+		/// <returns></returns>
 
 		static public IEnumerable<Nest> Nesteds(
 			char c

@@ -10,7 +10,7 @@ namespace nilnul.geometry.linear.drawable_
 	/// path connected.
 	/// grad, ray, or line
 	/// </summary>
-	/// <see cref="geometry.planar.spread_.IRoadable"/>: band connected; banded/taped
+	/// <see cref="geometry.planar.splash_.IRoadable"/>: band connected; banded/taped
 	/// also 3d tunnel-connected
 	///
 	[Obsolete(nameof(linear.ITope))]

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.croil_.polygon_.hex_
+namespace nilnul.geometry.planar.coil_.polygon_.hex_
 {
 	/// <summary>
 	/// little triangle inside another triangle

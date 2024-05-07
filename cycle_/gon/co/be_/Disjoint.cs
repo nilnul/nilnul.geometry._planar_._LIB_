@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.cycle_.gon.co.be_
 {
 	/// <summary>
+	/// about two curves, not two zones;
 	/// some might be at the internal of the other
 	/// </summary>
 	public class Disjoint4dbl

@@ -55,6 +55,10 @@ namespace nilnul.geometry.planar.rotation_
 		static public float ToRadian(float degree) {
 			return degree / 180 * (float)Math.PI;
 		}
+		static public double ToRadian(double degree) {
+			return degree / 180 * Math.PI;
+		}
+
 
 		static public Degree4dbl Of(
 			RotationOfDoubleI radian4Dbl

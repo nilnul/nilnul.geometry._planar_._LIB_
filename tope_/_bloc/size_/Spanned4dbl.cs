@@ -44,6 +44,20 @@ namespace nilnul.geometry.planar.tope_._bloc.size_
 
 		}
 
+		public Spanned4dbl(SpreadDbl size1)
+			:this(
+				 size1.width,size1.height
+				)
+		{
+		}
+
+		public Spanned4dbl(NonnegOfDoubleI width1, NonnegOfDoubleI height1)
+			:this(
+				 width1.realee,height1.realee
+			)
+		{
+		}
+
 		/// <summary>
 		/// latitude
 		/// </summary>

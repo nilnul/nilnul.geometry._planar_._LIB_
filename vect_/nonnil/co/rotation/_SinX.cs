@@ -14,7 +14,7 @@ namespace nilnul.geometry.planar.vect_.nonnil.co.rotation
 	/// =
 	/// E(|u||v|, b-a)
 	/// </summary>
-	static public class _SinX
+	static  class _SinX
 	{
 	
 	}

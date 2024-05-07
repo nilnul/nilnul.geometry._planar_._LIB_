@@ -137,7 +137,7 @@ namespace nilnul.geometry.planar.drawable_.tape.projected_.quad_
 		{
 
 			var tip = point.ToOrthogonal() + fromPointToTapeTip;
-			var tip1 = planar.cycle_.gon_.tetra_.convex_.trape_.Perpend.ExtendTrigon_assumeTrigon(
+			var tip1 = planar.cycle_.gon_.quad_.convex_.trape_.Perpend.ExtendTrigon_assumeTrigon(
 				point1, point, tip
 			);
 

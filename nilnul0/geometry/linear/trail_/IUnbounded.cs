@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.linear.trail_
+namespace nilnul.geometry.linear.trace_
 {
-	public interface IUnbounded
-		:
-		ITrail
+	public interface IUnbounded :
+		ITrace, ISpanned
 	{
 	}
 }

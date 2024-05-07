@@ -17,7 +17,7 @@ using Rx = nilnul.num.RealIX;
 namespace nilnul.geometry.planar.rotation_
 {
 	/// <summary>
-	/// a rotation in [0,pi)
+	/// a rotation in [0,pi). measure the angle of a line with respect to the line on xAxis.
 	/// </summary>
 	/// <remarks>
 	/// <see cref="rotation_.nonneg_.LtPi"/>

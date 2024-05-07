@@ -9,4 +9,5 @@ namespace nilnul.geometry.planar.vect.co.to_
 	public interface Real4toI:ToI<nilnul.num.RealI>
 	{
 	}
+
 }

@@ -77,6 +77,11 @@ namespace nilnul.geometry.planar.tope_._bloc
 		public double area() {
 			return  this.width.realee * this.height.realee ;
 		}
+		public double aspect() {
+			return  this.height.realee  / this.width.realee ;
+		}
+
+
 		static public SpreadDbl A4_inMeters = new SpreadDbl(0.210, 0.297);
 
 		/// <summary>

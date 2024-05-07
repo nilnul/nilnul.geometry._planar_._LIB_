@@ -26,7 +26,7 @@ namespace nilnul.geometry.planar.cycle_.gon.re_
 		{
 
 			if (
-					cycle_.gon.vsPoint.sign_._PointInsidePolygon.IsInsidePolygon(
+					cycle_.gon.vsPoint.sign_._PointInsidePolygonX.IsInsidePolygon(
 						inner.vertexes.First()
 						,
 						outer

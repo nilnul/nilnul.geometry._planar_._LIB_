@@ -15,6 +15,9 @@ namespace nilnul.geometry.planar.cloze_.gon_
 	///   bu for monogon, we have no edges.
 	///   So monogon is abnormal, and may be excluded from normal polygon
 	/// </remarks>
+	/// alias:
+	///		unigon
+	///	<see cref="sub_.polygon_"/>
 	public class Monogon:Polygon
 	{
 		public Monogon(planar.PointI1 point)

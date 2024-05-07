@@ -10,7 +10,8 @@ namespace nilnul.geometry.planar.curve_
 	/// the length is finite
 	/// </summary>
 	/// alias:
-	///		curl
+	///		curl,<see cref="planar.ICurl"/>
+	///		bounded, not boundaried which is constraints by a bloc. but if it's bounded, it is boundaried. not vice versa, as a boundaried curve can be unbounded.
 	public interface IFinite : ICurve
 	{
 	}

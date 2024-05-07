@@ -7,5 +7,10 @@
 	/// alias:
 	///		lap
 	///		loop
-	public interface ILop : ILoom,ILoop { }
+	public interface ILop
+		:
+		loop_.INonIntersect
+		,
+		ILoom
+	{ }
 }

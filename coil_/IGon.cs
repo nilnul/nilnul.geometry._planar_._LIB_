@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.coil_
 {
+	/// 	/// we might sample points in the middle of an edge, and at the same point,  hence an edge might be decomposed into several skids or grads.
+	/// But after being reduced, adjacent points are distinct. nonadjacent points might be incident. in other words,
 	/// <summary>
-	/// we might sample points in the middle of an edge, and at the same point,  hence an edge might be decomposed into several skids or grads.
-	/// But after being reduced, adjacent points are distinct. nonadjacent points might be incident. in other words, the edge is grad_.Skid.
-	/// 
-	/// 
+	///the edge is grad_.Skid.
+	/// two tangent edge might be <see cref="curl_.elbow.be_.IReflex"/> or <see cref="curl_.elbow.be_.IStraight"/>
 	/// </summary>
-	/// 
 	/// <remarks>
-	/// at least two points; Suppose we have one grad now,  and to be a cloze, the other grad has to be there opposite to the first one.
+	/// at least two points;
+	/// Suppose we have one grad now,  and to be a cloze, the other grad has to be there opposite to the first one.
 	/// 
 	/// eg: digon
 	///		note, two edge might on the same line.

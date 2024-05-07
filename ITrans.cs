@@ -26,6 +26,7 @@ namespace nilnul.geometry.planar
 	///		in order to avoid confusion with new axis name: x, y,z.
 	///
 	/// 
+	/// </remarks>
 	/// vs
 	///		sub.Morph
 	///			planar Trans is about the coord, while sub.Morph is about object.
@@ -34,7 +35,9 @@ namespace nilnul.geometry.planar
 	/// alias:
 	///
 	///		passive rotation. <see cref="planar.drawable._morph_"/>, <see cref="planar.sub.IMorph"/>, which is active transform
-	/// </remarks>
+	///		morph
+	///		
+	/// <see cref="sub.IMorph"/> for a local transformation.
 	public interface ITrans
 		: planar.map_.ITrans
 	{

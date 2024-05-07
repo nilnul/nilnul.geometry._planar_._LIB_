@@ -16,7 +16,7 @@ namespace nilnul.geometry.planar.curve_.algebraics_.spline_.cubic_.noninfectOut_
 	///
 	interface IPlentyPoints
 		:
-		IUnnatural //the first and last piece would have its inflection point at the start/end point. This is too rigouse and might be overkill.
+		IUnnatural //the first and last piece would have its inflection point at the start/end point. This is too rigouse and might be an overkill.
 
 		,
 

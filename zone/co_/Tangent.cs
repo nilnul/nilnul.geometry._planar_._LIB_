@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.zone.co_
 {
 	/// <summary>
-	/// joint at one point. the resulted would be: <see cref="planar.ISpread"/>
+	/// joint at one point. the resulted would be: <see cref="planar.ISplash"/>
 	/// </summary>
 	class Tangent
 	{

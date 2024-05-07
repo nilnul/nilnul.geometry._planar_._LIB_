@@ -40,11 +40,11 @@ namespace nilnul.geometry.planar.vect.to_.co_.decompose_.cross_
 			/// solve Ax=Vect, where A is the basis.
 			/// so x=Vect/A or Vect*A^-1
 			///
-			var sln = nilnul.num.real.matrix_.square_.rankful.op_.unary_.Invert._Matrix_assumeSquare1invertible(
+			var sln = nilnul.num.real.matrix_.square_.invertible.op_.unary_.Invert._Matrix_assumeSquare1invertible(
 				matrix1
 			);
 
-			return nilnul.num.real.matrix.co_.sociable._MultiX._Multiply_assumeSociable(
+			return nilnul.num.real.matrix.co_.multible._MultiX._Multiply_assumeSociable(
 				sln
 				,
 				vect.point.AsArray()

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.grad
 {
+	/// <summary>
+	/// draw on rasterized pixels;
+	/// </summary>
 	public class _DrawX
 	{
 		public static void Draw(Graphics g, Grad4dbl_byPointsI grad, Pen pen)

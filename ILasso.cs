@@ -15,7 +15,9 @@
 	///		lac
 	public interface ILasso
 		:ILocus
-		, trace_.IEndAtStart
+		, trail_.IEndAtStart
+		,
+		ILap
 	{
 
 	}

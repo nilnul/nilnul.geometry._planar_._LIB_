@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using C = System.Numerics.Complex;
 
 namespace nilnul.geometry.planar.vect_.nonnil.co
 {
@@ -28,6 +29,7 @@ namespace nilnul.geometry.planar.vect_.nonnil.co
 				planar.vect_.nonnil._DirectionX.NonnegLtTau(y)
 				- planar.vect_.nonnil._DirectionX.NonnegLtTau(x);
 		}
+
 		static public double Rotation(planar.vect_.NonnilDbl x, planar.vect_.NonnilDbl y) {
 			return
 				planar.vect_.nonnil._DirectionX.NonnegLtTau(y)
@@ -41,6 +43,38 @@ namespace nilnul.geometry.planar.vect_.nonnil.co
 
 			;
 		}
+
+		/// <summary>
+		/// (-tau, tau)
+		/// </summary>
+		/// <param name="point"></param>
+		/// <param name="point1"></param>
+		/// <returns></returns>
+		public static double _Rotation_01nonnil(C point, C point1)
+		{
+
+			return
+				point1.Phase /// (-pi, pi]
+				-
+				point.Phase ///  (-pi, pi]
+				;
+
+			;
+		}
+
+		public static double _Direction_01nonnil(C a, C b)
+		{
+
+			var r = _Rotation_01nonnil(a, b);
+
+			if (r<0)
+			{
+				return r + num.real_.eg_._Tau4dblX.FULL;	/// (0, tau)
+			}
+			return r;	//[0,tau)
+		}
+
+
 
 		public static double Rotation(VectorDbl vectorDbl1, VectorDbl vectorDbl2)
 		{

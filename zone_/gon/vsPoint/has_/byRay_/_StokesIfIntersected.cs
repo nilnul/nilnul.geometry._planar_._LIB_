@@ -19,6 +19,7 @@ namespace nilnul.geometry.planar.zone_.gon.vsPoint.has_.byRay_
 	///			when both are pointing upwards, the winding number is 1
 	///			when both pointing downards, the winding number is -1
 	/// </summary>
+	/// <see cref="cycle_.gon_.facade.vsPoint.sign_._PointInsidePolygon"/>
 	static public class _StokesIfIntersected
 	{
 

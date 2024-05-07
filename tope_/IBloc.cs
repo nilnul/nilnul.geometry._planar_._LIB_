@@ -14,6 +14,7 @@ namespace nilnul.geometry.planar.tope_
 	///	Alias:
 	///		boundary
 	///		bounding
+	///		brick
 	///		crop
 	///			rect
 	///		bloc

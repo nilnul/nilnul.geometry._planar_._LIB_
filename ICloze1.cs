@@ -19,7 +19,7 @@ namespace nilnul.geometry.planar
 	/// alias:
 	///		circuit
 	///		recycle
-	public interface ICloze : trail_.IEndAtStart
+	public interface ICloze : trav_.IEndAtStart
 	{
 	}
 }

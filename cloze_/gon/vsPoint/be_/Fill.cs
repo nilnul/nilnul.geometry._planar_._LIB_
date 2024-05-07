@@ -12,4 +12,5 @@ namespace nilnul.geometry.planar.cloze_.gon.vsPoint.be_
 	class Fill
 	{
 	}
+
 }

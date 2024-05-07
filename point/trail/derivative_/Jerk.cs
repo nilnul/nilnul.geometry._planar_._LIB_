@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.point.trail
 {
 	/// <summary>
-	/// third derivatice.
+	/// third derivative. it's the change of force;  the change can be nil, or contigouse;
 	/// </summary>
+	/// alias:
+	///		jerk
+	///		jolt
 	class Jerk
 	{
 	}

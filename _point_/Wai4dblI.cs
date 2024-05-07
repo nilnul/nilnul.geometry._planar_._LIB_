@@ -3,7 +3,7 @@
 namespace nilnul.geometry.planar._point_
 {
 	/// <summary>
-	/// <see cref="_point.Coord"/>
+	/// <see cref="_point.ICoord"/>
 	/// </summary>
 	public interface Wai4dblI
 	{

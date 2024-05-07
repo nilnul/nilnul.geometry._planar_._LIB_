@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -87,124 +90,154 @@
     <LangVersion>default</LangVersion>
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+      <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="johnHurliman.math._calculus_._LIB_, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\johnHurliman.math._calculus_._LIB_.1.0.1\lib\net46\johnHurliman.math._calculus_._LIB_.dll</HintPath>
-    </Reference>
-    <Reference Include="MathNet.Iridium, Version=1.0.1.32096, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\MathNet.Iridium.1.0.1.32096\lib\net46\MathNet.Iridium.dll</HintPath>
-    </Reference>
-    <Reference Include="miroslavStampar.math._calculus_._LIB_, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\miroslavStampar.math._calculus_._LIB_.1.0.0\lib\net46\miroslavStampar.math._calculus_._LIB_.dll</HintPath>
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.230611.40617-sym\lib\net481\nilnul.collection_._discrete_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.math._calculus_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.math._calculus_._LIB_.1.1.220729.125019\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul.lang_._cognom_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.lang_._cognom_._LIB_.1.1230806.123209-sym\lib\netstandard2.0\nilnul.lang_._cognom_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num.real._func_._LIB_.1.1.220725.160835\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul.lang_._cot_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.lang_._cot_._LIB_.1.1230804.164911-sym\lib\netstandard2.0\nilnul.lang_._cot_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.math._calculus_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.math._calculus_._LIB_.1.1.231025.131213-sym\lib\net481\nilnul.math._calculus_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._func_._LIB_.1.1.230507.144737-sym\lib\net481\nilnul.num.real._func_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul.num.real._matrix_._LIB_.1.1.220814.74253\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.240429.95934-sym\lib\net481\nilnul.num.real._matrix_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._complex_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul.num._complex_._LIB_.1.1.220731.183914\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._complex_._LIB_.1.1.240507.42623-sym\lib\net481\nilnul.num._complex_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.1.220728.140110\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.240506.141152-sym\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul.num._quotient_._LIB_.1.1.220728.140804\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.231225.105453-sym\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul.num._real_._LIB_.2.1.220818.53104\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.240507.30550-sym\lib\net481\nilnul.num._real_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._bit_._LIB_.1.1.220822.32314\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.231213.174600-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._character_._LIB_, Version=2.1.8272.35271, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._character_._LIB_.2.1.220825.113426\lib\net481\nilnul._character_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.231121.55239-sym\lib\net481\nilnul._character_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.1.220828.155848\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._fs_._LIB_.2.1.240301.52742-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._num_._LIB_.1.1.220826.15831\lib\net481\nilnul._num_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.240104.43053-sym\lib\net481\nilnul._num_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._num_._LINQ_.1.1.220825.155237\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.231206.31605-sym\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.220825.152127\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.240507.55359-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.231003.172246-sym\lib\net481\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.1.220728.133856\lib\net48\nilnul._set_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.230730.135726-sym\lib\net481\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._time_._LIB_.1.1.220814.174124\lib\net48\nilnul._time_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.240426.150924-sym\lib\net481\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.1.220828.153602\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.240229.181016-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._xml_._LIB_.1.1.220731.165341\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._xml_._LIB_.1.1.240426.114901-sym\lib\net481\nilnul._xml_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.0.7863.31102, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\sergeyBochkanov._alglib_._LIB_.1.0.7863.31102\lib\net48\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\sergeyBochkanov._alglib_._LIB_.1.1.231025.131213-sym\lib\net481\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\..\(packages)\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.230728.104656-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\_nilnul_._LINQ_.1.1.220819.143032\lib\net481\_nilnul_._LINQ_.dll</HintPath>
+      <HintPath>..\..\.deps\_nilnul_._LINQ_.1.1.230709.141821-sym\lib\net481\_nilnul_._LINQ_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="%28angle\AngleD.cs" />
-    <Compile Include="%28angle\angle\be_\Reflex.cs" />
-    <Compile Include="%28angle\angle\be_\Orthic.cs" />
-    <Compile Include="%28angle\angle\be_\Convex.cs" />
+    <Compile Include="%28ray\ray_\horizon_\decrease\vsGrad\_NearestJoint.cs" />
+    <Compile Include="angle\ISubtend.cs" />
+    <Compile Include="angle\IVertex.cs" />
+    <Compile Include="%28angle\_AngleX.cs" />
+    <Compile Include="angle\be_\Reflex.cs" />
+    <Compile Include="angle\be_\Orthic.cs" />
+    <Compile Include="angle\be_\Convex.cs" />
     <Compile Include="%28angle\IAngleD.cs" />
     <Compile Include="%28angle\AngleI.cs" />
-    <Compile Include="%28angle\angle\Eq.cs" />
+    <Compile Include="angle\Eq.cs" />
     <Compile Include="%28angle\angle_\NewFolder1\Reflection.cs" />
     <Compile Include="%28angle\angle_\Points4dbl.cs" />
     <Compile Include="%28angle\angle_\ByPoints.cs" />
@@ -214,9 +247,281 @@
     <Compile Include="%28angle\_angle_\InitialI.cs" />
     <Compile Include="%28ray\RayI1.cs" />
     <Compile Include="%28ray\ray_\horizon_\increase\vsGrad\_NearestJoint.cs" />
+    <Compile Include="cloze\co_\disjoint\IDuct.cs" />
+    <Compile Include="cloze\IStokes.cs" />
     <Compile Include="cloze_\circ\draw_\rasterize_\MidPointCircleAlgo.cs" />
+    <Compile Include="cloze_\gon\be_\ISurround.cs" />
+    <Compile Include="cloze_\gon\be_\surround_\_ProwindX.cs" />
+    <Compile Include="cloze_\gon\edge\co\be_\IDuct.cs" />
+    <Compile Include="cloze_\gon\vsPoint\be_\IInner.cs" />
+    <Compile Include="cloze_\gon\vsPoint\be_\_inner_\by_\IRayCasting.cs" />
+    <Compile Include="cloze_\gon\vsPoint\_WindingNumberX.cs" />
+    <Compile Include="cloze_\gon_\INonRetrowind.cs" />
+    <Compile Include="cloze_\gon_\nonshortcut\of_\_OfPointsX.cs" />
+    <Compile Include="cloze_\gon_\nonshortcut\of_\_points_\by_\_ByBisectX.cs" />
+    <Compile Include="cloze_\gon_\nonshortcut\of_\_points_\by_\_ByDirectionX.cs" />
+    <Compile Include="cloze_\gon_\quad_\ITrapezoid.cs" />
+    <Compile Include="cloze_\trigon\IParallelogram.cs" />
+    <Compile Include="cloze_\trigon\parlgrm\_SurroundedX.cs" />
+    <Compile Include="cloze_\trigon\_SurroundedX.cs" />
+    <Compile Include="coil_\gon_\conduit\be_\_IslandsX.cs" />
+    <Compile Include="coil_\gon_\conduit_\flake\of_\err_\IAntiZones.cs" />
+    <Compile Include="coil_\gon_\conduit_\flake_\ISimple.cs" />
+    <Compile Include="coil_\gon_\conduit_\IFlake.cs" />
+    <Compile Include="coil_\gon_\conduit_\IHoled.cs" />
+    <Compile Include="coil_\gon_\conduit_\INonFlake.cs" />
+    <Compile Include="coil_\gon_\conduit_\ISimple.cs" />
+    <Compile Include="coil_\gon_\IDigon.cs" />
+    <Compile Include="coil_\triangle_\IDegenerate.cs" />
+    <Compile Include="crux_\ILe1Dimension.cs" />
+    <Compile Include="curl_\elbow\be_\IConvex.cs" />
+    <Compile Include="curl_\elbow\be_\IReflex.cs" />
+    <Compile Include="curl_\elbow\be_\IStraight.cs" />
+    <Compile Include="curl_\elbow\be_\_NonProwindX.cs" />
+    <Compile Include="curl_\elbow\be_\_ProwindX.cs" />
+    <Compile Include="curl_\elbow\ISwing.cs" />
+    <Compile Include="curl_\elbow\swing_\_OpenCloseX.cs" />
+    <Compile Include="curl_\elbow\_DirectionX.cs" />
+    <Compile Include="curl_\elbow\_SwingX.cs" />
+    <Compile Include="curl_\elbow_\IFoldback.cs" />
+    <Compile Include="cycle_\circ\IDegenerate.cs" />
+    <Compile Include="cycle_\gon\corner\ICoast.cs" />
+    <Compile Include="cycle_\gon\corner_\concave\IBay.cs" />
+    <Compile Include="cycle_\gon\corner_\concave\IBight.cs" />
+    <Compile Include="cycle_\gon\corner_\convex\ICape.cs" />
+    <Compile Include="facet\IGenus.cs" />
+    <Compile Include="facet_\gon\dissect_\IHinged.cs" />
+    <Compile Include="facet_\gon\IDissection.cs" />
+    <Compile Include="facet_\gon\to_\IDissection.cs" />
+    <Compile Include="facet_\gon_\conduit\to_\IDissection.cs" />
+    <Compile Include="facet_\gon_\_conduit\IGulfsDisordered.cs" />
+    <Compile Include="facet_\gon_\_conduit\disord\to_\_MinCuspX.cs" />
+    <Compile Include="facet_\gon_\_conduit\IGulf.cs" />
+    <Compile Include="facet_\gon_\_conduit\_gulf\ICove.cs" />
+    <Compile Include="facet_\gon_\_conduit\_gulf\IEstuary.cs" />
+    <Compile Include="facet_\gon_\_conduit\_gulf\IStrait.cs" />
+    <Compile Include="grad\OpI.cs" />
+    <Compile Include="grad\op_\Opposite.cs" />
+    <Compile Include="grad\_ExtensionsX.cs" />
+    <Compile Include="grad_\skid\co_\angular\_DirectionX.cs" />
+    <Compile Include="curl_\elbow_\IConwind.cs" />
+    <Compile Include="curl_\elbow_\INonConwind.cs" />
+    <Compile Include="curl_\elbow_\INonProwind.cs" />
+    <Compile Include="curl_\elbow_\IProwind.cs" />
+    <Compile Include="curl_\elbow_\pro\vsPoint\be_\ISubtend.cs" />
+    <Compile Include="curl_\elbow_\pro\vsPoint\be_\_subtend_\_ByCrossProductX.cs" />
+    <Compile Include="curl_\IElbow.cs" />
+    <Compile Include="curl_\INonCoil.cs" />
+    <Compile Include="curl_\IPolyskid.cs" />
+    <Compile Include="curl_\ISimple.cs" />
+    <Compile Include="curl_\elbow\ICathetus.cs" />
+    <Compile Include="curl_\elbow\vertex_\IStart.cs" />
+    <Compile Include="curl_\elbow\vertex_\IPivot.cs" />
+    <Compile Include="curl_\elbow\vertex_\IStop.cs" />
+    <Compile Include="curl_\noncoil_\ISimple.cs" />
+    <Compile Include="curl_\link_\IBiSkid.cs" />
+    <Compile Include="curl_\elbow_\INunchaku.cs" />
+    <Compile Include="curves_\IWhorl.cs" />
+    <Compile Include="curve_\celestial\co_\disjoint_\IHyperbola.cs" />
+    <Compile Include="curve_\celestial_\IParabola.cs" />
+    <Compile Include="curve_\celestial_\xpn_\IHyperbola.cs" />
+    <Compile Include="curve_\celestial_\IPolyLine.cs" />
+    <Compile Include="curve_\finite_\PolyDash.cs" />
+    <Compile Include="curve_\infinite_\IBoundaried.cs" />
+    <Compile Include="curve_\infinite_\IInfiniteOnOneEnd.cs" />
+    <Compile Include="curve_\ICelestial.cs" />
+    <Compile Include="curve_\infinite_\IInfiniteOnOneEndOnly.cs" />
+    <Compile Include="curve_\noncoil_\ISimple.cs" />
+    <Compile Include="curve_\traject_\IBoundaried.cs" />
+    <Compile Include="curve_\traject_\IPolyTroll.cs" />
+    <Compile Include="cycles_\disjoint_\IHullWithHoles.cs" />
+    <Compile Include="cycle\inner\IWrap.cs" />
+    <Compile Include="cycle\re_\disjoint_\concord_\IEmbed.cs" />
+    <Compile Include="cycle\re_\disjoint_\concord_\ISeige.cs" />
+    <Compile Include="cycle\re_\disjoint_\IConcord.cs" />
+    <Compile Include="cycle\re_\disjoint_\IDisengage.cs" />
+    <Compile Include="cycle_\circ\re_\IConCentric.cs" />
+    <Compile Include="cycle_\gon\corners\theorem_\Ge3Convex.cs" />
+    <Compile Include="cycle_\gon\corners\theorem_\SumTo.cs" />
+    <Compile Include="cycle_\gon\corner_\IConvex.cs" />
+    <Compile Include="cycle_\gon\co_\pro9con_\IUnjoint.cs" />
+    <Compile Include="cycle_\gon\co_\unjoint_\pro9any\be_\concord_\_Seige4dblX.cs" />
+    <Compile Include="cycle_\gon\co_\unjoint_\pro9con\be_\concord_\_Seige4dblX.cs" />
+    <Compile Include="cycle_\gon\diag_\IChord.cs" />
+    <Compile Include="cycle_\gon\ICorner.cs" />
+    <Compile Include="cycle_\gon\IDiagonal.cs" />
+    <Compile Include="cycle_\gon\theorem_\IEarCorneredOffSide.cs" />
+    <Compile Include="cycle_\gon\theorem_\earOffEdge\ITwoEarsForNontri.cs" />
+    <Compile Include="cycle_\gon\theorem_\Triangulation.cs" />
+    <Compile Include="cycle_\gon_\INonTri.cs" />
+    <Compile Include="cycle_\gon_\nontri\ear\ITip.cs" />
+    <Compile Include="cycle_\gon_\nontri\theorem_\_twoEars\proof_\Triangulation.cs" />
+    <Compile Include="cycle_\gon_\nontri\theorem_\IHasChord.cs" />
+    <Compile Include="cycle_\gon_\nontri\theorem_\ITwoEared.cs" />
+    <Compile Include="cycle_\holes_\apart\IChannel.cs" />
+    <Compile Include="cycle_\hole\co_\apart\IChannel.cs" />
+    <Compile Include="cycle_\hole\co_\IDisjoint.cs" />
+    <Compile Include="cycle_\IEcllipse.cs" />
+    <Compile Include="cycle_\IOval.cs" />
+    <Compile Include="cycle_\ITriangle.cs" />
+    <Compile Include="cycle_\trape_\IConvex.cs" />
+    <Compile Include="cycle_\ICircle.cs" />
+    <Compile Include="cycle_\IConWinded.cs" />
+    <Compile Include="cycle_\IParallelogram.cs" />
+    <Compile Include="cycle_\IProWinded.cs" />
+    <Compile Include="cycle_\ITrape.cs" />
+    <Compile Include="cycle_\triangle_\IProWind.cs" />
+    <Compile Include="cycle_\xpn_\IConWinded.cs" />
+    <Compile Include="facet_\gon\to_\IToZones.cs" />
+    <Compile Include="facet_\gon\to_\_SplitToAdjacentZonesX.cs" />
+    <Compile Include="facet_\gon_\conduit\of_\coerce_\_MinCuspX.cs" />
+    <Compile Include="facet_\gon_\conduit\to_\IToHullAndHoles.cs" />
+    <Compile Include="facet_\gon_\conduit\to_\_CrackToZonesX.cs" />
+    <Compile Include="coil_\gon_\conduit\_HullAndHolesX.cs" />
+    <Compile Include="facet_\gon_\conduit\_HullX.cs" />
+    <Compile Include="facet_\gon_\IConduit.cs" />
+    <Compile Include="facet_\gon_\IHoled.cs" />
+    <Compile Include="facet_\_conduit_\IHull.cs" />
+    <Compile Include="flank_\gon_\IConduit.cs" />
+    <Compile Include="grad\co\be_\IDuct.cs" />
+    <Compile Include="grad\IShade.cs" />
+    <Compile Include="grad\IShadow.cs" />
+    <Compile Include="grad\shade\ISurround.cs" />
+    <Compile Include="grad\shade\IRect.cs" />
+    <Compile Include="grad\shade\rect\ISurround.cs" />
+    <Compile Include="grad\shade\rect\_SurroundX.cs" />
+    <Compile Include="grad\shade\_RectX.cs" />
+    <Compile Include="grad\shade_\uxp_\_OnAuxillaryX.cs" />
+    <Compile Include="grad\shadow_\IOntoAux.cs" />
+    <Compile Include="grad\shadow_\IOntoMain.cs" />
+    <Compile Include="grad\trigonize\parlgrm\diag_\originated\drag\belt_\_MiddleX.cs" />
+    <Compile Include="grad\trigonize\parlgrm\diag_\originated\drag\bunch_\ICentral.cs" />
+    <Compile Include="grad\trigonize\parlgrm\diag_\originated\_DragX.cs" />
+    <Compile Include="grad\trigonize\parlgrm\IDrag.cs" />
+    <Compile Include="grad\trigonize\parlgrm\_SurroundedX.cs" />
+    <Compile Include="grad\_ShadeX.cs" />
+    <Compile Include="grad_\skid\co_\angular_\convex\vsPoint\be_\ISubtend.cs" />
+    <Compile Include="grad_\skid\co_\angular\vsPoint\be_\ISubtend.cs" />
+    <Compile Include="grad_\skid\co_\angular_\IConvex.cs" />
+    <Compile Include="grad_\skid\co_\IAngular.cs" />
+    <Compile Include="grad_\skid\ICo.cs" />
+    <Compile Include="lead\vsPoint\be_\_NonconWindX.cs" />
+    <Compile Include="lead\vsPoint\be_\_ProWindX.cs" />
+    <Compile Include="line_\horizon\vsGrad\joints_\_Max0nulX.cs" />
+    <Compile Include="lop\re_\disjoint_\IAnnulus.cs" />
+    <Compile Include="lop\re_\disjoint_\IApart.cs" />
+    <Compile Include="lop\re_\disjoint_\annulus_\IInner.cs" />
+    <Compile Include="lop\re_\disjoint_\annulus_\IEnclosing.cs" />
+    <Compile Include="lop\re_\IUnJoint.cs" />
+    <Compile Include="lop_\gon\vsPoint\sign_\_PointInsidePolygonX.cs" />
+    <Compile Include="morph_\rebase_\orient_\flip_\_RealX.cs" />
+    <Compile Include="nilnul0\geometry\linear\tend\IPeg.cs" />
+    <Compile Include="nilnul0\geometry\linear\tend\peg_\IBegin.cs" />
+    <Compile Include="nilnul0\geometry\linear\tend\peg_\IEnd.cs" />
+    <Compile Include="nilnul0\geometry\_planar\axis_\IImaginary.cs" />
+    <Compile Include="nilnul0\geometry\_planar\axis_\IReal.cs" />
+    <Compile Include="nilnul0\geometry\_planar\coord_\ICurvilinear.cs" />
+    <Compile Include="nilnul0\geometry\_planar\coord_\IHomogeneous.cs" />
+    <Compile Include="nilnul0\geometry\_planar\IAxis.cs" />
+    <Compile Include="nilnul0\geometry\_planar\ICoordinateSystem.cs" />
+    <Compile Include="points\hull_\gon_\IOrthic.cs" />
+    <Compile Include="points\IBoundingBox.cs" />
+    <Compile Include="points\IConvexHull.cs" />
+    <Compile Include="rotation_\align_\IObtuse.cs" />
+    <Compile Include="rotation_\align_\IItalic.cs" />
+    <Compile Include="rotation_\direction\be_\ICusp.cs" />
+    <Compile Include="rotation_\direction\be_\IQuantile.cs" />
+    <Compile Include="rotation_\align\be_\IQuarter.cs" />
+    <Compile Include="rotation_\align_\ISalient.cs" />
+    <Compile Include="rotation_\direction_\IGePi.cs" />
+    <Compile Include="rotation_\direction_\ILtPi.cs" />
+    <Compile Include="rotation_\direction_\INonConvex.cs" />
+    <Compile Include="rotation_\direction_\gePi_\IReflex.cs" />
+    <Compile Include="rotation_\IAlignment.cs" />
+    <Compile Include="rotation_\IDirective.cs" />
+    <Compile Include="rotation_\IOblique.cs" />
+    <Compile Include="rotation_\IQuadrant.cs" />
+    <Compile Include="rotation_\nonneg_\ILtTau.cs" />
+    <Compile Include="rotation_\quadrant_\IAcute.cs" />
+    <Compile Include="rotation_\quadrant_\IOblique.cs" />
+    <Compile Include="rotation_\align_\ILtQuarter.cs" />
+    <Compile Include="rotation_\swing_\IGeNil.cs" />
+    <Compile Include="rotation_\swing_\ILtNil.cs" />
+    <Compile Include="sub_\uxp_\IGon.cs" />
+    <Compile Include="surface\IGenus.cs" />
+    <Compile Include="points_\dwelt\IBoundary.cs" />
+    <Compile Include="points_\dwelt\ICollinear.cs" />
+    <Compile Include="points_\dwelt\_BoundaryX.cs" />
+    <Compile Include="rotation\be_\_RevolutionX.cs" />
+    <Compile Include="rotation_\quadrant\be_\IAcute.cs" />
+    <Compile Include="rotation_\direction\be_\IConvex.cs" />
+    <Compile Include="rotation_\direction\be_\IPerpend.cs" />
+    <Compile Include="rotation_\direction\be_\IZero.cs" />
+    <Compile Include="rotation_\direction\be_\perpend_\IQuarter.cs" />
+    <Compile Include="rotation_\direction\be_\perpend_\IThreeQuarter.cs" />
+    <Compile Include="rotation_\ISwing.cs" />
+    <Compile Include="rotation_\nonneg_\ltTau\be_\IStraight.cs" />
+    <Compile Include="sub\IVwer.cs" />
+    <Compile Include="surface\IHollow.cs" />
+    <Compile Include="surface_\IClosed.cs" />
+    <Compile Include="surface_\IOpen.cs" />
+    <Compile Include="surface_\open\IClosure.cs" />
+    <Compile Include="surface_\open\set_\disjoint\disjunct\Closure.cs" />
+    <Compile Include="tend\Eq4dbl.cs" />
+    <Compile Include="tend\re_\Eq4dbl.cs" />
+    <Compile Include="tend\_re_\OfComplexI.cs" />
+    <Compile Include="tend_\edge\vsPoint\_DistanceX.cs" />
+    <Compile Include="grad_\skid\_DepartureX.cs" />
+    <Compile Include="IChase.cs" />
+    <Compile Include="IRotation.cs" />
+    <Compile Include="ITroll.cs" />
+    <Compile Include="IVect.cs" />
+    <Compile Include="line\vsPoint\IPlumb.cs" />
+    <Compile Include="lop_\IGon.cs" />
+    <Compile Include="nilnul0\geometry\linear\grad_\skid_\IClozed.cs" />
+    <Compile Include="nilnul0\geometry\linear\grad_\skid_\ICopen.cs" />
+    <Compile Include="nilnul0\geometry\linear\grad_\skid_\IOpen.cs" />
+    <Compile Include="nilnul0\geometry\linear\IManifold.cs" />
+    <Compile Include="nilnul0\geometry\linear\ITroll.cs" />
+    <Compile Include="nilnul0\geometry\linear\troll_\ISimple.cs" />
+    <Compile Include="nilnul0\rel_\net%28graph\Graph.cs" />
+    <Compile Include="nilnul0\rel_\net%28graph\_graph\Vertex.cs" />
+    <Compile Include="nilnul0\rel_\net%28graph\_graph\vertex\Dict.cs" />
+    <Compile Include="nilnul0\_img\closure_\_roundedRect\GeneratePath.cs" />
+    <Compile Include="nilnul0\_img\graphic\_morph\ITransform.cs" />
+    <Compile Include="nilnul0\_img\_graphic\ICoord.cs" />
+    <Compile Include="points\to_\Line.cs" />
+    <Compile Include="rotation\be_\_positive_\by_\IHand.cs" />
+    <Compile Include="rotation_\nonneg_\ltPi\be_\_ReflexX.cs" />
+    <Compile Include="surface\IVerge.cs" />
+    <Compile Include="swath_\IDemiPlane.cs" />
+    <Compile Include="swath_\IGalac.cs" />
+    <Compile Include="swath_\IPlane.cs" />
+    <Compile Include="swath_\IQuadrant.cs" />
+    <Compile Include="swath_\ISectant.cs" />
+    <Compile Include="swath_\ISemiPlane.cs" />
+    <Compile Include="tend\co_\orthic\IFoot.cs" />
+    <Compile Include="tend\co_\orthic\ILeg.cs" />
+    <Compile Include="tend\Departure.cs" />
+    <Compile Include="tend\vsPoint\Plumb.cs" />
+    <Compile Include="tend_\edge\IDeparture.cs" />
+    <Compile Include="tend_\edge\_DepartureX.cs" />
+    <Compile Include="tope_\disc\ISector.cs" />
+    <Compile Include="cloze_\circ\ISegment.cs" />
     <Compile Include="cloze_\conic\Fulcrum.cs" />
     <Compile Include="cloze_\gon\_ExtensionsX.cs" />
+    <Compile Include="cloze_\IPolyGram.cs" />
+    <Compile Include="cloze_\trigon_\IRegular.cs" />
+    <Compile Include="cloze_\gon_\hex_\IRegular.cs" />
+    <Compile Include="cloze_\gon_\IRegular.cs" />
+    <Compile Include="cloze_\gon_\ITri.cs" />
+    <Compile Include="cloze_\polygram_\tri_\IRegular.cs" />
+    <Compile Include="cloze_\polygram_\hex_\IRegular.cs" />
+    <Compile Include="cloze_\polygram_\IHex.cs" />
+    <Compile Include="cloze_\polygram_\IRegular.cs" />
+    <Compile Include="cloze_\polygram_\ITri.cs" />
+    <Compile Include="cloze_\polygram_\IWeaven.cs" />
+    <Compile Include="cloze_\polygram_\IStarry.cs" />
     <Compile Include="cloze_\_gon\vertexes\op_\unary_\_DelNilGradEsX.cs" />
     <Compile Include="coil_\gon\be_\many\Vow.cs" />
     <Compile Include="coil_\gon\be_\many\vow\Ee4dbl.cs" />
@@ -234,21 +539,41 @@
     <Compile Include="coil_\gon_\poly\Vow4dbl.cs" />
     <Compile Include="coil_\gon_\poly\vow\Ee4dbl.cs" />
     <Compile Include="coil_\gon_\poly\vow\ee_\VowNeo4Dbl.cs" />
-    <Compile Include="coil_\gon_\Tri.cs" />
-    <Compile Include="crux_\convex\SupportFunc.cs" />
+    <Compile Include="coil_\gon_\ITri.cs" />
+    <Compile Include="coil_\INonSimple.cs" />
+    <Compile Include="crux_\convex\SupportFuncI.cs" />
     <Compile Include="crux_\IConvex.cs" />
+    <Compile Include="curl\IUnDirected.cs" />
+    <Compile Include="curves_\eg_\SecCsc.cs" />
+    <Compile Include="curves_\eg_\AddInverse.cs" />
+    <Compile Include="curves_\ITriEllipse.cs" />
+    <Compile Include="curve\IUnDirected.cs" />
     <Compile Include="curve_\algebraic_\Conic.cs" />
     <Compile Include="curve_\algebraic_\conic_\hyperbola\ICo.cs" />
     <Compile Include="curve_\algebraic_\conic_\IHyperbola.cs" />
     <Compile Include="curve_\algebraic_\conic_\IParabola.cs" />
     <Compile Include="curve_\algebraic_\conic_\Ellipse.cs" />
+    <Compile Include="curve_\algebraic_\cubic\ICategorize.cs" />
+    <Compile Include="curve_\algebraic_\cubic\_category\Li_.cs" />
+    <Compile Include="curve_\algebraic_\cubic_\FoliumOfDescartes.cs" />
+    <Compile Include="curve_\algebraic_\cubic_\TrisectrixOfMaclaurin.cs" />
     <Compile Include="curve_\algebraic_\polynomial\by_\Points.cs" />
     <Compile Include="curve_\algebraic_\polynomial_\IQuintic.cs" />
     <Compile Include="curve_\algebraic_\polynomial_\IQuartic.cs" />
     <Compile Include="curve_\algebraic_\polynomial_\Cubic.cs" />
     <Compile Include="curve_\algebraic_\polynomial_\Quadratic.cs" />
+    <Compile Include="curve_\contiguous_\eg_\Spiral2inf.cs" />
     <Compile Include="curve_\IFunctional.cs" />
+    <Compile Include="curve_\infinite_\ISinusoid.cs" />
+    <Compile Include="curve_\ITraject.cs" />
     <Compile Include="curve_\Oval.cs" />
+    <Compile Include="curve_\simple_\noncycle_\Serpentine.cs" />
+    <Compile Include="curve_\simple_\noncycle_\serpentine_\Newton.cs" />
+    <Compile Include="curve_\_simple_\Func.cs" />
+    <Compile Include="cycle\IInner.cs" />
+    <Compile Include="cycle_\circ\co_\gt\be_\IEpicycle.cs" />
+    <Compile Include="cycle_\cycloid_\epi_\INephroid.cs" />
+    <Compile Include="cycle_\cycloid_\IEpicycloid.cs" />
     <Compile Include="cycle_\gons\of_\glyph_\_RetCyclesX.cs" />
     <Compile Include="cloze_\gon\be\Vow4dbl.cs" />
     <Compile Include="cloze_\gon\be\vow_\BeNeo4Dbl.cs" />
@@ -274,11 +599,11 @@
     <Compile Include="cloze_\gon_\facade\of_\_OfClozeByReverseIfNecessaryX.cs" />
     <Compile Include="cloze_\ISpanned.cs" />
     <Compile Include="cloze_\Finite.cs" />
-    <Compile Include="cloze_\gon\Surrouded.cs" />
+    <Compile Include="cloze_\gon\_SurroundedX.cs" />
     <Compile Include="cloze_\gon_\plural\Surrouded.cs" />
     <Compile Include="cloze_\gon_\plural\_GradsX.cs" />
     <Compile Include="cloze_\PolygonI.cs" />
-    <Compile Include="cloze_\gon\be_\stokes_\Nonneg.cs" />
+    <Compile Include="cloze_\gon\be_\surround_\Nonneg.cs" />
     <Compile Include="cloze_\gon\co_\IDonut.cs" />
     <Compile Include="cloze_\gon\_Grads4dblX.cs" />
     <Compile Include="cloze_\gon_\IDi.cs" />
@@ -316,7 +641,7 @@
     <Compile Include="coil_\gon_\conduit\vow\Ee4dbl.cs" />
     <Compile Include="coil_\gon_\conduit\vow\ee_\VowNeo4Dbl.cs" />
     <Compile Include="coil_\gon_\facade\of_\_OfClozeByReverseIfNecessaryX.cs" />
-    <Compile Include="coil_\gon_\Holed.cs" />
+    <Compile Include="coil_\gon_\IEnclosureAtEdge.cs" />
     <Compile Include="coil_\gon_\poly\be_\Adjacent.cs" />
     <Compile Include="coil_\gon\be_\_Conduit4dblX.cs" />
     <Compile Include="coil_\Gon4dbl.cs" />
@@ -345,7 +670,7 @@
     <Compile Include="curve\fractal_\DragonCurve.cs" />
     <Compile Include="curve\fractal_\LevySee.cs" />
     <Compile Include="curve\fractal_\Koch.cs" />
-    <Compile Include="curve_\algebraic\Piecewise.cs" />
+    <Compile Include="curve_\algebraic\IPiecewise.cs" />
     <Compile Include="cloze_\Piecewise.cs" />
     <Compile Include="curve_\IPolystep.cs" />
     <Compile Include="curve_\polystep_\Di4dbl.cs" />
@@ -375,7 +700,7 @@
     <Compile Include="cycle_\gon\co\be_\joint\Anto.cs" />
     <Compile Include="cycle_\gon\co_\nonjoint\be_\torus_\_Seige4dblX.cs" />
     <Compile Include="cycle_\gon\co_\nonjoint\be_\_Torus4dblX.cs" />
-    <Compile Include="cycle_\gon\co_\nonjoint\be_\_Nondonut4dblX.cs" />
+    <Compile Include="cycle_\gon\co_\nonjoint\be_\_Nontorus4dblX.cs" />
     <Compile Include="cycle_\gon\IEdge.cs" />
     <Compile Include="cycle_\gon\Re4dblI.cs" />
     <Compile Include="cycle_\gon\Be4dbl.cs" />
@@ -396,22 +721,59 @@
     <Compile Include="cycle_\gon\Vow4dblI.cs" />
     <Compile Include="cycle_\gon\vow\Ee4dbl.cs" />
     <Compile Include="cycle_\gon\vow\ee_\VowNeo.cs" />
-    <Compile Include="cycle_\gon_\parlgrm_\Rhombus.cs" />
-    <Compile Include="cycle_\gon_\parlgrm_\Rhomboid.cs" />
-    <Compile Include="cycle_\gon_\tetra_\ITrape.cs" />
-    <Compile Include="cycle_\gon_\tetra_\trape_\Parlgram.cs" />
+    <Compile Include="cycle_\IParlgrm.cs" />
+    <Compile Include="cycle_\gon_\IScalene.cs" />
+    <Compile Include="cycle_\parlgrm_\IOrthic.cs" />
+    <Compile Include="cycle_\parlgrm_\ISlanted.cs" />
+    <Compile Include="cycle_\parlgrm_\nonrect_\IRhomboid.cs" />
+    <Compile Include="cycle_\parlgrm_\nonrect_\Rhombus.cs" />
+    <Compile Include="cycle_\parlgrm_\nonrhombus_\IRect8nonsquare.cs" />
+    <Compile Include="cycle_\parlgrm_\INonRhombus.cs" />
+    <Compile Include="cycle_\parlgrm_\Rhombus.cs" />
+    <Compile Include="cycle_\parlgrm_\nonrhombus_\IRhomboid.cs" />
+    <Compile Include="cycle_\parlgrm_\rhombus_\ISquare.cs" />
+    <Compile Include="cycle_\rect_\IOblong.cs" />
+    <Compile Include="cycle_\gon_\regular_\hept\be_\Line9compass.cs" />
+    <Compile Include="cycle_\gon_\regular_\hept\be_\line9compass\NonTheorem.cs" />
+    <Compile Include="cycle_\gon_\regular_\IHepta.cs" />
+    <Compile Include="cycle_\gon_\quad_\IScalene.cs" />
+    <Compile Include="cycle_\gon_\quad_\ITrape.cs" />
+    <Compile Include="cycle_\trape_\IParlgram.cs" />
+    <Compile Include="cycle_\triangle\cevians_\Concur8inner.cs" />
+    <Compile Include="cycle_\triangle\cevians_\concur8inner\theorem_\ICeva.cs" />
+    <Compile Include="cycle_\triangle\cevian_\Altitude.cs" />
+    <Compile Include="cycle_\triangle\cevian_\Bisector.cs" />
+    <Compile Include="cycle_\triangle\cevian_\Splitter.cs" />
+    <Compile Include="cycle_\triangle\edge\IMidPoint.cs" />
+    <Compile Include="cycle_\triangle\ICevian.cs" />
+    <Compile Include="cycle_\triangle\cevian\theorem_\Stewart.cs" />
+    <Compile Include="cycle_\triangle\cevian_\Median.cs" />
+    <Compile Include="cycle_\triangle\cevian_\median\theorem_\Apollonius.cs" />
+    <Compile Include="cycle_\triangle\theorem_\Tangents.cs" />
+    <Compile Include="cycle_\triangle_\IScalene.cs" />
+    <Compile Include="cycle_\ICycloid.cs" />
+    <Compile Include="cycle_\IRect.cs" />
+    <Compile Include="cycle_\rect_\ISquare.cs" />
+    <Compile Include="cycle_\triangle_\perpend\edge_\IHypotenuse.cs" />
+    <Compile Include="cycle_\triangle_\perpend\edge_\ICathetus.cs" />
+    <Compile Include="cycle_\triangle_\perpend\IEdge.cs" />
+    <Compile Include="cycle_\_circ\Func.cs" />
+    <Compile Include="cycle_\_gon\vertexes\op_\RemoveInnerPoints.cs" />
+    <Compile Include="drawable\draw_\svg_\INesting.cs" />
     <Compile Include="grad\be_\Collapsed4dbl.cs" />
     <Compile Include="grad\be_\Trifling4dbl.cs" />
     <Compile Include="grad\Chain.cs" />
     <Compile Include="grad\chain_\Dwelt.cs" />
     <Compile Include="grad\chain_\dwelt_\Coil.cs" />
-    <Compile Include="grad\IRange.cs" />
+    <Compile Include="grad\draw_\_SvgX.cs" />
+    <Compile Include="grad\IDrag.cs" />
     <Compile Include="grad\re_\Joint4dbl.cs" />
     <Compile Include="grad\str_\Chain.cs" />
     <Compile Include="grad\Triangulate.cs" />
-    <Compile Include="grad\trigonize\Parallelogram.cs" />
+    <Compile Include="grad\trigonize\IParallelogram.cs" />
     <Compile Include="grad\vsPoint\Re4dblI.cs" />
     <Compile Include="grad\vsPoint\be_\Joint4dbl.cs" />
+    <Compile Include="grad\_LerpX.cs" />
     <Compile Include="grad_\skid\Chain.cs" />
     <Compile Include="grad_\skid\chain_\Dwelt.cs" />
     <Compile Include="grad_\skid\chain_\dwelt_\Coil.cs" />
@@ -423,15 +785,50 @@
     <Compile Include="grad_\skid\vsPoint\Be4dblI.cs" />
     <Compile Include="grad_\skid\vsPoint\be_\Has4dbl.cs" />
     <Compile Include="grad_\skid\vsPoint_\colinear\be_\_HasX.cs" />
+    <Compile Include="ICurl.cs" />
+    <Compile Include="IFlank.cs" />
     <Compile Include="ILasso.cs" />
+    <Compile Include="ILinger.cs" />
     <Compile Include="ILoom.cs" />
     <Compile Include="ILop.cs" />
+    <Compile Include="INonPointal.cs" />
+    <Compile Include="IOneDimensionable.cs" />
+    <Compile Include="ISpace.cs" />
+    <Compile Include="ISpread.cs" />
+    <Compile Include="ITamp.cs" />
+    <Compile Include="ITract.cs" />
+    <Compile Include="ITraverse1.cs" />
+    <Compile Include="lasso_\lap_\INonPoint.cs" />
+    <Compile Include="lasso_\INonPoint.cs" />
     <Compile Include="Lead4dblI.cs" />
+    <Compile Include="lead\Outlier.cs" />
+    <Compile Include="lead\outlier\beams_\tro\threorem_\Stewart.cs" />
+    <Compile Include="lead\outlier\beams_\tro\threorem_\stewart_\Apollonius.cs" />
+    <Compile Include="lead\outlier\IBeam.cs" />
     <Compile Include="lead\vsPoint\Be4dblI.cs" />
     <Compile Include="lead\vsPoint\be_\Has4dbl.cs" />
+    <Compile Include="lead\vsPoint\_sig_\by_\IByMorph.cs" />
+    <Compile Include="lead\vsPoint\_sig_\by_\IByTorque.cs" />
+    <Compile Include="line0point\re_\IOrthic.cs" />
+    <Compile Include="line\co\be_\Perpendicular.cs" />
+    <Compile Include="line\co_\crossed\angels_\co_\IOpposite.cs" />
+    <Compile Include="line\co_\IParallel.cs" />
+    <Compile Include="line\co_\parallel\Transversal.cs" />
+    <Compile Include="line\co_\parallel\transverse\angles_\co_\Alternate.cs" />
+    <Compile Include="line\co_\parallel\transverse\angles_\co_\alt_\Exterior.cs" />
+    <Compile Include="line\co_\parallel\transverse\angles_\co_\alt_\Interior.cs" />
+    <Compile Include="line\co_\parallel\transverse\angles_\co_\Corresponding.cs" />
+    <Compile Include="line\co_\parallel\transverse\angles_\co_\interior_\Consecutive.cs" />
+    <Compile Include="line\re_\Align.cs" />
+    <Compile Include="line\re_\cross_\IPerpend.cs" />
     <Compile Include="line\vsTend\Be.cs" />
     <Compile Include="line\vsTend\be_\Joint4dbl.cs" />
-    <Compile Include="loop_\gon\vsPoint\sign_\_PointInsidePolygon.cs" />
+    <Compile Include="loop\IInner.cs" />
+    <Compile Include="loop\IOuter.cs" />
+    <Compile Include="loop_\circa\Draw.cs" />
+    <Compile Include="loop_\circ_\IUnial.cs" />
+    <Compile Include="loop_\circ_\origined_\INormal.cs" />
+    <Compile Include="lop_\gon\vsPoint\sign_\_PointInsidePolygon.cs" />
     <Compile Include="cycle_\gon\_be_\OfClass4dblI.cs" />
     <Compile Include="cycle_\gon\_be_\OfInterface4dblI.cs" />
     <Compile Include="cycle_\gon_\antiwise\str\Be4dblI.cs" />
@@ -455,53 +852,120 @@
     <Compile Include="cycle_\Polygon4dblI.cs" />
     <Compile Include="cycle_\gon_\ITetragon.cs" />
     <Compile Include="cycle_\gon_\IAffirmative.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\trape_\IPerpend.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\trape_\IPerpend.cs" />
     <Compile Include="cycle_\Simple.cs" />
     <Compile Include="cycle_\Triangle.cs" />
     <Compile Include="cycle_\TrigonI.cs" />
     <Compile Include="cycle_\gon\Apex.cs" />
     <Compile Include="cycle_\gon\Apexes.cs" />
-    <Compile Include="cycle_\gon\area_\CrossProduct.cs" />
+    <Compile Include="cycle_\triangle\surround_\CrossProduct.cs" />
     <Compile Include="cycle_\gon\Be.cs" />
-    <Compile Include="cycle_\trigon\BeDoubleI.cs" />
-    <Compile Include="cycle_\trigon\be\Vow - Copy.cs" />
-    <Compile Include="cycle_\trigon\be\Vow.cs" />
-    <Compile Include="cycle_\trigon\be\Vow4dbl.cs" />
-    <Compile Include="cycle_\trigon\be\vow_\BeDefault4Dbl.cs" />
-    <Compile Include="cycle_\trigon\be_\AcuteI.cs" />
-    <Compile Include="cycle_\trigon\be_\Equilateral.cs" />
-    <Compile Include="cycle_\trigon\be_\IsoscelesI.cs" />
-    <Compile Include="cycle_\trigon\be_\ObtuseI.cs" />
-    <Compile Include="cycle_\trigon\be_\perpend\Vow - Copy.cs" />
-    <Compile Include="cycle_\trigon\be_\perpend\Vow.cs" />
-    <Compile Include="cycle_\trigon\be_\perpend\vow\Right - Copy.cs" />
-    <Compile Include="cycle_\trigon\be_\perpend\vow\Right.cs" />
-    <Compile Include="cycle_\trigon\be_\Positive.cs" />
-    <Compile Include="cycle_\trigon\be_\positive\Vow3dbl.cs" />
-    <Compile Include="cycle_\trigon\be_\positive\vow\Ee4dbl.cs" />
-    <Compile Include="cycle_\trigon\be_\Right - Copy.cs" />
-    <Compile Include="cycle_\trigon\be_\Right.cs" />
-    <Compile Include="cycle_\trigon\be_\RightI.cs" />
+    <Compile Include="cycle_\triangle\BeDoubleI.cs" />
+    <Compile Include="cycle_\triangle\be\Vow - Copy.cs" />
+    <Compile Include="cycle_\triangle\be\Vow.cs" />
+    <Compile Include="cycle_\triangle\be\Vow4dbl.cs" />
+    <Compile Include="cycle_\triangle\be\vow_\BeDefault4Dbl.cs" />
+    <Compile Include="cycle_\triangle\be_\AcuteI.cs" />
+    <Compile Include="cycle_\triangle\be_\Equilateral.cs" />
+    <Compile Include="cycle_\triangle\be_\IsoscelesI.cs" />
+    <Compile Include="cycle_\triangle\be_\ObtuseI.cs" />
+    <Compile Include="cycle_\triangle\be_\perpend\Vow - Copy.cs" />
+    <Compile Include="cycle_\triangle\be_\perpend\Vow.cs" />
+    <Compile Include="cycle_\triangle\be_\perpend\vow\Right - Copy.cs" />
+    <Compile Include="cycle_\triangle\be_\perpend\vow\Right.cs" />
+    <Compile Include="cycle_\triangle\be_\Positive.cs" />
+    <Compile Include="cycle_\triangle\be_\positive\Vow3dbl.cs" />
+    <Compile Include="cycle_\triangle\be_\positive\vow\Ee4dbl.cs" />
+    <Compile Include="cycle_\triangle\be_\Right - Copy.cs" />
+    <Compile Include="cycle_\triangle\be_\Right.cs" />
+    <Compile Include="cycle_\triangle\be_\RightI.cs" />
     <Compile Include="cycle_\gon\edges\EdgeLengthsInDouble.cs" />
     <Compile Include="line_\originated_\IBisector.cs" />
-    <Compile Include="loop_\gon\co_\nonjoint\be_\torus_\_Seige4dblX.cs" />
-    <Compile Include="loop_\gon\co_\nonjoint\be_\_Torus4dblX.cs" />
+    <Compile Include="lop_\gon\co_\nonjoint\be_\torus_\_Seige4dblX.cs" />
+    <Compile Include="lop_\gon\co_\nonjoint\be_\_Torus4dblX.cs" />
+    <Compile Include="loop_\Circ0point4Dbl.cs" />
+    <Compile Include="loop_\INonIntersect.cs" />
+    <Compile Include="lop_\Circle4dbl.cs" />
+    <Compile Include="map_\IMatrixed.cs" />
+    <Compile Include="map_\ITrans.cs" />
+    <Compile Include="morph_\affine_\IRefabricate.cs" />
+    <Compile Include="morph_\affine_\NewFolder1\NoShear%28class.cs" />
+    <Compile Include="morph_\affine_\rigid_\xpn_\IFlip.cs" />
+    <Compile Include="morph_\IGlobal.cs" />
+    <Compile Include="morph_\ILocal.cs" />
+    <Compile Include="morph_\projective_\IHomography.cs" />
+    <Compile Include="morph_\IMatric.cs" />
+    <Compile Include="morph_\rebase_\INonregress.cs" />
+    <Compile Include="morph_\rebase_\invertible_\axial_\IUnial.cs" />
+    <Compile Include="morph_\rebase_\invertible_\IAxial.cs" />
+    <Compile Include="morph_\rebase_\IOrient.cs" />
+    <Compile Include="morph_\rebase_\orient_\flip_\IAroundEks.cs" />
+    <Compile Include="morph_\rebase_\orient_\flip_\IAroundWai.cs" />
+    <Compile Include="morph_\rebase_\orient_\flip_\IBisect.cs" />
+    <Compile Include="morph_\rebase_\orient_\flip_\INegBisect.cs" />
+    <Compile Include="morph_\rebase_\orient_\IContraryStokes.cs" />
+    <Compile Include="morph_\rebase_\orient_\IFlip.cs" />
+    <Compile Include="morph_\rebase_\orient_\IProStokes.cs" />
+    <Compile Include="morph_\rebase_\orient_\IRotate.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\INegEks.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\INegOne.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\INegTwo.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\INegWai.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\swapped_\rotate_\INegEks.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\swapped_\INegOne.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\swapped_\INegTwo.cs" />
+    <Compile Include="morph_\rebase_\orient_\negish_\swapped_\rotate_\INegWai.cs" />
+    <Compile Include="morph_\rebase_\orient_\rotate_\IAntiQuarter.cs" />
+    <Compile Include="morph_\rebase_\orient_\rotate_\ICanonical.cs" />
+    <Compile Include="morph_\rebase_\orient_\rotate_\IHalf.cs" />
+    <Compile Include="morph_\rebase_\orient_\rotate_\IQuarter.cs" />
+    <Compile Include="morph_\rebase_\orient_\std_\ICanonical.cs" />
+    <Compile Include="morph_\rebase_\orient_\INegSome.cs" />
+    <Compile Include="morph_\rebase_\orient_\std_\ISwap.cs" />
+    <Compile Include="morph_\rebase_\_orient\ILi_.cs" />
+    <Compile Include="morph_\rebase_\_RotateX.cs" />
+    <Compile Include="morph_\_rebase_\basis_\Main.cs" />
+    <Compile Include="morph_\_rebase_\basis_\IWai.cs" />
+    <Compile Include="morph_\_rebase_\IBasis.cs" />
+    <Compile Include="nilnul0\geometry\linear\crux_\IUntimed.cs" />
+    <Compile Include="nilnul0\geometry\linear\curl\IUndirected.cs" />
+    <Compile Include="nilnul0\geometry\linear\curve\IUndirected.cs" />
+    <Compile Include="nilnul0\geometry\linear\curve_\inf_\IEndAtInf.cs" />
     <Compile Include="nilnul0\geometry\linear\grad\Re4dblI.cs" />
     <Compile Include="nilnul0\geometry\linear\grad\re_\Joint4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear\grad_\Skid4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear\grad_\skid\Re4dblI.cs" />
     <Compile Include="nilnul0\geometry\linear\grad_\skid\re_\Joint4dbl.cs" />
+    <Compile Include="nilnul0\geometry\linear\ICurl.cs" />
+    <Compile Include="nilnul0\geometry\linear\IMorph.cs" />
+    <Compile Include="nilnul0\geometry\linear\IPointOrCurve.cs" />
+    <Compile Include="nilnul0\geometry\linear\ISemiLine.cs" />
+    <Compile Include="nilnul0\geometry\linear\ILapse.cs" />
+    <Compile Include="nilnul0\geometry\linear\ITraverse.cs" />
+    <Compile Include="nilnul0\geometry\linear\LineDbl.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\Affine - Copy.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\IOrient.cs" />
+    <Compile Include="nilnul0\geometry\linear\PointDblIX.cs" />
+    <Compile Include="nilnul0\geometry\linear\point\_ExtensionsX.cs" />
+    <Compile Include="nilnul0\geometry\linear\RayI.cs" />
+    <Compile Include="nilnul0\geometry\linear\ray\IUndirected.cs" />
     <Compile Include="nilnul0\geometry\linear\Tend4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear\Tend4dblX.cs" />
     <Compile Include="nilnul0\geometry\linear\tend\ExtensionsX.cs" />
     <Compile Include="nilnul0\geometry\linear\tend\Re4dblI.cs" />
     <Compile Include="nilnul0\geometry\linear\tend\re_\Joint4dbl.cs" />
+    <Compile Include="nilnul0\geometry\linear\tend_\IBoolish.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav\IUnDirected.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\ICurve.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\IPoint.cs" />
+    <Compile Include="nilnul0\geometry\linear_\measured\span\distance\op_\unary_\ExchangeUnit.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\IUnit.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\Unit.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\Unit4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\Unit4dblA.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\UnitA.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\Angstrom.cs" />
+    <Compile Include="nilnul0\geometry\linear_\_measured\unit_\Milli4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\EngAsInch4Dbl.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\EngI.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\eng_\Foot4dbl1.cs" />
@@ -510,26 +974,91 @@
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\eng_\Mile4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\eng_\Yard4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\_eng_\Inches4dblI.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ergo_\ICanvas.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ergo_\ILevel.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ergo_\INamaste.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ergo_\namaste_\Forward9upward.cs" />
+    <Compile Include="nilnul0\geometry\planar_\geo_\home\rotate_\IClockwise.cs" />
+    <Compile Include="nilnul0\geometry\planar_\geo_\IAtlas.cs" />
+    <Compile Include="nilnul0\geometry\planar_\geo_\IHouse.cs" />
+    <Compile Include="nilnul0\geometry\planar_\IGeo.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ICosmo.cs" />
+    <Compile Include="nilnul0\geometry\planar_\measured\_bloc\size_\paper_\IUsLetter.cs" />
+    <Compile Include="nilnul0\geometry\planar_\xpn_\IHandedness.cs" />
+    <Compile Include="nilnul0\geometry\_planar\IOrient.cs" />
+    <Compile Include="nilnul0\geometry\_planar\_orient\Li_.cs" />
     <Compile Include="nilnul0\num\Complex4dbl.cs" />
+    <Compile Include="nilnul0\num\complex\func_\IUnary.cs" />
     <Compile Include="nilnul0\num\complex\matrix_\sym_\vandermonde_\cycle\DiscreteFourierTransform.cs" />
     <Compile Include="nilnul0\num\complex\matrix_\sym_\vandermonde_\_DiscreteFourierTransformMatrixX.cs" />
+    <Compile Include="nilnul0\num\complex\of_\IReal.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\continuous_\clopen_\ICloze.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\continuous_\IClopen.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\continuous_\IInjective.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\continuous_\injective_\clopen_\ICloze.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\continuous_\injective_\IClopen.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\continuous_\injective_\IClosed.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\IContinuous.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\IInjective.cs" />
+    <Compile Include="nilnul0\num\complex\of_\real_\IReal8connected.cs" />
     <Compile Include="nilnul0\num\complex\str_\unital_\Evenly.cs" />
     <Compile Include="nilnul0\num\complex_\Polar.cs" />
+    <Compile Include="nilnul0\num\complex_\polar\func_\IUnary.cs" />
+    <Compile Include="nilnul0\num\complex_\polar\func_\unary\stream_\fourier\ISeries.cs" />
+    <Compile Include="nilnul0\num\complex_\polar\func_\unary\stream_\IFourier.cs" />
     <Compile Include="nilnul0\num\complex_\polar\op_\UnaryI.cs" />
     <Compile Include="nilnul0\num\complex_\polar\op_\unary_\Stdize.cs" />
     <Compile Include="nilnul0\num\complex_\polar_\Std.cs" />
     <Compile Include="nilnul0\num\complex_\polar_\Unital.cs" />
     <Compile Include="nilnul0\num\complex_\polar_\_UnitalX.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\OfUnit.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitans\Prod.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitans\prod\Coefed.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan\Ampled.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan\metric\op_\BinaryI.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan\metric\op_\binary_\Multi.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan\metric\op_\binary_\multi\Cumulator.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan\metric\op_\binary_\multi\cumulator\Cumulate.cs" />
+    <Compile Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan\metric\op_\binary_\_MultiX.cs" />
     <Compile Include="nilnul0\num\real\expr_\polynomial\DefinedByPoints.cs" />
     <Compile Include="nilnul0\num\real\expr_\polynomial_\IOrderAtPonentOfTwo.cs" />
     <Compile Include="nilnul0\num\real\expr_\polynomial_\ordPonTwo\FourierFastTransform.cs" />
     <Compile Include="nilnul0\num\real\expr_\polynomial\op_\binary_\multi_\FastFourierTransform.cs" />
-    <Compile Include="nilnul0\num\real\op_\binary_\trigonometic_\Agrad.cs" />
+    <Compile Include="nilnul0\num\real\expr_\var_\geometry_\linear_\_UnitX.cs" />
+    <Compile Include="nilnul0\num\real\expr_\var_\geometry_\linear_\Unit%28T.cs" />
+    <Compile Include="nilnul0\num\real\expr_\var_\geometry_\linear_\Unit.cs" />
+    <Compile Include="nilnul0\num\real\expr_\var_\geometry_\linear_\UnitI.cs" />
+    <Compile Include="nilnul0\num\real\expr_\var_\geometry_\linear_\unit\Quantitied.cs" />
+    <Compile Include="nilnul0\num\real\expr_\var_\geometry_\linear_\unit_\Defaulted.cs" />
+    <Compile Include="nilnul0\num\real\matrix_\sq_\Tertiary.cs" />
+    <Compile Include="nilnul0\num\real\of_\binary_\trigonometic_\Agrad.cs" />
+    <Compile Include="nilnul0\num\real\of_\unary_\cos\ITheorem.cs" />
+    <Compile Include="nilnul0\num\real\of_\unary_\cos\theorem_\eq_\Prod2sum.cs" />
+    <Compile Include="nilnul0\num\real\of_\unary_\cos\theorem_\IEq.cs" />
+    <Compile Include="nilnul0\num\real\of_\unary_\trigno\ITheorem.cs" />
+    <Compile Include="nilnul0\num\real\of_\unary_\trigno\theorem_\eq_\Prod2sum.cs" />
+    <Compile Include="nilnul0\num\real\of_\unary_\trigno\theorem_\IEq.cs" />
     <Compile Include="point\re_\Unapprox4dbl.cs" />
     <Compile Include="point\IReD.cs" />
     <Compile Include="point\re_\Approx.cs" />
     <Compile Include="point\set_\sed\BoundBox.cs" />
+    <Compile Include="ray\IUnDirected.cs" />
+    <Compile Include="rotation\be_\_ReflexX.cs" />
     <Compile Include="rotation\op_\unary_\_tg\Of.cs" />
+    <Compile Include="rotation\re_\Congruent.cs" />
+    <Compile Include="rotation_\direction\be_\_ReflexX.cs" />
+    <Compile Include="rotation_\IClockwise.cs" />
+    <Compile Include="rotation_\IHours.cs" />
+    <Compile Include="rotation_\ISun.cs" />
+    <Compile Include="space\IThirteenGon.cs" />
+    <Compile Include="space\tiling_\IThirteenGon.cs" />
+    <Compile Include="splash_\INonroadable.cs" />
+    <Compile Include="splash_\Roadable.cs" />
+    <Compile Include="spread_\INoSelfJoint.cs" />
+    <Compile Include="spread_\ISimple.cs" />
+    <Compile Include="spread_\Roadable.cs" />
+    <Compile Include="sub\be_\IRadialSymmetry.cs" />
+    <Compile Include="sub\ITransform.cs" />
     <Compile Include="sub\_area\NewFolder1\Unit4dblA.cs" />
     <Compile Include="sub\_area\NewFolder1\Unit4dblI.cs" />
     <Compile Include="sub\_area\Unit4dblA.cs" />
@@ -537,77 +1066,85 @@
     <Compile Include="sub\_area\unit_\EngAsSqInchEs4Dbl.cs" />
     <Compile Include="sub\_area\unit_\EngAsSqInch4Dbl.cs" />
     <Compile Include="sub\_area\_unit_\NewFolder1\AsSqMeters4DblI.cs" />
+    <Compile Include="surface\inner\be_\ISpreadable.cs" />
     <Compile Include="swath_\Boundarable.cs" />
+    <Compile Include="tope_\bloc\diag_\ICross.cs" />
+    <Compile Include="tope_\bloc\diag_\IRadial.cs" />
+    <Compile Include="tope_\bloc\_AreaX.cs" />
+    <Compile Include="tope_\bloc_\ISpanned.cs" />
     <Compile Include="tope_\gon_\quod_\Circum.cs" />
     <Compile Include="tope_\gon_\quod_\circum\area_\ByBrahmagupta.cs" />
+    <Compile Include="tope_\IDimensionUniform.cs" />
+    <Compile Include="tope_\IGe1dEverywhere.cs" />
+    <Compile Include="tope_\rect_\ICanonic.cs" />
     <Compile Include="tope_\trigon\area_\HeronFormula.cs" />
     <Compile Include="cycle_\gon\Sweep.cs" />
     <Compile Include="cycle_\gon\theorem_\Ceva.cs" />
     <Compile Include="cycle_\gon\theorem_\ceva_\Angular.cs" />
     <Compile Include="cycle_\gon\theorem_\ceva_\angular\Converse.cs" />
-    <Compile Include="cycle_\gon\theorem_\Menelaus.cs" />
-    <Compile Include="cycle_\trigon\op_\UnaryI.cs" />
-    <Compile Include="cycle_\trigon\op_\unary_\EnsureFacade.cs" />
-    <Compile Include="cycle_\trigon\Vow4dblI.cs" />
+    <Compile Include="cycle_\triangle\theorem_\Menelaus.cs" />
+    <Compile Include="cycle_\triangle\op_\UnaryI.cs" />
+    <Compile Include="cycle_\triangle\op_\unary_\EnsureFacade.cs" />
+    <Compile Include="cycle_\triangle\Vow4dblI.cs" />
     <Compile Include="cycle_\gon\Vow.cs" />
-    <Compile Include="cycle_\trigon\vow\Ee.cs" />
-    <Compile Include="cycle_\trigon\vow\Ee4dbl.cs" />
-    <Compile Include="cycle_\trigon\vow\ee_\VowDefault.cs" />
+    <Compile Include="cycle_\triangle\vow\Ee.cs" />
+    <Compile Include="cycle_\triangle\vow\Ee4dbl.cs" />
+    <Compile Include="cycle_\triangle\vow\ee_\VowDefault.cs" />
     <Compile Include="cycle_\gon\vsPoint_\InnerPointI.cs" />
     <Compile Include="cycle_\gon\vsPoint_\inner_\Brocard.cs" />
     <Compile Include="cycle_\gon\vsPoint_\inner_\FermatI.cs" />
     <Compile Include="cycle_\gon\_theoremS\LawOfCos.cs" />
     <Compile Include="cycle_\gon\_theoremS\LawOfSines.cs" />
-    <Compile Include="cycle_\trigon\vsPoint\parametric_\Basised.cs" />
-    <Compile Include="cycle_\trigon\vsPoint\parametric_\Barycentric.cs" />
-    <Compile Include="cycle_\trigon_\IPrism.cs" />
-    <Compile Include="cycle_\trigon_\Isocele.cs" />
-    <Compile Include="cycle_\trigon_\Obtuse.cs" />
-    <Compile Include="cycle_\trigon_\Acute.cs" />
-    <Compile Include="cycle_\trigon_\Isoscele.cs" />
-    <Compile Include="cycle_\trigon_\isoscele_\arrow_\perspect_\Bigward.cs" />
-    <Compile Include="cycle_\trigon_\isoscele_\arrow_\perspect_\VerticalSmaller.cs" />
-    <Compile Include="cycle_\trigon_\isoscele_\Golden.cs" />
-    <Compile Include="cycle_\trigon_\isoscele_\golden\Golden.cs" />
-    <Compile Include="cycle_\trigon_\Perpend.cs" />
-    <Compile Include="cycle_\trigon_\PerpendX.cs" />
-    <Compile Include="cycle_\trigon_\perpend\Extensions.cs" />
-    <Compile Include="cycle_\trigon_\ortho_\Isocele.cs" />
-    <Compile Include="cycle_\trigon_\ortho_\isocele_\RigitTrans.cs" />
-    <Compile Include="cycle_\trigon_\Positive.cs" />
-    <Compile Include="cycle_\trigon_\Prepend_byFlex.cs" />
-    <Compile Include="cycle_\trigon_\Scalene.cs" />
+    <Compile Include="cycle_\triangle\vsPoint\parametric_\Basised.cs" />
+    <Compile Include="cycle_\triangle\vsPoint\parametric_\Barycentric.cs" />
+    <Compile Include="cycle_\triangle_\IPrism.cs" />
+    <Compile Include="cycle_\triangle_\Isocele.cs" />
+    <Compile Include="cycle_\triangle_\Obtuse.cs" />
+    <Compile Include="cycle_\triangle_\Acute.cs" />
+    <Compile Include="cycle_\triangle_\Isoscele.cs" />
+    <Compile Include="cycle_\triangle_\isoscele_\arrow_\perspect_\Bigward.cs" />
+    <Compile Include="cycle_\triangle_\isoscele_\arrow_\perspect_\VerticalSmaller.cs" />
+    <Compile Include="cycle_\triangle_\isoscele_\Golden.cs" />
+    <Compile Include="cycle_\triangle_\isoscele_\golden\Golden.cs" />
+    <Compile Include="cycle_\triangle_\Perpend.cs" />
+    <Compile Include="cycle_\triangle_\PerpendX.cs" />
+    <Compile Include="cycle_\triangle_\perpend\Extensions.cs" />
+    <Compile Include="cycle_\triangle_\ortho_\Isocele.cs" />
+    <Compile Include="cycle_\triangle_\ortho_\isocele_\RigitTrans.cs" />
+    <Compile Include="cycle_\triangle_\Positive.cs" />
+    <Compile Include="cycle_\triangle_\Prepend_byFlex.cs" />
+    <Compile Include="cycle_\triangle_\Scalene.cs" />
     <Compile Include="cycle_\_gon_\ArrowFirstThreeDblI.cs" />
     <Compile Include="cycle_\_gon_\ArrowThird.cs" />
     <Compile Include="cycle_\_gon_\Grads4dblI.cs" />
     <Compile Include="cycle_\_gon_\Vertexes4dbl.cs" />
     <Compile Include="drawable\draw_\_svg_\El.cs" />
-    <Compile Include="drawable\op_\binary_\MinkowskiSum.cs" />
+    <Compile Include="drawable\of_\binary_\IMinkowskiSum.cs" />
     <Compile Include="drawable\_morph_\OfPoint.cs" />
     <Compile Include="drawable_\_boundaried_\Boundary.cs" />
-    <Compile Include="facet_\donut_\IGon.cs" />
+    <Compile Include="facet_\holed_\IGon.cs" />
     <Compile Include="facet_\Gon4DblI.cs" />
     <Compile Include="facet_\Gon4dbl.cs" />
     <Compile Include="facet_\gon\Nested.cs" />
-    <Compile Include="facet_\gon\nests\of_\Coils.cs" />
+    <Compile Include="facet_\gon\nests\of_\ICoils.cs" />
     <Compile Include="facet_\gon\nests\of_\cycles_\nonjoint_\_ByForestX.cs" />
-    <Compile Include="facet_\gon\sortie_\Holed.cs" />
-    <Compile Include="facet_\gon\triangulate_\EarClipping.cs" />
+    <Compile Include="facet_\gon\sortie_\IHoled.cs" />
+    <Compile Include="facet_\gon\triangulate_\IEarClipping.cs" />
     <Compile Include="facet_\gon\vsPoint\has_\ByRestoreHoles.cs" />
     <Compile Include="facet_\gon\vsPoint\has_\_ByWindingNumber.cs" />
     <Compile Include="facet_\gon_\Conduit4Dbl.cs" />
     <Compile Include="facet_\gon_\Conduit4DblI.cs" />
-    <Compile Include="facet_\gon_\conduit\Nested.cs" />
-    <Compile Include="facet_\gon_\conduit\of_\_Coerce4dblX.cs" />
+    <Compile Include="facet_\gon_\conduit\INested.cs" />
+    <Compile Include="facet_\gon_\_conduit\disord\of_\_Coerce4dblX.cs" />
     <Compile Include="facet_\gon_\conduit\to_\_Cast4dblX.cs" />
-    <Compile Include="facet_\gon_\IHoled.cs" />
-    <Compile Include="facet_\donut_\Annulus.cs" />
-    <Compile Include="facet_\gon\To.cs" />
-    <Compile Include="facet_\gon\to_\Coil.cs" />
+    <Compile Include="facet_\gon_\IByCoil.cs" />
+    <Compile Include="facet_\holed_\IAnnulus.cs" />
+    <Compile Include="facet_\gon\ITo.cs" />
+    <Compile Include="facet_\gon\to_\ICoil.cs" />
     <Compile Include="facet_\IGon.cs" />
     <Compile Include="facet_\IDonut.cs" />
-    <Compile Include="gon_\Dwelt.cs" />
-    <Compile Include="gon_\dwelt_\Distinct.cs" />
+    <Compile Include="sub_\gon_\IDwelt.cs" />
+    <Compile Include="sub_\gon_\dwelt_\IDistinct.cs" />
     <Compile Include="grad\be_\Vertical0point.cs" />
     <Compile Include="grad\co\_CrossProductX.cs" />
     <Compile Include="grad\Re4dblI.cs" />
@@ -636,24 +1173,24 @@
     <Compile Include="IRay.cs" />
     <Compile Include="ITend.cs" />
     <Compile Include="IVector.cs" />
-    <Compile Include="lap\Inscribed.cs" />
-    <Compile Include="lap\Secant.cs" />
-    <Compile Include="lap_\circ\Chord.cs" />
+    <Compile Include="lop\Inscribed.cs" />
+    <Compile Include="lop\Secant.cs" />
+    <Compile Include="lasso_\circ\Chord.cs" />
     <Compile Include="ILine.cs" />
-    <Compile Include="lap_\circ\chord\mid\Sagitta.cs" />
+    <Compile Include="lasso_\circ\chord\mid\Sagitta.cs" />
     <Compile Include="lead\AsSect.cs" />
     <Compile Include="line\Set.cs" />
     <Compile Include="line\set_\sed\be_\Concurrent.cs" />
     <Compile Include="line_\byInnerProd_\NewBasisNorm.cs" />
-    <Compile Include="line_\horizon\vsGrad\_SmallestJoint.cs" />
+    <Compile Include="line_\horizon\vsGrad\joints_\_SmallestJoint.cs" />
     <Compile Include="loop_\circ\Chord.cs" />
     <Compile Include="loop_\circ\Length - Copy.cs" />
-    <Compile Include="loop_\circ_\orginated_\Nontrivia4dbl.cs" />
-    <Compile Include="loop_\gon\Fillmode.cs" />
-    <Compile Include="loop_\gon\fill_\Alternate.cs" />
+    <Compile Include="loop_\circ_\origined_\Nontrivia4dbl.cs" />
+    <Compile Include="lop_\gon\IFillMode.cs" />
+    <Compile Include="lop_\gon\fill_\IAlternate.cs" />
     <Compile Include="loop_\IPolygon.cs" />
     <Compile Include="nilnul0\geometry\dimed\ISimplex.cs" />
-    <Compile Include="nilnul0\geometry\linear\crux_\Directed.cs" />
+    <Compile Include="nilnul0\geometry\linear\crux_\IDirected.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\IInfinite.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\Finite.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\_byConstruct\Cut.cs" />
@@ -662,14 +1199,14 @@
     <Compile Include="nilnul0\geometry\linear\IRay.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\Open.cs" />
     <Compile Include="nilnul0\geometry\linear\ITend.cs" />
-    <Compile Include="nilnul0\geometry\linear\trail_\IFinite.cs" />
-    <Compile Include="nilnul0\geometry\linear\trail_\Closed.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\IFinite.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\Closed.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\IOpenAtStart.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\OpenAtEnd.cs" />
-    <Compile Include="nilnul0\geometry\linear\trail_\ClosedAtEnd.cs" />
-    <Compile Include="nilnul0\geometry\linear\trail_\ClosedAtStart.cs" />
-    <Compile Include="nilnul0\geometry\linear\trail_\IInfinite.cs" />
-    <Compile Include="nilnul0\geometry\linear\trail_\IUnspanned.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\ClosedAtEnd.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\ClosedAtStart.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\IInfinite.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\IUnspanned.cs" />
     <Compile Include="nilnul0\geometry\linear\trail\IUndirected.cs" />
     <Compile Include="nilnul0\geometry\linear\_grad_\LengthAsDblI.cs" />
     <Compile Include="nilnul0\geometry\linear\_tend_\LengthAsDblI.cs" />
@@ -701,7 +1238,7 @@
     <Compile Include="point\str\vow\ee_\NewFolder1\VowDefault.cs" />
     <Compile Include="point\str\vow\NewFolder1\Ee.cs" />
     <Compile Include="point\trio\be_\_StepsX.cs" />
-    <Compile Include="grad_\skid\co_\Chain.cs" />
+    <Compile Include="grad_\skid\co_\IChain.cs" />
     <Compile Include="grad_\nonhorizon\azimuth\Ctg.cs" />
     <Compile Include="grad_\skid_\azimuth\_TgX.cs" />
     <Compile Include="ICloze1.cs" />
@@ -711,7 +1248,7 @@
     <Compile Include="ILapse.cs" />
     <Compile Include="IRevert.cs" />
     <Compile Include="ISwath.cs" />
-    <Compile Include="ITrace.cs" />
+    <Compile Include="ITrail0.cs" />
     <Compile Include="ILocus.cs" />
     <Compile Include="cloze_\piecewise_\Poly.cs" />
     <Compile Include="cloze_\Trigon.cs" />
@@ -723,8 +1260,8 @@
     <Compile Include="cloze_\_trigon_\Vertexes.cs" />
     <Compile Include="curve_\contiguous_\finite.cs" />
     <Compile Include="curve_\IEndAtStart.cs" />
-    <Compile Include="curve_\Simple.cs" />
-    <Compile Include="facet_\donut_\Polygon.cs" />
+    <Compile Include="curve_\ISimple.cs" />
+    <Compile Include="facet_\holed_\Polygon.cs" />
     <Compile Include="grad\vsPoint\NearestMember.cs" />
     <Compile Include="grad\vsPoint_\colinear\categorize_\Inside4dblX.cs" />
     <Compile Include="grad_\skid\Re4dblI.cs" />
@@ -740,8 +1277,8 @@
     <Compile Include="lead_\originated\vsPoint\Leg.cs" />
     <Compile Include="line0point\vsPoint\Foot4perpend.cs" />
     <Compile Include="line0point\vsPoint\Leg.cs" />
-    <Compile Include="line\vsPoint\Foot4perpend.cs" />
-    <Compile Include="line\vsPoint\Leg.cs" />
+    <Compile Include="line\vsPoint\_Foot4perpendX.cs" />
+    <Compile Include="line\vsPoint\_LegX.cs" />
     <Compile Include="line_\Hinged.cs" />
     <Compile Include="line_\horizon\vsGrad_\slid_\cross\Intersected.cs" />
     <Compile Include="line_\originated_\byAlign\vsPoint\Leg4perpend.cs" />
@@ -753,18 +1290,17 @@
     <Compile Include="cloze_\Polygon4dbl.cs" />
     <Compile Include="map_\_Projection4dblX.cs" />
     <Compile Include="nilnul0\geometry\linear\ITrace.cs" />
-    <Compile Include="nilnul0\geometry\linear\IShape.cs" />
     <Compile Include="nilnul0\geometry\linear\ITrail.cs" />
     <Compile Include="nilnul0\geometry\linear\Vect4dblI.cs" />
     <Compile Include="nilnul0\geometry\linear\VectI.cs" />
-    <Compile Include="nilnul0\geometry\linear\trace_\Bounded.cs" />
-    <Compile Include="nilnul0\geometry\linear\trace_\ISpanned.cs" />
-    <Compile Include="nilnul0\geometry\linear\trace_\IUnbounded.cs" />
     <Compile Include="nilnul0\geometry\linear\trail_\Bounded.cs" />
     <Compile Include="nilnul0\geometry\linear\trail_\ISpanned.cs" />
     <Compile Include="nilnul0\geometry\linear\trail_\IUnbounded.cs" />
-    <Compile Include="nilnul0\geometry\linear\locus_\Bounded.cs" />
-    <Compile Include="nilnul0\geometry\linear\locus_\IUnbounded.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\Bounded.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\ISpanned.cs" />
+    <Compile Include="nilnul0\geometry\linear\trav_\IUnbounded.cs" />
+    <Compile Include="nilnul0\geometry\linear\curl_\Bounded.cs" />
+    <Compile Include="nilnul0\geometry\linear\curl_\IUnbounded.cs" />
     <Compile Include="nilnul0\geometry\dimed\IPoint.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\IUnbounded.cs" />
     <Compile Include="nilnul0\geometry\linear\curve_\Bounded.cs" />
@@ -778,7 +1314,7 @@
     <Compile Include="nilnul0\geometry\linear\sub_\ISeq.cs" />
     <Compile Include="nilnul0\geometry\linear\sub_\squential_\IEmpty.cs" />
     <Compile Include="nilnul0\geometry\linear\sub_\squential_\INonempty.cs" />
-    <Compile Include="nilnul0\geometry\linear\Tope.cs" />
+    <Compile Include="nilnul0\geometry\linear\ITope.cs" />
     <Compile Include="nilnul0\geometry\linear\vect\Co4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear\vect\co\categorize_\Inside4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear\vect\co\categorize_\_InsideX.cs" />
@@ -787,7 +1323,7 @@
     <Compile Include="nilnul0\geometry\linear\vect\co\to_\real_\_InnerProductX.cs" />
     <Compile Include="nilnul0\geometry\original\ISub.cs" />
     <Compile Include="nilnul0\geometry\original\sub_\IEmpty.cs" />
-    <Compile Include="orbit_\Simple.cs" />
+    <Compile Include="lapse_\Simple.cs" />
     <Compile Include="point\str\Be4dblI.cs" />
     <Compile Include="point\str\be\Vow4dbl.cs" />
     <Compile Include="point\str\be\vow_\BeNeo4Dbl.cs" />
@@ -811,20 +1347,31 @@
     <Compile Include="point_\PositiveWai.cs" />
     <Compile Include="rotation_\nonneg_\LtPi4Dbl.cs" />
     <Compile Include="rotation_\Alignment.cs" />
-    <Compile Include="spread_\INonroadable.cs" />
     <Compile Include="sub\Hull.cs" />
     <Compile Include="sub_\directed_\connected_\chain\of_\Vertexes.cs" />
     <Compile Include="sub_\directed_\connected_\PolynSeg.cs" />
-    <Compile Include="surface_\Plane.cs" />
+    <Compile Include="surface_\IPlane.cs" />
     <Compile Include="Tend4dblI.cs" />
     <Compile Include="TendI.cs" />
     <Compile Include="tend\Variance.cs" />
     <Compile Include="tend_\IEdge.cs" />
-    <Compile Include="tope_\disc\ISected.cs" />
+    <Compile Include="tope_\_bloc\size\comp_\_ByArea.cs" />
+    <Compile Include="tope_\_bloc\size_\photo\OneInchX.cs" />
+    <Compile Include="tope_\_bloc\size_\photo\PhotoX.cs" />
+    <Compile Include="tope_\_bloc\size_\photo\TwoInchX.cs" />
     <Compile Include="tope_\_DiscX.cs" />
-    <Compile Include="track_\gon_\IPenta.cs" />
-    <Compile Include="trans_\ILinear.cs" />
-    <Compile Include="trans_\IRebase.cs" />
+    <Compile Include="flank_\gon_\IPenta.cs" />
+    <Compile Include="trail\diagram_\ILine9compass.cs" />
+    <Compile Include="trail\IDraw.cs" />
+    <Compile Include="morph_\affine_\IColwise.cs" />
+    <Compile Include="morph_\affine_\INonTranslate.cs" />
+    <Compile Include="morph_\affine_\IRowwise.cs" />
+    <Compile Include="morph_\affine_\nontranslate_\reflect_\Upward.cs" />
+    <Compile Include="morph_\affine_\nontranslate_\reflect_\_LeftwardX.cs" />
+    <Compile Include="morph_\affine_\rowwise\Apply.cs" />
+    <Compile Include="morph_\affine\_apply\PointX.cs" />
+    <Compile Include="morph_\NewFolder1\ILinear.cs" />
+    <Compile Include="morph_\IRebase.cs" />
     <Compile Include="sub\Area4dblI.cs" />
     <Compile Include="sub\AreaI.cs" />
     <Compile Include="sub\IArea.cs" />
@@ -833,16 +1380,112 @@
     <Compile Include="sub\_area\unit_\eng_\SqFt4Dbl.cs" />
     <Compile Include="sub\_area\unit_\eng_\SqYard4Dbl.cs" />
     <Compile Include="sub\_area\unit_\_eng_\SqInch4DblI.cs" />
+    <Compile Include="morph_\rebase_\axial_\INonneg.cs" />
+    <Compile Include="morph_\rebase_\axial_\Reflect.cs" />
+    <Compile Include="morph_\rebase_\axial_\reflect_\Upward.cs" />
+    <Compile Include="morph_\rebase_\axial_\reflect_\_LeftwardX.cs" />
+    <Compile Include="morph_\rebase_\IColwise.cs" />
+    <Compile Include="morph_\rebase_\IRowwise.cs" />
+    <Compile Include="morph_\rebase_\IAxial.cs" />
+    <Compile Include="morph_\rebase_\orthic_\IUnial.cs" />
+    <Compile Include="morph_\rebase_\orthic_\unial_\IAxial.cs" />
+    <Compile Include="traject\IUnDirected.cs" />
+    <Compile Include="trav\IIgnoreOrder - Copy.cs" />
+    <Compile Include="cloze_\gon_\IOrthogonal.cs" />
+    <Compile Include="trav_\IBack2start.cs" />
+    <Compile Include="trav_\IGon.cs" />
+    <Compile Include="trav_\IPolyseg.cs" />
+    <Compile Include="trav_\polyseg_\ICloze.cs" />
+    <Compile Include="trav_\polyseg_\_OrthogonalX.cs" />
+    <Compile Include="cloze_\gon_\orthy\of_\steps_\_DeriveLastX.cs" />
+    <Compile Include="trav_\polyseg_\_orthic_\by_\NewFolder1\_Direction4prevX.cs" />
+    <Compile Include="trav_\polyseg_\_orthic_\by_\_Direction4currentX.cs" />
+    <Compile Include="troll\IUndirected.cs" />
+    <Compile Include="troll_\ISimple.cs" />
+    <Compile Include="vect\co\be_\IOrthic.cs" />
+    <Compile Include="vect\co\ICrossProduct.cs" />
+    <Compile Include="vect\co\ITo.cs" />
+    <Compile Include="vect\co\op_\project_\_VariationX.cs" />
+    <Compile Include="vect\co\scala_\DotProduct.cs" />
+    <Compile Include="vect\co\scala_\dot\theorem_\Cosine.cs" />
+    <Compile Include="vect\co\scala_\dot\theorem_\Projection.cs" />
+    <Compile Include="vect\co\scala_\IInnerProduct.cs" />
+    <Compile Include="vect\co\to_\IToReal.cs" />
+    <Compile Include="vect\IDrag.cs" />
+    <Compile Include="vect\of_\binary_\CrossProduct.cs" />
+    <Compile Include="vect\co\op_\_ProjectionX.cs" />
+    <Compile Include="vect\re_\IOrthic.cs" />
+    <Compile Include="vect\_ToX.cs" />
+    <Compile Include="vect_\axial_\IPositive.cs" />
+    <Compile Include="vect_\IBasis.cs" />
+    <Compile Include="vect_\IStd.cs" />
+    <Compile Include="vect_\nonnil\co\be_\NonProwind.cs" />
+    <Compile Include="vect_\nonnil\co\be_\NonContraryWind.cs" />
+    <Compile Include="vect_\nonnil\co\be_\ContraryWind.cs" />
+    <Compile Include="vect_\nonnil\co\be_\Prowind.cs" />
+    <Compile Include="vect_\nonnil\co\be_\IPerpend.cs" />
+    <Compile Include="vect_\nonnil\re_\IPerpend.cs" />
+    <Compile Include="vect_\std_\IPositive.cs" />
+    <Compile Include="vect_\unial_\IAxial.cs" />
+    <Compile Include="vect_\axial_\IUnial.cs" />
+    <Compile Include="vect_\IAxial.cs" />
+    <Compile Include="vect_\ICanonic.cs" />
+    <Compile Include="vect_\IUnial.cs" />
+    <Compile Include="vwer\rotation\be_\_positive_\by_\IHand.cs" />
+    <Compile Include="vwer_\IMeasured.cs" />
+    <Compile Include="vwer_\IMorph.cs" />
+    <Compile Include="vwer_\IScreen.cs" />
+    <Compile Include="vwer_\IRightUp.cs" />
+    <Compile Include="vwer_\morph_\IAuxillaryFlipped.cs" />
+    <Compile Include="vwer_\rigid_\IOrient.cs" />
+    <Compile Include="vwer_\rigid_\ITranslate.cs" />
+    <Compile Include="zones_\disjoint\ICauseway.cs" />
+    <Compile Include="zone\co_\disjoint\IBridge.cs" />
+    <Compile Include="zone\IHollow.cs" />
+    <Compile Include="zone\of_\IOfLinear.cs" />
+    <Compile Include="zone\of_\linear_\Projection.cs" />
+    <Compile Include="zone\of_\linear_\Shadow.cs" />
+    <Compile Include="zone\of_\linear_\Shine.cs" />
+    <Compile Include="zone\re_\IAdjacent.cs" />
+    <Compile Include="zone\re_\IIntertrude.cs" />
+    <Compile Include="zone\re_\IJoint.cs" />
+    <Compile Include="zone\re_\ITangent.cs" />
+    <Compile Include="zone_\Bloc8dbl.cs" />
+    <Compile Include="zone_\disc\IDegenerate.cs" />
+    <Compile Include="zone_\disc\IHollow.cs" />
     <Compile Include="zone_\disc\vsPoint_\noncenter\CenterLine.cs" />
     <Compile Include="zone_\disc\vsPoint_\noncenter\IInverse.cs" />
     <Compile Include="zone_\disc\vsPoint_\noncenter\inverse\IPolarLine.cs" />
     <Compile Include="zone_\disc\vsPoint_\outer\IInverse.cs" />
+    <Compile Include="zone_\ellipse\ICenter.cs" />
+    <Compile Include="zone_\ellipse\IDegnerate.cs" />
+    <Compile Include="zone_\ellipse\IFoci.cs" />
+    <Compile Include="zone_\ellipse\IMajor.cs" />
+    <Compile Include="zone_\ellipse\IMinor.cs" />
+    <Compile Include="zone_\ellipse\ISemiMajor.cs" />
+    <Compile Include="zone_\ellipse\ISemiMinor.cs" />
+    <Compile Include="zone_\gon\corners\theorem_\_ConvexOffEdgeX.cs" />
+    <Compile Include="zone_\gon\corners\theorem_\_convexOffSide_\by_\_RevolvingVerticesX.cs" />
+    <Compile Include="zone_\gon\corner\be_\IReEntrant.cs" />
+    <Compile Include="zone_\gon\corner\be_\Salient.cs" />
+    <Compile Include="zone_\gon\ear\ITip.cs" />
+    <Compile Include="zone_\gon\IEar.cs" />
+    <Compile Include="zone_\gon\of_\IOfCycle.cs" />
+    <Compile Include="zone_\gon\theorem_\earOffEdge\ITwoEarsForNontri.cs" />
+    <Compile Include="zone_\gon\corners\theorem_\Ge3Convex.cs" />
+    <Compile Include="zone_\gon\theorem_\_EarOffSideX.cs" />
+    <Compile Include="zone_\gon\theorem_\_earOffSide_\by_\_RevolvingVerticesX.cs" />
+    <Compile Include="zone_\gon\vsPoint_\INonVerge.cs" />
+    <Compile Include="zone_\gon\vsPoint_\nonverge\be_\_inner_\by_\_ByRayCastingX.cs" />
+    <Compile Include="zone_\gon_\convex\co\Distance.cs" />
+    <Compile Include="zone_\gon_\convex\Departure.cs" />
+    <Compile Include="zone_\gon_\convex_\ISymmetric.cs" />
     <Compile Include="zone_\gon_\hepta_\IArrow.cs" />
-    <Compile Include="track_\IBroadable.cs" />
+    <Compile Include="flank_\IBroadable.cs" />
     <Compile Include="crux_\IUniformDimension.cs" />
     <Compile Include="crux_\Nonmanifold.cs" />
     <Compile Include="cloze_\Polygon4dblI.cs" />
-    <Compile Include="coil_\gon_\Hex.cs" />
+    <Compile Include="coil_\gon_\IHex.cs" />
     <Compile Include="coil_\gon_\hex_\Annulus.cs" />
     <Compile Include="coil_\gon_\hex_\Butterfly.cs" />
     <Compile Include="coil_\gon_\hex_\Hexagram.cs" />
@@ -854,7 +1497,7 @@
     <Compile Include="coil_\gon_\oct_\Regular.cs" />
     <Compile Include="coil_\gon_\oct_\Tbeam.cs" />
     <Compile Include="coil_\gon_\oct_\Ubeam.cs" />
-    <Compile Include="coil_\gon_\Quad.cs" />
+    <Compile Include="coil_\gon_\IQuad.cs" />
     <Compile Include="crux_\IDirected.cs" />
     <Compile Include="crux_\Simple.cs" />
     <Compile Include="spread_\roadable_\Simple.cs" />
@@ -862,7 +1505,7 @@
     <Compile Include="rotation_\nonneg_\ltPi_\Acute.cs" />
     <Compile Include="rotation_\nonneg_\ltPi_\Obtuse.cs" />
     <Compile Include="tend\Direction.cs" />
-    <Compile Include="spread_\polygon_\tetra_\Butterfly.cs" />
+    <Compile Include="splash_\polygon_\tetra_\Butterfly.cs" />
     <Compile Include="sub\Flip.cs" />
     <Compile Include="sub_\connected_\Empty.cs" />
     <Compile Include="sub_\Directed.cs" />
@@ -897,39 +1540,39 @@
     <Compile Include="tope_\bloc\ReI.cs" />
     <Compile Include="tope_\_bloc\Size4dbl.cs" />
     <Compile Include="tope_\_bloc\size_\Spanned4dbl.cs" />
-    <Compile Include="trace_\IEndAtStart.cs" />
-    <Compile Include="trace_\directed_\Curve.cs" />
-    <Compile Include="trace_\IUndirected.cs" />
-    <Compile Include="trace_\IDirected.cs" />
-    <Compile Include="track_\INonmanifold.cs" />
-    <Compile Include="track_\ISimple.cs" />
+    <Compile Include="trail_\IEndAtStart.cs" />
+    <Compile Include="trail_\directed_\Curve.cs" />
+    <Compile Include="trail_\IUndirected.cs" />
+    <Compile Include="trail_\IDirected.cs" />
+    <Compile Include="flank_\INonmanifold.cs" />
+    <Compile Include="flank_\ISimple.cs" />
     <Compile Include="cycle_\gons\of_\glyph_\retTree_\_LogicEmbedX.cs" />
     <Compile Include="cloze_\gons\of_\glyph_\_RetClozesX.cs" />
     <Compile Include="cycle_\gons\of_\glyph_\_RetTreeX.cs" />
-    <Compile Include="trail\IIgnoreOrder.cs" />
-    <Compile Include="trail_\Cloze.cs" />
-    <Compile Include="trail_\IClosedAtEnd.cs" />
-    <Compile Include="trail_\IClosedAtStart.cs" />
-    <Compile Include="trail_\Closed.cs" />
-    <Compile Include="trail_\DimOne.cs" />
+    <Compile Include="trav\NewFolder1\IIgnoreOrder.cs" />
+    <Compile Include="trav_\Cloze.cs" />
+    <Compile Include="trav_\IClosedAtEnd.cs" />
+    <Compile Include="trav_\IClosedAtStart.cs" />
+    <Compile Include="trav_\Closed.cs" />
+    <Compile Include="trav_\DimOne.cs" />
     <Compile Include="locus_\IEndAtStart.cs" />
-    <Compile Include="trail_\piecewise_\_polyseg_\Grads4dblI.cs" />
-    <Compile Include="trail_\_polyseg_\Grads4dblI.cs" />
-    <Compile Include="trail_\_polyseg_\Vertexes4dbl.cs" />
-    <Compile Include="trans_\NewFolder1\IMatrix.cs" />
-    <Compile Include="trans_\rebase_\IScale.cs" />
-    <Compile Include="trans_\rebase_\IInvertible.cs" />
-    <Compile Include="trans_\rebase_\regress_\Nil.cs" />
-    <Compile Include="trans_\rebase_\regress_\Projection.cs" />
-    <Compile Include="trans_\rebase_\shear_\Flip.cs" />
-    <Compile Include="trans_\rebase_\shear_\IRotate.cs" />
-    <Compile Include="trans_\rebase_\shear_\rotate_\Quarter.cs" />
-    <Compile Include="trans_\rebase_\invertible_\Skew.cs" />
-    <Compile Include="trans_\rebase_\shear_\Straight.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\Flip.cs" />
-    <Compile Include="trans_\rebase_\shear_\skew_\Regressed.cs" />
-    <Compile Include="trans_\rebase_\shear_\skew_\Unchanged.cs" />
-    <Compile Include="trans_\nonlinear_\LinearFractional.cs" />
+    <Compile Include="trav_\piecewise_\_polyseg_\Grads4dblI.cs" />
+    <Compile Include="trav_\_polyseg_\Grads4dblI.cs" />
+    <Compile Include="trav_\_polyseg_\Vertexes4dbl.cs" />
+    <Compile Include="morph_\IMatrix.cs" />
+    <Compile Include="morph_\rebase_\IScale.cs" />
+    <Compile Include="morph_\rebase_\IInvertible.cs" />
+    <Compile Include="morph_\rebase_\regress_\Nil.cs" />
+    <Compile Include="morph_\rebase_\regress_\Projection.cs" />
+    <Compile Include="morph_\rebase_\shear_\Flip.cs" />
+    <Compile Include="morph_\rebase_\shear_\IRotate.cs" />
+    <Compile Include="morph_\rebase_\shear_\rotate_\Quarter.cs" />
+    <Compile Include="morph_\rebase_\ISkew.cs" />
+    <Compile Include="morph_\rebase_\shear_\Straight.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\Flip.cs" />
+    <Compile Include="morph_\rebase_\shear_\skew_\Regressed.cs" />
+    <Compile Include="morph_\rebase_\shear_\skew_\Unchanged.cs" />
+    <Compile Include="morph_\nonmatrixed_\LinearFractional.cs" />
     <Compile Include="vect\Be4dblI.cs" />
     <Compile Include="vect\be\NewFolder1\VowDouble.cs" />
     <Compile Include="vect\be\NewFolder1\VowDouble_beDefault.cs" />
@@ -944,22 +1587,21 @@
     <Compile Include="vect\be_\unital\vow\Ee4dbl.cs" />
     <Compile Include="vect\Co4dbl.cs" />
     <Compile Include="vect\co\OuterProduct.cs" />
-    <Compile Include="grad\trigonize\parlgrm\range\lateral\_ByChangeOfOneOrdinateOfGradX.cs" />
-    <Compile Include="vect\co\to_\scalar_\_RangeStokesMinusX.cs" />
-    <Compile Include="vect\co\to_\scalar_\cross\theorem_\JacobiEquation.cs" />
+    <Compile Include="vect\drag\co\_DeltaX.cs" />
+    <Compile Include="vect\co\to_\scala_\cross\theorem_\JacobiEquation.cs" />
     <Compile Include="vect\co\to_\_AsMatrixX.cs" />
     <Compile Include="vect\co_\Cross.cs" />
     <Compile Include="vect\Azimuth.cs" />
     <Compile Include="vect\EqNeo.cs" />
     <Compile Include="vect\ExtensionsX.cs" />
-    <Compile Include="vect\_RangeX.cs" />
+    <Compile Include="vect\_DragX.cs" />
     <Compile Include="vect\NewFolder1\VowDoubleI.cs" />
     <Compile Include="vect\Projector.cs" />
     <Compile Include="vect\Set4dbl.cs" />
-    <Compile Include="vect\set\op_\Binary4dblI.cs" />
-    <Compile Include="vect\set\op_\binary_\minkowski_\Diff.cs" />
-    <Compile Include="vect\set\op_\binary_\minkowski_\Minus.cs" />
-    <Compile Include="vect\set\op_\binary_\minkowski_\MinkowskiAddition.cs" />
+    <Compile Include="vect\set\of_\Binary4dblI.cs" />
+    <Compile Include="vect\set\of_\binary_\minkowski_\Diff.cs" />
+    <Compile Include="vect\set\of_\binary_\minkowski_\Minus.cs" />
+    <Compile Include="vect\set\of_\binary_\minkowski_\MinkowskiAddition.cs" />
     <Compile Include="vect\to_\co_\decompose_\cross_\normal_\_ByLamiTheoremX.cs" />
     <Compile Include="vect\to_\co_\decompose_\cross_\_NormalX.cs" />
     <Compile Include="vect\to_\co_\decompose_\ortho_\normal\rejection_\OfAlignment.cs" />
@@ -1013,7 +1655,7 @@
     <Compile Include="vect_\Positives4dblI.cs" />
     <Compile Include="vect_\Unital4dbl.cs" />
     <Compile Include="vect_\Unital4dblI.cs" />
-    <Compile Include="vect_\unital\Projector.cs" />
+    <Compile Include="vect_\unial\Projector.cs" />
     <Compile Include="zone\co\of_\BySect.cs" />
     <Compile Include="zone\Flip.cs" />
     <Compile Include="zone\morph_\Jacobian.cs" />
@@ -1032,18 +1674,18 @@
     <Compile Include="manifold_\DimTwo.cs" />
     <Compile Include="manifold_\Nil0one.cs" />
     <Compile Include="manifold_\Simple.cs" />
-    <Compile Include="map_\Morph.cs" />
+    <Compile Include="map_\IMorph.cs" />
     <Compile Include="manifold_\circ_\real projective lines.cs" />
-    <Compile Include="splash_\Boundinged.cs" />
+    <Compile Include="spread_\IBoundinged.cs" />
     <Compile Include="surface_\Boundarable.cs" />
     <Compile Include="tope_\Bloc4dbl_byAnchorI.cs" />
     <Compile Include="tope_\BlocDbl.cs" />
     <Compile Include="tope_\Bloc4dbl_byBounds.cs" />
-    <Compile Include="tope_\disc\CircularSegment.cs" />
+    <Compile Include="tope_\disc\Sector4dbl.cs" />
     <Compile Include="zone_\bloc_\Std.cs" />
     <Compile Include="zone_\bloc_\std\morph_\TipStretch.cs" />
     <Compile Include="zone_\bloc_\std\morph_\HorizontalStretch.cs" />
-    <Compile Include="zone_\convex\co\collision\SeparatingAxisTheorem.cs" />
+    <Compile Include="zone_\convex\co\collision\ISeparatingAxisTheorem.cs" />
     <Compile Include="zone_\gon\be\Vow4dbl_ofInterface.cs" />
     <Compile Include="zone_\gon\be\vow_\BeOfInterfaceNeo.cs" />
     <Compile Include="zone_\gon\be_\Quadri.cs" />
@@ -1051,7 +1693,7 @@
     <Compile Include="zone_\gon\Co.cs" />
     <Compile Include="zone_\gon\co\Be.cs" />
     <Compile Include="zone_\gon\co\be_\Disjoint.cs" />
-    <Compile Include="zone_\gon\co\be_\_disjoint\Grid.cs" />
+    <Compile Include="zone_\gon\co\be_\_disjoint\IGrid.cs" />
     <Compile Include="zone_\gon\str\Be4dblI.cs" />
     <Compile Include="zone_\gon\str\be\Vow.cs" />
     <Compile Include="zone_\gon\str\be\vow_\BeNeo.cs" />
@@ -1066,43 +1708,129 @@
     <Compile Include="zone_\gon\vow\ee_\VowNeo_ofInterface.cs" />
     <Compile Include="zone_\gon\vsPoint\_has\ByBounding1st.cs" />
     <Compile Include="zone_\gon\_be_\OfVowedCycle4DblI.cs" />
-    <Compile Include="zone_\convex\co\be_\Joint.cs" />
-    <Compile Include="zone_\convex\co\be_\joint_\GjkAlgorithm.cs" />
-    <Compile Include="zone_\convex\co\distance_\GjkAlgorithm.cs" />
+    <Compile Include="zone_\convex\co\be_\IJoint.cs" />
+    <Compile Include="zone_\convex\co\be_\joint_\IGjkAlgorithm.cs" />
+    <Compile Include="zone_\convex\co\distance_\IGjkAlgorithm.cs" />
     <Compile Include="zone_\gon_\hepta_\_arrow\triviable_\rightward_\HighAtHalf.cs" />
+    <Compile Include="zone_\gon_\hex\OverlapTilingWithDiscs.cs" />
+    <Compile Include="zone_\gon_\hex_\IHexagram.cs" />
     <Compile Include="zone_\gon_\IHeptagon.cs" />
-    <Compile Include="track_\gon_\penta_\Arrow4Dbl.cs" />
-    <Compile Include="track_\gon_\penta_\IArrow.cs" />
-    <Compile Include="track_\gon_\penta_\_arrow\HeadInTope4Dbl.cs" />
-    <Compile Include="track_\gon_\penta_\_arrow\headTope_\perspect_\Smallward.cs" />
+    <Compile Include="flank_\gon_\penta_\Arrow4Dbl.cs" />
+    <Compile Include="flank_\gon_\penta_\IArrow.cs" />
+    <Compile Include="flank_\gon_\penta_\_arrow\HeadInTope4Dbl.cs" />
+    <Compile Include="flank_\gon_\penta_\_arrow\headTope_\perspect_\Smallward.cs" />
+    <Compile Include="zone_\gon_\INonTri.cs" />
+    <Compile Include="zone_\gon_\IParlgrm.cs" />
+    <Compile Include="zone_\gon_\nontri\chord\_find_\by_\_ByElbowX.cs" />
+    <Compile Include="zone_\gon_\nontri\chord\_find_\by_\_ByCornerX.cs" />
+    <Compile Include="zone_\gon_\nontri\corner_\convex\_ChordX.cs" />
+    <Compile Include="zone_\gon_\nontri\corner_\convex_\IInner.cs" />
+    <Compile Include="zone_\gon_\nontri\corner_\convex_\inner\_ChordX.cs" />
+    <Compile Include="zone_\gon_\nontri\_ChordX.cs" />
+    <Compile Include="zone_\gon_\Perpendive.cs" />
+    <Compile Include="zone_\gon_\prepend_\INonrect.cs" />
+    <Compile Include="zone_\gon_\parlgrm\_area\by_\Cut9compose.cs" />
+    <Compile Include="zone_\gon_\parlgrm\_area\by_\SidewayPush.cs" />
+    <Compile Include="zone_\gon_\parlgrm\_area\by_\Sine.cs" />
+    <Compile Include="zone_\gon_\parlgrm\_area\IBy.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\INonOrthic.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\INonRhombus.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\IOrthic.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\Lowered.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\lowered\of_\coerce_\OfParlgrm.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\lowered\_area\by_\Cut9compose.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\lowered\_area\IBy.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\nonrhombus_\IRhomboid.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\nonrhombus_\IOblong.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\Rhombus.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\rhombus_\IDiamond.cs" />
+    <Compile Include="zone_\gon_\parlgrm_\rhombus_\ISquare.cs" />
     <Compile Include="zone_\gon_\quad\area_\ByBretschneider.cs" />
     <Compile Include="zone_\gon_\quad\Caliper.cs" />
     <Compile Include="zone_\gon_\quad\morph_\Parameterize.cs" />
     <Compile Include="zone_\gon_\quad_\canonic\morph_\Vertical.cs" />
     <Compile Include="zone_\gon_\quad_\canonic\morph_\Horizon.cs" />
     <Compile Include="zone_\gon_\quad_\canonic\morph_\TipPoint.cs" />
+    <Compile Include="zone_\gon_\quad_\Convex.cs" />
+    <Compile Include="zone_\gon_\quad_\IConcave.cs" />
+    <Compile Include="zone_\gon_\quad_\INonscalene.cs" />
+    <Compile Include="zone_\gon_\quad_\ITrapezoid.cs" />
+    <Compile Include="zone_\gon_\quad_\nonscalene_\flip_\IDart.cs" />
+    <Compile Include="zone_\gon_\quad_\nonscalene_\flip_\IKite.cs" />
+    <Compile Include="zone_\gon_\quad_\nonscalene_\flip_\_dart\IConcave.cs" />
+    <Compile Include="zone_\gon_\quad_\nonscalene_\flip_\_kite\IConvex.cs" />
+    <Compile Include="zone_\gon_\quad_\nonscalene_\IFlip.cs" />
     <Compile Include="zone_\gon_\quad_\perpend\morph_\TipPoint.cs" />
     <Compile Include="zone_\gon_\quad_\perpend_\Cannonical.cs" />
     <Compile Include="zone_\gon_\quad_\trape\theorem_\Butterfly.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\INonPerpend.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\IParlgrm.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\IPerpend.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\nonperpend_\Balanced.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\nonperpend_\Biased.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\nonperpend_\nonfan_\IParallel.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\perpend_\INonRect.cs" />
+    <Compile Include="zone_\gon_\quad_\trape_\perpend_\IRect.cs" />
     <Compile Include="zone_\gon_\Quod4dbl.cs" />
     <Compile Include="zone_\gon_\HeptagonI.cs" />
+    <Compile Include="zone_\IClozure.cs" />
+    <Compile Include="zone_\ICrescent.cs" />
+    <Compile Include="zone_\IRect.cs" />
     <Compile Include="zone_\rect\morph_\FanOut.cs" />
     <Compile Include="zone_\gon_\quad_\trape_\perpend_\baseOne\morph_\HorizontalStretch.cs" />
     <Compile Include="zone_\Trigon4dbl_onVertexesA.cs" />
     <Compile Include="zone_\trigon\be_\Silver.cs" />
     <Compile Include="zone_\trigon\Caliper.cs" />
+    <Compile Include="zone_\trigon\cevians_\Concur8inner.cs" />
+    <Compile Include="zone_\trigon\cevians_\splitter_\concur8inner\INagelPoint.cs" />
+    <Compile Include="zone_\trigon\cevian_\IMedian.cs" />
+    <Compile Include="zone_\trigon\cevian_\Splitter.cs" />
+    <Compile Include="zone_\trigon\IConduit.cs" />
+    <Compile Include="zone_\trigon\chord_\Cevian.cs" />
+    <Compile Include="zone_\trigon\chord_\Cleaver.cs" />
+    <Compile Include="zone_\trigon\conduit_\IChoid.cs" />
+    <Compile Include="zone_\trigon\edges\every\footer\NinePointCircle.cs" />
+    <Compile Include="zone_\trigon\edge\Apex.cs" />
+    <Compile Include="zone_\trigon\edge\inerd_\Extouch.cs" />
+    <Compile Include="zone_\trigon\edge\point_\IBisect4perimeter.cs" />
+    <Compile Include="zone_\trigon\edge\point_\IFooter.cs" />
+    <Compile Include="zone_\trigon\inerd_\INagel.cs" />
+    <Compile Include="zone_\trigon\ISecantSkid.cs" />
+    <Compile Include="zone_\trigon\IVertex.cs" />
+    <Compile Include="zone_\trigon\secant_\apexed_\IDichnotomy.cs" />
+    <Compile Include="zone_\trigon\secant_\dich_\BisectPerimeter.cs" />
+    <Compile Include="zone_\trigon\secant_\IApexed.cs" />
     <Compile Include="zone_\trigon\theorem_\Cosine.cs" />
     <Compile Include="zone_\trigon\theorem_\Sine.cs" />
     <Compile Include="zone_\trigon\trans_\rigid_\Stablize.cs" />
     <Compile Include="cloze_\trigon_\BaseOne4DblI.cs" />
-    <Compile Include="zone_\trigon\vsPoint\be_\Has.cs" />
-    <Compile Include="zone_\trigon\vsPoint\be_\has_\ByCrossProduct.cs" />
-    <Compile Include="zone_\trigon\vsPoint\be_\has_\Ray.cs" />
+    <Compile Include="zone_\trigon\vertex\IBeam.cs" />
+    <Compile Include="zone_\trigon\vertex\IOppositeEdge.cs" />
+    <Compile Include="zone_\trigon\vertex\ISecantSkid.cs" />
+    <Compile Include="zone_\trigon\vsPoint\Barycentric.cs" />
+    <Compile Include="zone_\trigon\vsPoint\be_\ByCrossProduct.cs" />
+    <Compile Include="zone_\trigon\vsPoint\be_\IHas.cs" />
+    <Compile Include="zone_\trigon\vsPoint\be_\ISubtend.cs" />
+    <Compile Include="zone_\trigon\vsPoint\be_\_has_\by_\ByCrossProduct.cs" />
+    <Compile Include="zone_\trigon\vsPoint\be_\has_\IRay.cs" />
+    <Compile Include="zone_\trigon\edges\every\mid\NinePointCircle.cs" />
+    <Compile Include="zone\vsPoint_\inner_\ICentroid.cs" />
+    <Compile Include="zone_\trigon\vsPoint\be_\_has_\by_\_ByCrossProductX.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\inner_\ICentroid.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\inner_\ICircumCenter.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\inner_\IIncenter.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\inner_\ISemiperimeterCenter.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\inner_\Orthocenter.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\inner_\orthocenter\duo_\apex\IMid.cs" />
+    <Compile Include="zone_\trigon\vsPoint_\outer_\TangentCircCenterI.cs" />
+    <Compile Include="zone_\trigon_\equilateral\point_\inner\legs\every\length\sum\theorem_\IEqHeight.cs" />
     <Compile Include="zone_\trigon_\equilateral_\BaseOne.cs" />
+    <Compile Include="zone_\trigon_\ISilver.cs" />
+    <Compile Include="zone_\_bloc\ISize.cs" />
+    <Compile Include="zone_\_bloc_\SizeI.cs" />
     <Compile Include="zone_\_byConstruct\Construct_.cs" />
     <Compile Include="zone_\disc\pie_\Quarter.cs" />
     <Compile Include="zone_\disc\Sector.cs" />
-    <Compile Include="zone_\gon\vsPoint\has_\byRay_\byWinding_\_StokesIfIntersected.cs" />
     <Compile Include="zone_\ITrigon.cs" />
     <Compile Include="zone_\Polygon4dbl_onPositiveCycle.cs" />
     <Compile Include="zone_\Polygon4dblI.cs" />
@@ -1137,9 +1865,9 @@
     <Compile Include="tope_\_bloc_\SizeI.cs" />
     <Compile Include="tope_\_bloc_\Bounds.cs" />
     <Compile Include="tope_\TwoDim.cs" />
-    <Compile Include="track_\Boundaried.cs" />
-    <Compile Include="trail\co_\Connected.cs" />
-    <Compile Include="trail\co_\connected_\Cross.cs" />
+    <Compile Include="flank_\Boundaried.cs" />
+    <Compile Include="trav\co_\Connected.cs" />
+    <Compile Include="trav\co_\connected_\Cross.cs" />
     <Compile Include="manifold_\Circ.cs" />
     <Compile Include="nilnul0\bit\expr_\tauto_\Real.cs" />
     <Compile Include="nilnul0\bit\expr_\tauto_\real_\_TrignoX.cs" />
@@ -1183,13 +1911,12 @@
     <Compile Include="tend_\Open.cs" />
     <Compile Include="tend_\OpenClose.cs" />
     <Compile Include="surface\of_\PushCurve.cs" />
-    <Compile Include="trails_\Dwelt.cs" />
-    <Compile Include="trails_\dwelt_\Connected.cs" />
-    <Compile Include="trail\ICo.cs" />
-    <Compile Include="loop_\Circ.cs" />
+    <Compile Include="trails_\IDwelt.cs" />
+    <Compile Include="trails_\dwelt_\IConnected.cs" />
+    <Compile Include="trav\ICo.cs" />
+    <Compile Include="loop_\ICirc0point.cs" />
     <Compile Include="cloze_\gon\_GradsX.cs" />
-    <Compile Include="spread_\Roadable.cs" />
-    <Compile Include="spread_\Simple.cs" />
+    <Compile Include="splash_\Simple.cs" />
     <Compile Include="Surfaces.cs" />
     <Compile Include="surfaces_\Tangent.cs" />
     <Compile Include="surface\Side.cs" />
@@ -1215,11 +1942,11 @@
     <Compile Include="map_\bijective_\Nonlinear.cs" />
     <Compile Include="map_\bijective_\Linear.cs" />
     <Compile Include="map_\bijective_\Trans.cs" />
-    <Compile Include="map_\HigherDim.cs" />
-    <Compile Include="map_\Linear.cs" />
-    <Compile Include="map_\linear_\Proj.cs" />
-    <Compile Include="map_\linear_\Trivia.cs" />
-    <Compile Include="map_\Nonlinear.cs" />
+    <Compile Include="map_\xpn_\HigherDim.cs" />
+    <Compile Include="map_\NewFolder1\Linear.cs" />
+    <Compile Include="map_\matrixed_\Proj.cs" />
+    <Compile Include="map_\matrixed_\Trivia.cs" />
+    <Compile Include="map_\INonmatrixed.cs" />
     <Compile Include="map_\Trivia.cs" />
     <Compile Include="nilnul0\geometry\linear\Map.cs" />
     <Compile Include="nilnul0\geometry\linear\map_\Nonmatrix.cs" />
@@ -1230,25 +1957,25 @@
     <Compile Include="nilnul0\geometry\linear\Trans.cs" />
     <Compile Include="nilnul0\geometry\linear\Sub.cs" />
     <Compile Include="nilnul0\geometry\linear\sub\Morph.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\Affine.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\affine_\ShiftOnly.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\affine_\ScaleOnly.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\Rigid.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\Shift.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\Scale.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\Positive.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\positive_\Non.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\positive_\Shrink.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\positive_\Stretch.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\neg_\Reflect.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\neg_\Stretch.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\neg_\Shrink.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\nontrivia_\Neg.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\nontrivia_\Positive.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\Trivia.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\scale_\Nontrivia.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\_affine\matrix_\BasisOrigin.cs" />
-    <Compile Include="nilnul0\geometry\linear\trans_\_affine\matrix_\OriginBasis.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\NewFolder1\Affine.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\affine_\ShiftOnly.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\affine_\ScaleOnly.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\Rigid.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\Shift.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\Scale.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\Positive.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\positive_\Non.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\positive_\Shrink.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\positive_\Stretch.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\neg_\Reflect.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\neg_\Stretch.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\neg_\Shrink.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\nontrivia_\Neg.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\nontrivia_\Positive.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\Trivia.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\scale_\Nontrivia.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\_affine\matrix_\BasisOrigin.cs" />
+    <Compile Include="nilnul0\geometry\linear\morph_\_affine\matrix_\OriginBasis.cs" />
     <Compile Include="nilnul0\geometry\linear_\measured\Speed.cs" />
     <Compile Include="nilnul0\geometry\linear_\measured\speed_\KmPerHour.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\eng_\%28retiring\inches_\Foot4dbl.cs" />
@@ -1258,19 +1985,19 @@
     <Compile Include="rotation_\deg_\fortyFive\Trignomy.cs" />
     <Compile Include="rotation_\deg_\thirty\Trignomy.cs" />
     <Compile Include="rotation_\deg_\nonneg_\leQuad_\Specials.cs" />
-    <Compile Include="spread_\polygon_\Hex.cs" />
-    <Compile Include="spread_\polygon_\oct_\Annulus.cs" />
-    <Compile Include="spread_\polygon_\oct_\Butterfly.cs" />
-    <Compile Include="spread_\polygon_\oct_\Regular.cs" />
-    <Compile Include="spread_\polygon_\hex_\Annulus.cs" />
-    <Compile Include="spread_\polygon_\hex_\Butterfly.cs" />
-    <Compile Include="spread_\polygon_\hex_\ElBeam.cs" />
-    <Compile Include="spread_\polygon_\hex_\Hexagram.cs" />
-    <Compile Include="spread_\polygon_\hex_\Regular.cs" />
+    <Compile Include="splash_\polygon_\IHex.cs" />
+    <Compile Include="splash_\polygon_\oct_\Annulus.cs" />
+    <Compile Include="splash_\polygon_\oct_\Butterfly.cs" />
+    <Compile Include="splash_\polygon_\oct_\Regular.cs" />
+    <Compile Include="splash_\polygon_\hex_\Annulus.cs" />
+    <Compile Include="splash_\polygon_\hex_\Butterfly.cs" />
+    <Compile Include="splash_\polygon_\hex_\ElBeam.cs" />
+    <Compile Include="splash_\polygon_\hex_\Hexagram.cs" />
+    <Compile Include="splash_\polygon_\hex_\Regular.cs" />
     <Compile Include="sub\fractal_\Hexaflake.cs" />
     <Compile Include="sub\fractal_\PythagorasTree.cs" />
     <Compile Include="sub\fractal_\Vicsek.cs" />
-    <Compile Include="sub\Morph.cs" />
+    <Compile Include="Morph.cs" />
     <Compile Include="sub_\connected_\Simple.cs" />
     <Compile Include="sub_\connected_\simple_\Roadable.cs" />
     <Compile Include="sub_\_attrs_\Empty.cs" />
@@ -1289,16 +2016,16 @@
     <Compile Include="sub_\directed_\connected_\_polygon_\ArrowThird.cs" />
     <Compile Include="sub_\directed_\connected_\_polygon_\Vertexes.cs" />
     <Compile Include="sub_\directed_\connected_\_polygon_\Vertexes4dbl.cs" />
-    <Compile Include="curve_\Track.cs" />
-    <Compile Include="ISpread.cs" />
-    <Compile Include="trace_\frac_\Cantor.cs" />
-    <Compile Include="trace_\Simple.cs" />
-    <Compile Include="trans_\Nonrigid.cs" />
-    <Compile Include="vect\co\to_\scalar_\CrossProduct.cs" />
+    <Compile Include="curve_\ITrail.cs" />
+    <Compile Include="ISplash.cs" />
+    <Compile Include="trail_\frac_\Cantor.cs" />
+    <Compile Include="trail_\Simple.cs" />
+    <Compile Include="morph_\Nonrigid.cs" />
+    <Compile Include="vect\co\to_\scala_\CrossProduct.cs" />
     <Compile Include="vect\op_\unary_\CrossProduct.cs" />
     <Compile Include="vect\to_\co_\decompose_\ortho_\normal\_RejectionX.cs" />
     <Compile Include="vect_\nonnil\Bloc.cs" />
-    <Compile Include="facet_\donut_\Bloc4dbl.cs" />
+    <Compile Include="facet_\holed_\Bloc4dbl.cs" />
     <Compile Include="vect_\norm_\Polar4dbl.cs" />
     <Compile Include="ISurface.cs" />
     <Compile Include="vect_\Polar4dbl_radius1st.cs" />
@@ -1312,38 +2039,38 @@
     <Compile Include="zone_\PolygonI.cs" />
     <Compile Include="tope_\trigon_\perpend_\Isoscele.cs" />
     <Compile Include="zone_\rect_\Square.cs" />
-    <Compile Include="trans_\affine_\Reflect.cs" />
-    <Compile Include="trans_\affine_\NoScaleI.cs" />
-    <Compile Include="trans_\affine_\NoShearI.cs" />
-    <Compile Include="trans_\affine_\TranslateOnly.cs" />
-    <Compile Include="trans_\affine_\IRebase.cs" />
-    <Compile Include="trans_\affine_\Nontiltl.cs" />
+    <Compile Include="morph_\affine_\Reflect.cs" />
+    <Compile Include="morph_\affine_\NoScaleI.cs" />
+    <Compile Include="morph_\affine_\NoShearI.cs" />
+    <Compile Include="morph_\affine_\ITranslateOnly.cs" />
+    <Compile Include="morph_\affine_\IRebase.cs" />
+    <Compile Include="morph_\affine_\Nontiltl.cs" />
     <Compile Include="map_\bijective_\Proj.cs" />
-    <Compile Include="trans_\affine_\NoShear%28class.cs" />
-    <Compile Include="trans_\affine_\Rigid.cs" />
-    <Compile Include="trans_\independ_\Linear.cs" />
-    <Compile Include="trans_\IIndepend.cs" />
-    <Compile Include="trans_\rebase_\Rigid.cs" />
-    <Compile Include="trans_\rebase_\SimilarI.cs" />
-    <Compile Include="trans_\rebase_\xpn_\TranslateIsNotLinear.cs" />
-    <Compile Include="trans_\independ_\Nonlinear.cs" />
-    <Compile Include="trans_\rebase_\scale_\AntoHanded.cs" />
-    <Compile Include="trans_\rebase_\scale_\antihanded_\similar_\Reflect.cs" />
-    <Compile Include="trans_\rebase_\scale_\antihanded_\SimilarI.cs" />
-    <Compile Include="trans_\rebase_\scale_\KeepHandedness.cs" />
-    <Compile Include="trans_\rebase_\scale_\Nonflip.cs" />
-    <Compile Include="trans_\rebase_\scale_\Rigid.cs" />
-    <Compile Include="trans_\rebase_\scale_\Shadow.cs" />
-    <Compile Include="trans_\rebase_\scale_\SimilarI.cs" />
-    <Compile Include="trans_\rebase_\scale_\Nontrivia.cs" />
-    <Compile Include="trans_\rebase_\scale_\Trivia.cs" />
-    <Compile Include="trans_\rebase_\scale_\uniform_\Nop.cs" />
-    <Compile Include="trans_\rebase_\scale_\uniform_\Notrivia.cs" />
-    <Compile Include="trans_\rebase_\scale_\uniform_\Neg.cs" />
-    <Compile Include="trans_\rebase_\IShear.cs" />
-    <Compile Include="trans_\rebase_\scale_\Uniform.cs" />
-    <Compile Include="trans_\rebase_\ShearOnly.cs" />
-    <Compile Include="trans_\rebase_\scale_\squeeze.cs" />
+    <Compile Include="morph_\affine_\Shearless4Dbl.cs" />
+    <Compile Include="morph_\affine_\Rigid.cs" />
+    <Compile Include="morph_\independ_\Linear.cs" />
+    <Compile Include="morph_\IIndepend.cs" />
+    <Compile Include="morph_\rebase_\Rigid.cs" />
+    <Compile Include="morph_\rebase_\SimilarI.cs" />
+    <Compile Include="morph_\rebase_\xpn_\TranslateIsNotLinear.cs" />
+    <Compile Include="morph_\independ_\Nonlinear.cs" />
+    <Compile Include="morph_\rebase_\scale_\AntoHanded.cs" />
+    <Compile Include="morph_\rebase_\scale_\antihanded_\similar_\Reflect.cs" />
+    <Compile Include="morph_\rebase_\scale_\antihanded_\SimilarI.cs" />
+    <Compile Include="morph_\rebase_\scale_\KeepHandedness.cs" />
+    <Compile Include="morph_\rebase_\scale_\Nonflip.cs" />
+    <Compile Include="morph_\rebase_\scale_\Rigid.cs" />
+    <Compile Include="morph_\rebase_\scale_\Shadow.cs" />
+    <Compile Include="morph_\rebase_\scale_\SimilarI.cs" />
+    <Compile Include="morph_\rebase_\scale_\Nontrivia.cs" />
+    <Compile Include="morph_\rebase_\scale_\Trivia.cs" />
+    <Compile Include="morph_\rebase_\scale_\uniform_\Nop.cs" />
+    <Compile Include="morph_\rebase_\scale_\uniform_\Notrivia.cs" />
+    <Compile Include="morph_\rebase_\scale_\uniform_\Neg.cs" />
+    <Compile Include="morph_\rebase_\IShear.cs" />
+    <Compile Include="morph_\rebase_\scale_\Uniform.cs" />
+    <Compile Include="morph_\rebase_\ShearOnly.cs" />
+    <Compile Include="morph_\rebase_\scale_\squeeze.cs" />
     <Compile Include="curve\fractal_\map1dim_\LogisticMap.cs" />
     <Compile Include="curve\fractal_\map1dim_\singleQuadraticMax\FeigenbaumConstant.cs" />
     <Compile Include="curve\stream_\hilbert_\byPoints_\AroundOrigin.cs" />
@@ -1355,18 +2082,18 @@
     <Compile Include="nilnul0\geometry\linear\point\co\be\Vow - Copy.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\be\vow_\BeDefault - Copy.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\be_\dif\Vow4dbl.cs" />
-    <Compile Include="nilnul0\geometry\linear\point\co\be_\dif\vow\Ee - Copy.cs" />
+    <Compile Include="nilnul0\geometry\linear\point\co\be_\dif\vow\Ee4dbl.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\Vow - Copy.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\vow\Ee - Copy.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\vow\ee_\VowDefault - Copy.cs" />
     <Compile Include="point\op_\Unary4dblI.cs" />
-    <Compile Include="point\op_\unary_\flip_\AlongVertical.cs" />
-    <Compile Include="point\op_\unary_\flip_\AlongHorizon.cs" />
-    <Compile Include="point\op_\unary_\flip_\Along135deg.cs" />
-    <Compile Include="point\op_\unary_\flip_\Along45deg.cs" />
-    <Compile Include="point\op_\unary_\rotate_\NegQuarter.cs" />
-    <Compile Include="point\op_\unary_\rotate_\Quarter.cs" />
-    <Compile Include="point\op_\unary_\rotate_\TwoQuarter.cs" />
+    <Compile Include="point\op_\flip_\AlongVertical.cs" />
+    <Compile Include="point\op_\flip_\AlongHorizon.cs" />
+    <Compile Include="point\op_\flip_\Along135deg.cs" />
+    <Compile Include="point\op_\flip_\Along45deg.cs" />
+    <Compile Include="point\op_\rotate_\NegQuarter.cs" />
+    <Compile Include="point\op_\rotate_\Quarter.cs" />
+    <Compile Include="point\op_\rotate_\TwoQuarter.cs" />
     <Compile Include="point\trail\derivative_\Jerk.cs" />
     <Compile Include="point\trail\derivative_\Acceleration.cs" />
     <Compile Include="point\trail\derivative_\Velocity.cs" />
@@ -1384,31 +2111,31 @@
     <Compile Include="sub_\connected_\Pathable.cs" />
     <Compile Include="sub_\nonclosed_\Nonbound.cs" />
     <Compile Include="sub_\Noncurve.cs" />
-    <Compile Include="trans_\rebase_\ScaleOnlyI.cs" />
-    <Compile Include="trans_\rebase_\regress_\Proj.cs" />
-    <Compile Include="trans_\rebase_\shear_\HandedKept.cs" />
-    <Compile Include="trans_\rebase_\shear_\Anithanded.cs" />
-    <Compile Include="trans_\rebase_\shear_\Rigid.cs" />
-    <Compile Include="trans_\rebase_\shear_\Slant.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\Antihanded.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\KeepHanded.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\Rigid.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\rigid_\Opposite.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\rigid_\Nop.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\Nonshadow.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\Shadow.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\shadow_\Positive.cs" />
-    <Compile Include="trans_\rebase_\shear_\slant_\shadow_\Neg.cs" />
-    <Compile Include="trans_\rebase_\regress_\Trivia.cs" />
-    <Compile Include="trans_\rigid_\Heldable.cs" />
-    <Compile Include="trans_\rebase_\shear_\UniformThenSlant.cs" />
-    <Compile Include="trans_\_affine\MatrixX.cs" />
-    <Compile Include="trans_\_affine\matrix_\RowsAsBasisOrigin.cs" />
-    <Compile Include="trans_\_affine\matrix_\RowsAsOriginBasis.cs" />
-    <Compile Include="trans_\_affine\matrix_\rowsAsBasisOrigin_\ShiftOnly.cs" />
-    <Compile Include="trans_\_affine\matrix_\rowsAsOriginBasis_\ShiftOnly.cs" />
-    <Compile Include="trans_\_rebase_\Scale.cs" />
-    <Compile Include="trans_\_rebase_\Shear.cs" />
+    <Compile Include="morph_\rebase_\ScaleOnlyI.cs" />
+    <Compile Include="morph_\rebase_\regress_\Proj.cs" />
+    <Compile Include="morph_\rebase_\shear_\HandedKept.cs" />
+    <Compile Include="morph_\rebase_\shear_\Anithanded.cs" />
+    <Compile Include="morph_\rebase_\shear_\Rigid.cs" />
+    <Compile Include="morph_\rebase_\shear_\Slant.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\Antihanded.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\KeepHanded.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\Rigid.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\rigid_\Opposite.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\rigid_\Nop.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\Nonshadow.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\Shadow.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\shadow_\Positive.cs" />
+    <Compile Include="morph_\rebase_\shear_\slant_\shadow_\Neg.cs" />
+    <Compile Include="morph_\rebase_\regress_\Trivia.cs" />
+    <Compile Include="morph_\rigid_\Heldable.cs" />
+    <Compile Include="morph_\rebase_\shear_\UniformThenSlant.cs" />
+    <Compile Include="morph_\_affine\MatrixX.cs" />
+    <Compile Include="morph_\_affine\matrix_\_RowsAsBasisOriginX.cs" />
+    <Compile Include="morph_\_affine\matrix_\RowsAsOriginBasis.cs" />
+    <Compile Include="morph_\_affine\matrix_\rowsAsBasisOrigin_\ShiftOnly.cs" />
+    <Compile Include="morph_\_affine\matrix_\rowsAsOriginBasis_\ShiftOnly.cs" />
+    <Compile Include="morph_\_rebase_\Scale.cs" />
+    <Compile Include="morph_\_rebase_\Shear.cs" />
     <Compile Include="vect\co_\Perpend.cs" />
     <Compile Include="vect\co_\nontilt_\AlongAxis.cs" />
     <Compile Include="vect_\nonnil\co_\Orthogonal.cs" />
@@ -1434,7 +2161,7 @@
     <Compile Include="curve_\algebraic_\bezier_\cubic\length_\_ovTime\Cumulated.cs" />
     <Compile Include="loop_\circ\arc_\Semicircle.cs" />
     <Compile Include="loop_\simple_\convex_\quadratic_\conic_\ellipse_\Pie.cs" />
-    <Compile Include="curve\of_\points\points_\Approximate.cs" />
+    <Compile Include="curve\of_\points_\Approximate.cs" />
     <Compile Include="curve_\algebraic_\Quadratic.cs" />
     <Compile Include="curve_\algebraic_\Cuspidal.cs" />
     <Compile Include="curve_\algebraic_\cuspidal_\Parametric.cs" />
@@ -1477,13 +2204,13 @@
     <Compile Include="curve_\algebraic_\bezier_\Cubic.cs" />
     <Compile Include="curve_\algebraic_\bezier_\Quadratic.cs" />
     <Compile Include="loop_\circ\Length.cs" />
-    <Compile Include="loop_\circ_\orginated_\unital\proj_\StereoGraph.cs" />
-    <Compile Include="loop_\circ_\orginated_\unital\proj_\stereoGraph_\FroNorthPole.cs" />
+    <Compile Include="loop_\circ_\origined_\unial\proj_\StereoGraph.cs" />
+    <Compile Include="loop_\circ_\origined_\unial\proj_\stereoGraph_\FroNorthPole.cs" />
     <Compile Include="curve\be_\Finite.cs" />
     <Compile Include="loop_\circ\ArcByBezire.cs" />
     <Compile Include="loop_\circ\ArcByBounding4Float.cs" />
     <Compile Include="loop_\circ\ArcByBounding.cs" />
-    <Compile Include="loop_\circ\Arc.cs" />
+    <Compile Include="loop_\circ\IArc.cs" />
     <Compile Include="curve_\algebraic_\quadratic_\Ellipse.cs" />
     <Compile Include="curve_\func\interpolate_\polys\theorem_\Weierstrass.cs" />
     <Compile Include="curve_\func\interpolate_\polys\theorem_\weierstrass\Runge.cs" />
@@ -1495,7 +2222,7 @@
     <Compile Include="curve_\algebraics_\spline_\Quadratic.cs" />
     <Compile Include="curve_\algebraics_\spline_\Step.cs" />
     <Compile Include="curve_\algebraic_\Univariate.cs" />
-    <Compile Include="curve_\Roulette.cs" />
+    <Compile Include="curve_\IRoulette.cs" />
     <Compile Include="curve_\roulette_\fixedCirC_\outsidE_\rollingCirC_\Epicycloid.cs" />
     <Compile Include="curve_\roulette_\fixedCirC_\outsidE_\rollingCirC_\epicycloid_\Quatrefoil.cs" />
     <Compile Include="curve_\roulette_\fixedCirC_\outsidE_\rollingCirC_\epicycloid_\Trefoil.cs" />
@@ -1533,13 +2260,13 @@
     <Compile Include="grad_\skid_\NewFolder1\INonnilDbl.cs" />
     <Compile Include="grad_\skid_\Nonperspect.cs" />
     <Compile Include="grad_\skid_\perspect\Lerp.cs" />
-    <Compile Include="trans_\Warp.cs" />
-    <Compile Include="trans_\SqInComplexPlane.cs" />
-    <Compile Include="trans_\rebase_\IntoOtherDimException.cs" />
-    <Compile Include="nilnul0\geometry\linear\grad\Lerp.cs" />
+    <Compile Include="morph_\Warp.cs" />
+    <Compile Include="morph_\SqInComplexPlane.cs" />
+    <Compile Include="morph_\rebase_\IntoOtherDimException.cs" />
+    <Compile Include="nilnul0\geometry\linear\grad\_LerpX.cs" />
     <Compile Include="nilnul0\geometry\linear_\measured\span\distance_\Kms.cs" />
-    <Compile Include="nilnul0\geometry\linear_\measured_\Gauge.cs" />
-    <Compile Include="nilnul0\geometry\linear_\_measured\Mark.cs" />
+    <Compile Include="nilnul0\geometry\linear_\_measured\measure\Gauge.cs" />
+    <Compile Include="nilnul0\geometry\linear_\_measured\measure\Mark.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\mark\Extensions.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\Unit4dblI.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\Eng4dblI.cs" />
@@ -1670,7 +2397,7 @@
     <Compile Include="nilnul0\geometry\dimed\vec\op_\binary_\Minus.cs" />
     <Compile Include="nilnul0\geometry\dimed\vec\op_\binary_\Multi.cs" />
     <Compile Include="nilnul0\geometry\IDimed.cs" />
-    <Compile Include="nilnul0\geometry\Linear.cs" />
+    <Compile Include="nilnul0\geometry\ILinear.cs" />
     <Compile Include="nilnul0\geometry\linear\grad_\based_\Bar.cs" />
     <Compile Include="nilnul0\geometry\linear\grad_\Based.cs" />
     <Compile Include="nilnul0\geometry\linear_\measured\span\Distance.cs" />
@@ -1711,7 +2438,7 @@
     <Compile Include="nilnul0\geometry\linear\PointD.cs" />
     <Compile Include="nilnul0\geometry\linear\PointDblI.cs" />
     <Compile Include="nilnul0\geometry\linear\PointI.cs" />
-    <Compile Include="nilnul0\geometry\linear\point\Co - Copy.cs" />
+    <Compile Include="nilnul0\geometry\linear\point\CoDbl.cs" />
     <Compile Include="nilnul0\geometry\linear\point\Co.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\BeI.cs" />
     <Compile Include="nilnul0\geometry\linear\point\co\be\Vow.cs" />
@@ -1844,7 +2571,7 @@
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\Mm%281.cs" />
     <Compile Include="nilnul0\geometry\linear_\_measured\unit_\eng_\NauticalMile.cs" />
     <Compile Include="nilnul0\Geometry.cs" />
-    <Compile Include="nilnul0\geometry\Original.cs" />
+    <Compile Include="nilnul0\geometry\IOriginal.cs" />
     <Compile Include="nilnul0\geometry\original\IPoint.cs" />
     <Compile Include="nilnul0\geometry\original\PointI.cs" />
     <Compile Include="nilnul0\geometry\original_\Ergo.cs" />
@@ -1864,13 +2591,13 @@
     <Compile Include="cloze_\gon_\Di4dbl.cs" />
     <Compile Include="zone_\gon_\octa_\BidirectionalArrow.cs" />
     <Compile Include="zone_\gon_\hepta_\_arrow\triviable_\Rightward.cs" />
-    <Compile Include="nilnul0\geometry\planar_\Ergo.cs" />
+    <Compile Include="nilnul0\geometry\planar_\IErgo.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo\_bloc\ISize.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo\_bloc\_size_\Width.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo_\level_\Board.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo_\canvas\_bloc\Size.cs" />
-    <Compile Include="nilnul0\geometry\planar_\ergo_\canvas_\Math.cs" />
-    <Compile Include="nilnul0\geometry\planar_\ergo_\canvas_\Screen.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ergo_\canvas_\IMath.cs" />
+    <Compile Include="nilnul0\geometry\planar_\ergo_\canvas_\IScreen.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo_\level_\board\rotation_\CounterClockwise.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo_\level_\board\rotation_\Clockwise.cs" />
     <Compile Include="nilnul0\geometry\planar_\ergo_\level_\Pad.cs" />
@@ -1887,12 +2614,12 @@
     <Compile Include="zone_\gon_\Convex.cs" />
     <Compile Include="zone_\gon_\ITetragon.cs" />
     <Compile Include="coil_\gon_\tetra_\ISimple.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\circumed\theorem_\Ptolemy.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\IRect.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\trape_\Perpend.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\circumed\theorem_\Ptolemy.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\IRect.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\trape_\Perpend.cs" />
     <Compile Include="zone_\rect_\OfFlexDbl.cs" />
     <Compile Include="tend\Mid.cs" />
-    <Compile Include="spread_\Bounded.cs" />
+    <Compile Include="splash_\Bounded.cs" />
     <Compile Include="surface_\bounded_\Holed.cs" />
     <Compile Include="surface_\bounded_\Nonholed.cs" />
     <Compile Include="ISub.cs" />
@@ -1902,7 +2629,7 @@
     <Compile Include="zone_\trigon\be\Vow4dbl.cs" />
     <Compile Include="zone_\trigon\be\vow_\BeDefault4Dbl.cs" />
     <Compile Include="zone_\trigon\Catheti.cs" />
-    <Compile Include="cloze_\convex_\Arch.cs" />
+    <Compile Include="cloze_\convex_\IArch.cs" />
     <Compile Include="cloze_\convex_\arch_\Vault.cs" />
     <Compile Include="point\trio\be_\Flex.cs" />
     <Compile Include="curve_\polystep_\di\be_\Quarter4dbl.cs" />
@@ -1923,8 +2650,8 @@
     <Compile Include="vect\Based.cs" />
     <Compile Include="vect\Direction.cs" />
     <Compile Include="vect\OpI - Copy.cs" />
-    <Compile Include="vect\op_\binary_\Multi.cs" />
-    <Compile Include="vect\op_\binary_\Minus.cs" />
+    <Compile Include="vect\of_\binary_\Multi.cs" />
+    <Compile Include="vect\of_\binary_\Minus.cs" />
     <Compile Include="vect\op_\Unary.cs" />
     <Compile Include="vect\op_\unary_\Scale.cs" />
     <Compile Include="vect\to_\co_\decompose_\ortho_\normal\_ProjectionX.cs" />
@@ -1955,8 +2682,8 @@
     <Compile Include="point\trail_\Stepped.cs" />
     <Compile Include="point\trail_\StreamOfPoints.cs" />
     <Compile Include="IZone.cs" />
-    <Compile Include="zone\co\op_\to_\Except.cs" />
-    <Compile Include="zone\re_\Conterminous.cs" />
+    <Compile Include="zone\co\to_\Except.cs" />
+    <Compile Include="zone\re_\IConterminous.cs" />
     <Compile Include="zone_\disc\sub_\poly_\inscribed_\Square.cs" />
     <Compile Include="zone_\Len.cs" />
     <Compile Include="zone_\rect_\square\sub_\InscribedCirc.cs" />
@@ -1973,23 +2700,31 @@
     <Compile Include="zone_\_gon_\Grads4dblI.cs" />
     <Compile Include="cycle_\_gon_\VowedVertexes4dblI.cs" />
     <Compile Include="zone_\_gon_\Vertexes4dbl.cs" />
+    <Compile Include="_curve\Func.cs" />
+    <Compile Include="_cloze_\Func.cs" />
+    <Compile Include="_curve_\Func.cs" />
     <Compile Include="_grad_\Basis.cs" />
     <Compile Include="_grad_\End.cs" />
     <Compile Include="_grad_\end_\End.cs" />
     <Compile Include="_grad_\VectDbl.cs" />
     <Compile Include="_grad_\_polar_\VectDbl.cs" />
     <Compile Include="_lead_\AzimuthI.cs" />
-    <Compile Include="_point\Coord.cs" />
+    <Compile Include="_morph_\OfCoord.cs" />
+    <Compile Include="_point\coord_\ICurvilinear.cs" />
+    <Compile Include="_point\coord_\IParallogram.cs" />
+    <Compile Include="_point\ICoord.cs" />
     <Compile Include="_point\coord\Conversion.cs" />
     <Compile Include="_point\Coord_.cs" />
     <Compile Include="_point\coord_\Basises_.cs" />
+    <Compile Include="_point\_coord_\IAuxillaryAxis.cs" />
+    <Compile Include="_point\_coord_\IMainAxis.cs" />
     <Compile Include="_point_\Wai4dblI.cs" />
     <Compile Include="_point_\Eks4dblI.cs" />
     <Compile Include="zone_\_gon_\Vertexes.cs" />
     <Compile Include="zone_\_gon_\ArrowThird.cs" />
     <Compile Include="zone_\_gon_\Arrows.cs" />
     <Compile Include="zone_\_gon_\ArrowLast.cs" />
-    <Compile Include="trans_\INonlinear.cs" />
+    <Compile Include="morph_\INonaffine.cs" />
     <Compile Include="zone_\trigon\theorem_\ceva_\angular\Converse.cs" />
     <Compile Include="zone_\trigon\theorem_\ceva_\Angular.cs" />
     <Compile Include="cycle_\gon_\_trigon_\Arrows.cs" />
@@ -1998,7 +2733,7 @@
     <Compile Include="vect\be_\nonneg\Vow.cs" />
     <Compile Include="vect\be_\nonneg\vow\EeDbl.cs" />
     <Compile Include="vect\be_\nonneg\vow\Ee.cs" />
-    <Compile Include="vect\op_\binary_\Add.cs" />
+    <Compile Include="vect\of_\binary_\Add.cs" />
     <Compile Include="vect_\NonnegDbl.cs" />
     <Compile Include="vect_\horizon\Translate.cs" />
     <Compile Include="vect_\vertical\Translate.cs" />
@@ -2061,13 +2796,13 @@
     <Compile Include="rotation\be_\Acute.cs" />
     <Compile Include="rotation\be_\Positive.cs" />
     <Compile Include="rotation_\_bearing\Bearing.cs" />
-    <Compile Include="rotation_\dir\be_\Obtuse.cs" />
-    <Compile Include="rotation_\dir\be_\Straight.cs" />
-    <Compile Include="rotation_\dir\be_\Reflex.cs" />
+    <Compile Include="rotation_\align\be_\IObtuse.cs" />
+    <Compile Include="rotation_\direction\be_\IStraight.cs" />
+    <Compile Include="rotation_\direction\be_\IReflex.cs" />
     <Compile Include="nilnul0\geometry\planar_\measured\_bloc\size_\card_\Bank.cs" />
     <Compile Include="nilnul0\geometry\planar_\measured\_bloc\size_\card_\CnCitizen.cs" />
     <Compile Include="nilnul0\geometry\planar_\measured\_bloc\size_\paper_\A4.cs" />
-    <Compile Include="ITrail.cs" />
+    <Compile Include="ITrace.cs" />
     <Compile Include="point\str_\started\Center.cs" />
     <Compile Include="point\Bag.cs" />
     <Compile Include="point\bag\BeI.cs" />
@@ -2094,7 +2829,7 @@
     <Compile Include="grad\convert_\DisplaceX.cs" />
     <Compile Include="grad\co\InnerProduct.cs" />
     <Compile Include="grad\Eq.cs" />
-    <Compile Include="grad\Stokes.cs" />
+    <Compile Include="grad\shade\Stokes.cs" />
     <Compile Include="grad_\skid_\ByPoints4Dbl.cs" />
     <Compile Include="grad_\skid\Vector.cs" />
     <Compile Include="grad_\skid\Direction.cs" />
@@ -2104,7 +2839,7 @@
     <Compile Include="grad_\skid_\Originated.cs" />
     <Compile Include="grad_\Originated.cs" />
     <Compile Include="grad_\originated_\Nonnil.cs" />
-    <Compile Include="LineD.cs" />
+    <Compile Include="LineDbl.cs" />
     <Compile Include="line\be_\has_\ByAngle.cs" />
     <Compile Include="line\Co - Copy.cs" />
     <Compile Include="line\co\be_\Cross1.cs" />
@@ -2117,22 +2852,22 @@
     <Compile Include="line_\VectorProduct.cs" />
     <Compile Include="zone_\gon_\convex\vsLead\Bisect - Copy.cs" />
     <Compile Include="zone_\gon_\convex\vsLead\Bisect.cs" />
-    <Compile Include="trans_\Affine.cs" />
-    <Compile Include="trans_\affine_\flip\Str.cs" />
-    <Compile Include="sub\morph_\Flip.cs" />
-    <Compile Include="trans_\rebase_\invertible_\Orthogonal.cs" />
-    <Compile Include="trans_\_MatrixX.cs" />
-    <Compile Include="trans_\rebase_\Scale.cs" />
+    <Compile Include="morph_\Affine.cs" />
+    <Compile Include="morph_\affine_\flip\Str.cs" />
+    <Compile Include="sub\trans_\Flip.cs" />
+    <Compile Include="morph_\rebase_\IOrthogonal.cs" />
+    <Compile Include="morph_\_MatrixX.cs" />
+    <Compile Include="morph_\rebase_\Scale.cs" />
     <Compile Include="map_\_linear\Matrixed.cs" />
-    <Compile Include="map_\linear_\Trans.cs" />
-    <Compile Include="trans_\Rigid.cs" />
+    <Compile Include="map_\matrixed_\Trans.cs" />
+    <Compile Include="morph_\Rigid.cs" />
     <Compile Include="tope_\IBloc.cs" />
     <Compile Include="curve_\byPolar_\eg_\AppleDbl.cs" />
     <Compile Include="curve_\byPolar_\eg_\Apple.cs" />
     <Compile Include="curve_\simple\co\Similarity.cs" />
     <Compile Include="lead\vsSkid\Layout%28real.cs" />
     <Compile Include="lead\vsSkid\Layout.cs" />
-    <Compile Include="%28ray\ray\Arrow.cs" />
+    <Compile Include="ray\Arrow.cs" />
     <Compile Include="lead\vsSkid\_layout\Ret.cs" />
     <Compile Include="lead\vsSkid\_layout\ret_\align.cs" />
     <Compile Include="lead\vsSkid\_layout\ret_\Fork.cs" />
@@ -2181,19 +2916,19 @@
     <Compile Include="lead\vsPoint\sig_\Layout.cs" />
     <Compile Include="lead_\Ray - Copy.cs" />
     <Compile Include="lead_\Ray.cs" />
-    <Compile Include="Map.cs" />
+    <Compile Include="IMap.cs" />
     <Compile Include="map_\IProj.cs" />
-    <Compile Include="map_\Trans.cs" />
+    <Compile Include="map_\Trans4dblI.cs" />
     <Compile Include="nilnul0\num\real\convert_\OfRotation.cs" />
     <Compile Include="PointD.cs" />
     <Compile Include="PointI1.cs" />
     <Compile Include="sub_\directed_\connected_\polygon\_GradsX.cs" />
-    <Compile Include="%28ray\ray\co\be_\Crossable.cs" />
-    <Compile Include="%28ray\ray\co\be_\Align.cs" />
-    <Compile Include="%28ray\ray\Vector.cs" />
+    <Compile Include="ray\co\be_\Crossable.cs" />
+    <Compile Include="ray\co\be_\Align.cs" />
+    <Compile Include="ray\Vector.cs" />
     <Compile Include="%28ray\ray_\OnArrow.cs" />
-    <Compile Include="%28ray\ray\co_\Align.cs" />
-    <Compile Include="%28ray\ray\vsPoint\_layout\Category.cs" />
+    <Compile Include="ray\co_\Align.cs" />
+    <Compile Include="ray\vsPoint\_layout\Category.cs" />
     <Compile Include="tend\vsPoint_\colinear\Contain.cs" />
     <Compile Include="tend\vsPoint_\colinear\_layout\Layout.cs" />
     <Compile Include="tend_\EdgeD.cs" />
@@ -2218,7 +2953,7 @@
     <Compile Include="vect\vow\Ee.cs" />
     <Compile Include="vect\vsPoint_\coline\be_\VectorHasPoint.cs" />
     <Compile Include="vect_\polar_\DirRadius.cs" />
-    <Compile Include="vect_\nonnil\co\rotation\_categorize\Rotation.cs" />
+    <Compile Include="vect_\nonnil\co\rotation\_categorize\Category.cs" />
     <Compile Include="vect_\nonnil\vsPoint_\coline\be_\VectorHasPoint.cs" />
     <Compile Include="vect_\nonnil\vsPoint_\coline\Layout.cs" />
     <Compile Include="vect_\Unital.cs" />
@@ -2375,7 +3110,7 @@
     <Compile Include="rotation_\nonneg_\LtTau.cs" />
     <Compile Include="rotation_\Dir.cs" />
     <Compile Include="rotation_\Straight.cs" />
-    <Compile Include="rotation_\Right.cs" />
+    <Compile Include="rotation_\_RightX.cs" />
     <Compile Include="zone_\TrigonI.cs" />
     <Compile Include="zone_\trigon\vsPoint_\InnerPointI.cs" />
     <Compile Include="zone_\trigon\vsPoint_\inner_\FermatI.cs" />
@@ -2449,7 +3184,7 @@
     <Compile Include="vect\co\BeI.cs" />
     <Compile Include="vect\co\be_\Align.cs" />
     <Compile Include="vect\co\Sig.cs" />
-    <Compile Include="vect\co\to_\scalar_\%28retiring\NewFolder1\CrossProduct.cs" />
+    <Compile Include="vect\co\to_\scala_\%28retiring\NewFolder1\CrossProduct.cs" />
     <Compile Include="map_\projection_\ForReal.cs" />
     <Compile Include="vect\co_\linear\categorize_\Inside.cs" />
     <Compile Include="vect\CoI.cs" />
@@ -2463,7 +3198,7 @@
     <Compile Include="vect_\nonnil\co_\align\be_\Opposite.cs" />
     <Compile Include="vect\Co.cs" />
     <Compile Include="vect\co\ToI.cs" />
-    <Compile Include="vect\co\to_\scalar_\DotProduct.cs" />
+    <Compile Include="vect\co\to_\scala_\DotProduct.cs" />
     <Compile Include="vect\co\to_\ToRealI.cs" />
     <Compile Include="curve_\algebraic\be_\Cyclic.cs" />
     <Compile Include="PointsI1.cs" />
@@ -2479,17 +3214,17 @@
     <Compile Include="point\quartet_\Bounding.cs" />
     <Compile Include="facet_\RectD.cs" />
     <Compile Include="tope_\boundaried_\_RectX.cs" />
-    <Compile Include="trans_\affine_\Homothetic.cs" />
-    <Compile Include="trans_\Quardrilateral.cs" />
-    <Compile Include="trans_\affine_\Parallelogram.cs" />
-    <Compile Include="trans_\rebase_\scale_\StretchY.cs" />
-    <Compile Include="trans_\rebase_\scale_\StretchX.cs" />
-    <Compile Include="trans_\rebase_\invertible_\orthic_\Noop.cs" />
-    <Compile Include="trans_\rebase_\scale_\uniform_\neg_\ReflectAboutO.cs" />
-    <Compile Include="trans_\rebase_\scale_\antihanded_\similar_\reflect_\ReflectAboutY.cs" />
-    <Compile Include="trans_\rebase_\scale_\antihanded_\similar_\reflect_\ReflectAboutX.cs" />
-    <Compile Include="trans_\affine_\SimilarI.cs" />
-    <Compile Include="cloze\%28zone\ZoneI.cs" />
+    <Compile Include="morph_\affine_\Homothetic.cs" />
+    <Compile Include="morph_\Quardrilateral.cs" />
+    <Compile Include="morph_\affine_\Parallelogram.cs" />
+    <Compile Include="morph_\rebase_\scale_\StretchY.cs" />
+    <Compile Include="morph_\rebase_\scale_\StretchX.cs" />
+    <Compile Include="morph_\rebase_\orthic_\Noop.cs" />
+    <Compile Include="morph_\rebase_\scale_\uniform_\neg_\ReflectAboutO.cs" />
+    <Compile Include="morph_\rebase_\scale_\antihanded_\similar_\reflect_\ReflectAboutY.cs" />
+    <Compile Include="morph_\rebase_\scale_\antihanded_\similar_\reflect_\ReflectAboutX.cs" />
+    <Compile Include="morph_\affine_\SimilarI.cs" />
+    <Compile Include="ZoneI.cs" />
     <Compile Include="loop_\Circle1.cs" />
     <Compile Include="LeadI.cs" />
     <Compile Include="lead\vsPoint\layout_\_ByAngleX.cs" />
@@ -2514,7 +3249,7 @@
     <Compile Include="point_\PolarI.cs" />
     <Compile Include="point_\_polar_\Radius.cs" />
     <Compile Include="point_\_polar_\RotationI.cs" />
-    <Compile Include="zone_\gon\of_\points_\Hull.cs" />
+    <Compile Include="zone_\gon\of_\points_\IHull.cs" />
     <Compile Include="zone_\_gon\Convex.cs" />
     <Compile Include="zone_\_gon\ConvexI.cs" />
     <Compile Include="%28ray\RayI.cs" />
@@ -2538,16 +3273,19 @@
     <Compile Include="vect\co\to_\AsMatrix.cs" />
     <Compile Include="vect_\nonnil\Direction.cs" />
     <Compile Include="rotation\be_\Oblique.cs" />
-    <Compile Include="%28angle\angle\be_\Full.cs" />
-    <Compile Include="%28angle\angle\be_\Simple.cs" />
+    <Compile Include="angle\be_\Full.cs" />
+    <Compile Include="angle\be_\Simple.cs" />
     <Compile Include="rotation\co\be_\Congruent.cs" />
     <Compile Include="ITrans.cs" />
     <Compile Include="tope_\_bloc\SizeFoat.cs" />
     <Compile Include="tope_\_bloc\Spread.cs" />
-    <Compile Include="trans_\_perspect\Homo.cs" />
+    <Compile Include="morph_\_perspect\Homo.cs" />
     <Compile Include="_rotation\Unit - Copy.cs" />
     <Compile Include="_rotation\unit_\Hour4dbl.cs" />
     <Compile Include="_rotation\unit_\Deg4dbl.cs" />
+    <Compile Include="_rotation\unit_\IDegree.cs" />
+    <Compile Include="_rotation\unit_\IPi.cs" />
+    <Compile Include="_rotation\unit_\ITurn.cs" />
     <Compile Include="_rotation\unit_\Turn4dbl.cs" />
     <Compile Include="_rotation\unit_\_measure\Radian.cs" />
     <Compile Include="rotation_\nonneg\be_\NonReflex.cs" />
@@ -2556,7 +3294,7 @@
     <Compile Include="rotation_\nonneg\be_\Obtuse.cs" />
     <Compile Include="rotation_\nonneg\be_\Acute.cs" />
     <Compile Include="rotation_\nonneg\be_\Straight.cs" />
-    <Compile Include="%28angle\angle\BiSector.cs" />
+    <Compile Include="angle\BiSector.cs" />
     <Compile Include="rotation_\nonneg_\ltQuarter\co\be_\Complement.cs" />
     <Compile Include="rotation\co\be_\Explement.cs" />
     <Compile Include="rotation_\nonneg\nonReflex\rel\Rel.cs" />
@@ -2621,15 +3359,15 @@
     <Compile Include="point\co\band_\AddDbl.cs" />
     <Compile Include="point\co\band_\Min.cs" />
     <Compile Include="point\OpI.cs" />
-    <Compile Include="point\op_\unary_\Negate.cs" />
-    <Compile Include="point\op_\unary_\Raise.cs" />
-    <Compile Include="point\op_\unary_\Shift.cs" />
+    <Compile Include="point\op_\Negate.cs" />
+    <Compile Include="point\op_\Raise.cs" />
+    <Compile Include="point\op_\Shift.cs" />
     <Compile Include="PointsD.cs" />
     <Compile Include="point\str_\seq_\started\convert_\Closure.cs" />
     <Compile Include="zone_\gon_\convex_\Centripetal.cs" />
     <Compile Include="point\str\be_\Segged.cs" />
     <Compile Include="sub_\Zone.cs" />
-    <Compile Include="trans\RotationMatrix.cs" />
+    <Compile Include="morph\RotationMatrix.cs" />
     <Compile Include="zone_\trigon\be_\Right.cs" />
     <Compile Include="zone_\trigon\_theoremS\LawOfCos.cs" />
     <Compile Include="zone_\trigon\_theoremS\LawOfSines.cs" />
@@ -2637,9 +3375,9 @@
     <Compile Include="loop_\circ\area_\Disc.cs" />
     <Compile Include="loop_\circ\co\Intersect.cs" />
     <Compile Include="Coord.cs" />
-    <Compile Include="%28ray\ray\co\Rotation.cs" />
+    <Compile Include="ray\co\Rotation.cs" />
     <Compile Include="vect_\nonnil\vsPoint\Layout.cs" />
-    <Compile Include="%28ray\ray\vsPoint\Layout.cs" />
+    <Compile Include="ray\vsPoint\Layout.cs" />
     <Compile Include="zone_\DiskI.cs" />
     <Compile Include="LineX.cs" />
     <Compile Include="line\co_\crossed\Intersect.cs" />
@@ -2678,19 +3416,19 @@
     <Compile Include="zone\be\Annulus.cs" />
     <Compile Include="zone\eg\ReuleauxTriangle.cs" />
     <Compile Include="zone\eg\Annulus.cs" />
-    <Compile Include="trans\Matrix.cs" />
+    <Compile Include="morph\Matrix.cs" />
     <Compile Include="zone_\Triangle.cs" />
     <Compile Include="zone_\trigon\edges\EdgeLengthsInDouble.cs" />
     <Compile Include="zone_\trigon\be_\AcuteI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\ConcaveQuadrilateralI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\ConvexQuadrilateralI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\concave\DartI.cs" />
+    <Compile Include="cycle_\gon_\quad_\ConcaveQuadrilateralI.cs" />
+    <Compile Include="cycle_\gon_\quad_\ConvexQuadrilateralI.cs" />
+    <Compile Include="cycle_\gon_\quad_\concave\DartI.cs" />
     <Compile Include="EquilateralI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\KiteI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\trape_\parlgrm_\rhombus_\LozengeI.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\KiteI.cs" />
+    <Compile Include="cycle_\parlgrm_\rhombus_\LozengeI.cs" />
     <Compile Include="zone_\rect_\OblongI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\trape_\ParallelogramI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\trape_\parlgrm_\rhombus_\RhomboidI.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\trape_\ParallelogramI.cs" />
+    <Compile Include="cycle_\parlgrm_\rhombus_\RhomboidI.cs" />
     <Compile Include="surface\be_\ConcaveI.cs" />
     <Compile Include="zone\be_\ConvexI.cs" />
     <Compile Include="_rotation\unit_\_measure\Degree.cs" />
@@ -2702,23 +3440,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="zone_\gon_\TetragonI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\trape_\parlgrm_\RhombusI.cs" />
+    <Compile Include="cycle_\parlgrm_\RhombusI.cs" />
     <Compile Include="cloze\ShapeI.cs" />
     <Compile Include="zone_\Disk.cs" />
     <Compile Include="loop_\circ\Area.cs" />
     <Compile Include="loop_\circ\area_\Doubl.cs" />
     <Compile Include="loop_\circ\area_\doubl_\Doubl.cs" />
     <Compile Include="coil_\gon_\tetra_\SimpleQuadrilateralI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\Square.cs" />
+    <Compile Include="cycle_\gon_\quad_\Square.cs" />
     <Compile Include="Tau.cs" />
-    <Compile Include="trans_\_rebase\Matrix.cs" />
-    <Compile Include="trans_\rebase_\shear_\Rotate.cs" />
-    <Compile Include="trans_\rebase_\invertible_\skew_\ShearAlongY.cs" />
-    <Compile Include="trans_\rebase_\invertible_\skew_\ShearAlongX.cs" />
-    <Compile Include="trans_\affine_\Shift.cs" />
+    <Compile Include="morph_\_rebase\Matrix.cs" />
+    <Compile Include="morph_\rebase_\shear_\Rotate.cs" />
+    <Compile Include="morph_\rebase_\skew_\ShearAlongY.cs" />
+    <Compile Include="morph_\rebase_\skew_\ShearAlongX.cs" />
+    <Compile Include="morph_\affine_\Shift.cs" />
     <Compile Include="Topology.cs" />
-    <Compile Include="cycle_\gon_\tetra_\convex_\TrapezoidI.cs" />
-    <Compile Include="cycle_\gon_\tetra_\ParlgrmDbl.cs" />
+    <Compile Include="cycle_\gon_\quad_\convex_\TrapezoidI.cs" />
+    <Compile Include="cycle_\gon_\ParlgrmDbl.cs" />
     <Compile Include="zone_\rect_\RightDistinctTrio.cs" />
     <Compile Include="zone_\trigon\be_\IsoscelesI.cs" />
     <Compile Include="zone_\trigon\be_\ObtuseI.cs" />
@@ -2762,6 +3500,10 @@
     <Compile Include="_vw\_coord\Origin.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="1d-directed.cd" />
+    <None Include="1d-undirected.cd" />
+    <None Include="2d-1d.cd" />
+    <None Include="2d.cd" />
     <None Include="crux.cd" />
     <None Include="has2d.cd" />
     <None Include="drawable.cd" />
@@ -2778,34 +3520,22 @@
     <None Include="sub_\directed_\connected_\polygon.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="%28angle\angle\%28measure\" />
-    <Folder Include="%28angle\angle\be_\obtuse\" />
-    <Folder Include="%28angle\angle\be_\right\" />
-    <Folder Include="%28angle\angle\be_\simple\" />
-    <Folder Include="%28angle\angle\be_\straigth\" />
-    <Folder Include="%28angle\angle\co\" />
-    <Folder Include="%28angle\angle\rel\" />
     <Folder Include="%28angle\angle_\nonneg_\" />
     <Folder Include="%28angle\_angle\" />
-    <Folder Include="%28ray\ray\co\be_\colinear_\" />
-    <Folder Include="%28ray\ray\co\be_\coline\" />
-    <Folder Include="%28ray\ray\co\op\" />
-    <Folder Include="%28ray\ray\co_\align\" />
-    <Folder Include="%28ray\ray\co_\crossable\" />
-    <Folder Include="%28ray\ray\co_\parallel\" />
-    <Folder Include="%28ray\ray\rel\" />
-    <Folder Include="%28ray\ray\vsPoint_\coline\" />
     <Folder Include="%28ray\ray_\horizon\" />
-    <Folder Include="%28ray\ray_\horizon_\increase\vsSlop_\crossByLine\" />
     <Folder Include="%28ray\ray~\" />
     <Folder Include="%28ray\_ray\" />
-    <Folder Include="circuit_\" />
+    <Folder Include="angle\%28measure\" />
+    <Folder Include="angle\be_\obtuse\" />
+    <Folder Include="angle\be_\right\" />
+    <Folder Include="angle\be_\simple\" />
+    <Folder Include="angle\be_\straigth\" />
+    <Folder Include="angle\co\" />
+    <Folder Include="angle\rel\" />
+    <Folder Include="clifford\NewFolder1\" />
     <Folder Include="cloze_\cross\" />
     <Folder Include="cloze_\gon\draw_\draw_\" />
-    <Folder Include="cloze_\gon_\poly\" />
-    <Folder Include="cloze_\gon_\quad_\" />
-    <Folder Include="cloze_\gon_\simple_\" />
-    <Folder Include="cloze_\gon_\tetra_\" />
+    <Folder Include="cloze_\gon\of_\" />
     <Folder Include="cloze_\piecewise_\polygon_\" />
     <Folder Include="cloze_\rect\cornerCropped\concaveRounded\points\" />
     <Folder Include="cloze_\rect\cornerCropped\concaveRounded_\spinnedOff\" />
@@ -2814,18 +3544,22 @@
     <Folder Include="coil_\gon\co\" />
     <Folder Include="coil_\gon\skid\co\be_\tending_\incident\" />
     <Folder Include="coil_\gon_\hex_\simple_\" />
-    <Folder Include="coil_\gon_\holed\" />
     <Folder Include="coil_\gon_\poly\be_\adjacent_\" />
-    <Folder Include="coil_\trigon_\" />
+    <Folder Include="coil_\triangle\" />
+    <Folder Include="coil_\_coil\" />
     <Folder Include="crux_\boundaried_\" />
+    <Folder Include="crux_\convex\op_\" />
     <Folder Include="crux_\curl\" />
     <Folder Include="crux_\facet\" />
     <Folder Include="crux_\pathable_\" />
     <Folder Include="crux_\point\" />
     <Folder Include="crux_\polygon_\" />
     <Folder Include="crux_\spread_\" />
+    <Folder Include="curl_\elbow\trich_\" />
+    <Folder Include="curl_\link\" />
+    <Folder Include="curve\of_\points\" />
     <Folder Include="curve\stream_\fractal\" />
-    <Folder Include="curve_\%28spline\" />
+    <Folder Include="curve_\algebraics_\%28spline\" />
     <Folder Include="curve_\algebraics_\spline_\cubic_\_noninflectOut\" />
     <Folder Include="curve_\algebraics_\spline_\linear\" />
     <Folder Include="curve_\algebraics_\spline_\step\" />
@@ -2833,6 +3567,7 @@
     <Folder Include="curve_\algebraic_\bezier_\cubic\measure\co_\" />
     <Folder Include="curve_\algebraic_\bezier_\cubic\par_\" />
     <Folder Include="curve_\algebraic_\conic_\ellipse_\" />
+    <Folder Include="curve_\algebraic_\cubic_\eg_\" />
     <Folder Include="curve_\algebraic_\cubic_\elliptic_\" />
     <Folder Include="curve_\algebraic_\polynomial\of_\" />
     <Folder Include="curve_\algebraic_\quadratic_\ellipse_\" />
@@ -2842,45 +3577,52 @@
     <Folder Include="curve_\algebraic_\_bezier_\" />
     <Folder Include="curve_\arc_\" />
     <Folder Include="curve_\convex_\" />
-    <Folder Include="curve_\finite\" />
     <Folder Include="curve_\func_\polynomial\op_\" />
     <Folder Include="curve_\func_\poly_\" />
     <Folder Include="curve_\piecewise\" />
     <Folder Include="curve_\polystep_\_di\points\be_\" />
+    <Folder Include="cycles_\disjoint_\hull9holes\" />
     <Folder Include="cycle_\gon\area\" />
     <Folder Include="cycle_\gon\be_\orient_\" />
     <Folder Include="cycle_\gon\be_\stokes\" />
     <Folder Include="cycle_\gon\cathetus_\major\" />
     <Folder Include="cycle_\gon\cathetus_\minor\" />
+    <Folder Include="cycle_\gon\co_\pro9con_\unjoint\" />
+    <Folder Include="cycle_\gon\co_\unjoint_\pro9any\be_\apart\" />
+    <Folder Include="cycle_\gon\co_\unjoint_\pro9con\be_\apart\" />
+    <Folder Include="cycle_\gon\co_\unjoint_\pro9con_\" />
     <Folder Include="cycle_\gon\edges\lengths\" />
     <Folder Include="cycle_\gon\hypotenuse\" />
     <Folder Include="cycle_\gon\of_\" />
     <Folder Include="cycle_\gon\vsPoint\" />
     <Folder Include="cycle_\gon\vsPoint_\inner\" />
     <Folder Include="cycle_\gon_\antiwise\str\be_\disjoint\vow\" />
-    <Folder Include="cycle_\gon_\tetra_\convex_\trape_\parlgrm\" />
-    <Folder Include="cycle_\gon_\tetra_\parlgram_\" />
-    <Folder Include="cycle_\trigon_\isoscele_\golden_\" />
-    <Folder Include="cycle_\trigon_\ortho_\isocele\of_\" />
-    <Folder Include="cycle_\trigon_\ortho_\isocele\op_\" />
+    <Folder Include="cycle_\gon_\facade\vsGon\" />
+    <Folder Include="cycle_\gon_\facade\vs_\NewFolder1\" />
+    <Folder Include="cycle_\gon_\sept\" />
+    <Folder Include="cycle_\gon_\tri_\" />
+    <Folder Include="cycle_\parlgrm\" />
+    <Folder Include="cycle_\parlgrm_\nonrhombus_\_rhomboid\" />
+    <Folder Include="cycle_\triangle\chord_\" />
+    <Folder Include="cycle_\triangle\of_\" />
+    <Folder Include="cycle_\triangle\sect_\" />
+    <Folder Include="cycle_\triangle_\isoscele_\golden_\" />
+    <Folder Include="cycle_\triangle_\ortho_\isocele\of_\" />
+    <Folder Include="cycle_\triangle_\ortho_\isocele\op_\" />
+    <Folder Include="cycle_\triangle_\pro\" />
     <Folder Include="cycle_\_gon\vertexes\be_\zone_\" />
+    <Folder Include="cycle_\_triangle_\" />
     <Folder Include="drawable\draw_\svg\" />
     <Folder Include="drawable\draw_\_svg\_builder\" />
     <Folder Include="drawable_\tape\projected\" />
     <Folder Include="drawable_\tape\projected_\quad_\rect_\" />
     <Folder Include="facet\co_\subtract_\" />
-    <Folder Include="facet_\bloc_\" />
-    <Folder Include="facet_\donut_\disc_\" />
-    <Folder Include="facet_\gon\nested\" />
-    <Folder Include="facet_\gon\nests\of_\coils_\nonjoint\" />
-    <Folder Include="facet_\gon_\conduit\of_\coerce\" />
-    <Folder Include="facet_\gon_\conduit\of_\coerce_\" />
-    <Folder Include="facet_\gon_\conduit\to_\cast\" />
-    <Folder Include="facet_\gon_\donut_\" />
-    <Folder Include="facet_\gon_\_conduit\vertexes\" />
-    <Folder Include="gon_\dwelt_\plural_\" />
-    <Folder Include="gon_\skids_\plural\" />
-    <Folder Include="gon_\skids_\plural_\" />
+    <Folder Include="facet_\gon_\conduit\NewFolder1\" />
+    <Folder Include="facet_\gon_\conduit\to_\_cast\" />
+    <Folder Include="facet_\gon_\conduit_\" />
+    <Folder Include="facet_\gon_\_conduit\disord\to_\_minCusp_\by_\coils_\" />
+    <Folder Include="facet_\gon_\_conduit\gulfUnord\" />
+    <Folder Include="flank_\gon_\hepta_\" />
     <Folder Include="grads_\closure_\points\" />
     <Folder Include="grads_\closure_\_points\" />
     <Folder Include="grads_\points\be_\" />
@@ -2891,10 +3633,11 @@
     <Folder Include="grad\range\" />
     <Folder Include="grad\str_\seq\" />
     <Folder Include="grad\triangulate\" />
+    <Folder Include="grad\trigonize\parlgrm\diag_\originated\belt\" />
+    <Folder Include="grad\trigonize\parlgrm\drag\" />
     <Folder Include="grad\vsPoint_\colinear\categorize_\_categorize\" />
     <Folder Include="grad_\originated\" />
     <Folder Include="grad_\skid\be\vow\" />
-    <Folder Include="grad_\skid\co_\chain\be_\" />
     <Folder Include="grad_\skid\lerp_\" />
     <Folder Include="grad_\skid\point\" />
     <Folder Include="grad_\skid\point_\" />
@@ -2907,8 +3650,8 @@
     <Folder Include="grad_\_skid\" />
     <Folder Include="grad_\_veced_\" />
     <Folder Include="grid\" />
-    <Folder Include="lap\incribed_\" />
     <Folder Include="lead\be_\" />
+    <Folder Include="lead\outlier\beams\" />
     <Folder Include="lead\to_\" />
     <Folder Include="lead\vsPoint\_layout\sign\" />
     <Folder Include="lead\vsSkid\_layout\ret_\fork_\" />
@@ -2919,6 +3662,8 @@
     <Folder Include="line\co\be\" />
     <Folder Include="line\co\be_\cross\" />
     <Folder Include="line\co_\crossed\to_\" />
+    <Folder Include="line\co_\parallel\transverse\angles_\co\" />
+    <Folder Include="line\co_\parallel\transverse\angle\" />
     <Folder Include="line\rel_\" />
     <Folder Include="line\vsPoint\be_\" />
     <Folder Include="line\vsTend\be\" />
@@ -2928,13 +3673,24 @@
     <Folder Include="line_\horizon\vsSpan_\" />
     <Folder Include="line_\horizon\vsStep_\" />
     <Folder Include="line_\_byInnerProduct_\" />
-    <Folder Include="loop_\circular_\" />
     <Folder Include="loop_\circ\co_\joint\" />
     <Folder Include="loop_\circ\length\" />
     <Folder Include="loop_\simple_\convex_\quadratic_\conic_\ellipse_\disk\" />
     <Folder Include="loop_\_circ\" />
-    <Folder Include="manifold_\boundaried_\" />
-    <Folder Include="manifold_\surface_\" />
+    <Folder Include="morph_\affine_\reflect_\" />
+    <Folder Include="morph_\rebase_\orient_\flip_\real\" />
+    <Folder Include="morph_\rebase_\orthic_\axial_\" />
+    <Folder Include="morph_\rebase_\orthic_\unial_\axial_\positive_\" />
+    <Folder Include="morph_\rebase_\scale_\antihanded_\similar_\reflect_\flip\" />
+    <Folder Include="morph_\rebase_\scale_\handed_\" />
+    <Folder Include="morph_\rebase_\scale_\nonflip_\" />
+    <Folder Include="morph_\rebase_\scale_\similar_\" />
+    <Folder Include="morph_\rebase_\shear_\orthic_\" />
+    <Folder Include="morph_\rebase_\shear_\uniform_\" />
+    <Folder Include="morph_\_affine_\" />
+    <Folder Include="morph_\_rebase_\scale\" />
+    <Folder Include="morph_\_rebase_\shear\" />
+    <Folder Include="morph_\_rebase_\shear_\" />
     <Folder Include="nilnul0\bit\expr_\iff\" />
     <Folder Include="nilnul0\geometry\dimed\vec\co\innerProduct\" />
     <Folder Include="nilnul0\geometry\linear\grad\vsPoint\re_\" />
@@ -2946,11 +3702,10 @@
     <Folder Include="nilnul0\geometry\linear\grad_\skid\vsPoint\sig_\" />
     <Folder Include="nilnul0\geometry\linear\grad_\skid\vsPoint\_layout\" />
     <Folder Include="nilnul0\geometry\linear\map_\proj_\" />
+    <Folder Include="nilnul0\geometry\linear\morph_\affine_\matrix_\" />
+    <Folder Include="nilnul0\geometry\linear\morph_\_affine\matrix_\basisOrigin\" />
     <Folder Include="nilnul0\geometry\linear\tend\distance\" />
-    <Folder Include="nilnul0\geometry\linear\tope_\" />
-    <Folder Include="nilnul0\geometry\linear\trail_\spanned_\" />
-    <Folder Include="nilnul0\geometry\linear\trans_\affine_\matrix_\" />
-    <Folder Include="nilnul0\geometry\linear\trans_\_affine\matrix_\basisOrigin\" />
+    <Folder Include="nilnul0\geometry\linear\tend\distance_\" />
     <Folder Include="nilnul0\geometry\linear\vector_\nil\vector\be_\" />
     <Folder Include="nilnul0\geometry\linear\vector_\nonneg\as_\basis\of_\vector\" />
     <Folder Include="nilnul0\geometry\linear\vector_\nonnil\as_\basis\of_\vector\" />
@@ -2962,31 +3717,33 @@
     <Folder Include="nilnul0\geometry\linear_\ergo_\perspect\_bar\distance\width\" />
     <Folder Include="nilnul0\geometry\linear_\ergo_\vertical\span\" />
     <Folder Include="nilnul0\geometry\linear_\ergo_\vertical\_bar\distance\height\" />
-    <Folder Include="nilnul0\geometry\linear_\measured\span\distance\" />
     <Folder Include="nilnul0\geometry\linear_\measured\span\distance_\eng_\inches\" />
     <Folder Include="nilnul0\geometry\linear_\measured\span\_distance\" />
     <Folder Include="nilnul0\geometry\linear_\measured\speed\" />
     <Folder Include="nilnul0\geometry\linear_\_ergo_\" />
-    <Folder Include="nilnul0\geometry\linear_\_measured\unit\" />
+    <Folder Include="nilnul0\geometry\linear_\_measured\unit_\eng_\inches_\" />
     <Folder Include="nilnul0\geometry\linear_\_measured\unit_\ergo_\" />
-    <Folder Include="nilnul0\geometry\planar_\ergo_\canvas\_bloc\_size_\" />
-    <Folder Include="nilnul0\geometry\planar_\ergo_\namaste_\" />
     <Folder Include="nilnul0\geometry\planar_\ergo_\_canvas_\axis_\vertical\height\" />
     <Folder Include="nilnul0\geometry\planar_\ergo_\_canvas_\axis_\_vertical\" />
+    <Folder Include="nilnul0\geometry\planar_\geo_\home_\" />
     <Folder Include="nilnul0\geometry\_linear\" />
-    <Folder Include="nilnul0\img\" />
+    <Folder Include="nilnul0\img\op_\" />
     <Folder Include="nilnul0\num\complex\expr\equiv\" />
     <Folder Include="nilnul0\num\complex\expr_\polynomial\pred\" />
     <Folder Include="nilnul0\num\complex_\polar_\unital\" />
     <Folder Include="nilnul0\num\real\expr\co_\equiv\" />
     <Folder Include="nilnul0\num\real\expr\co_\equiv_\" />
     <Folder Include="nilnul0\num\real\expr\re_\equiv_\" />
+    <Folder Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitans\prod\coefed\" />
+    <Folder Include="nilnul0\num\real\expr_\algebraic\_frac\indic_\geometry_\linear_\unitan_\" />
+    <Folder Include="nilnul0\num\real\expr_\algebraic_\geometry_\linear_\unit_\" />
     <Folder Include="nilnul0\num\real\expr_\polynomial\calc_\binary_\" />
-    <Folder Include="nilnul0\num\real\NewFolder1\" />
-    <Folder Include="nilnul0\num\real\op_\unary_\" />
+    <Folder Include="nilnul0\num\real\matrix\of_\" />
+    <Folder Include="nilnul0\num\real\matrix_\sq\" />
+    <Folder Include="nilnul0\num\real\matrix_\sq_\tertiary\of_\" />
     <Folder Include="nilnul0\num\real_\geometry_\planar_\trigno_\" />
+    <Folder Include="nilnul\geometry\planar\surface\" />
     <Folder Include="points\op_\unary_\sortByHorizon\" />
-    <Folder Include="points_\" />
     <Folder Include="point\%28eq\" />
     <Folder Include="point\be_\%28retiring\" />
     <Folder Include="point\collection\_onPoint\" />
@@ -3002,8 +3759,8 @@
     <Folder Include="point\co~\duo\" />
     <Folder Include="point\in2r\eg\" />
     <Folder Include="point\op\" />
-    <Folder Include="point\op_\unary_\flip_\along45deg_\" />
-    <Folder Include="point\op_\unary_\flip_\horizon_\" />
+    <Folder Include="point\op_\flip_\along45deg_\" />
+    <Folder Include="point\op_\flip_\horizon_\" />
     <Folder Include="point\quartet\" />
     <Folder Include="point\ray\" />
     <Folder Include="point\rel\" />
@@ -3022,6 +3779,14 @@
     <Folder Include="point_\polar\" />
     <Folder Include="point_\polar_\" />
     <Folder Include="point~\" />
+    <Folder Include="ray\co\be_\colinear_\" />
+    <Folder Include="ray\co\be_\coline\" />
+    <Folder Include="ray\co\op\" />
+    <Folder Include="ray\co_\align\" />
+    <Folder Include="ray\co_\crossable\" />
+    <Folder Include="ray\co_\parallel\" />
+    <Folder Include="ray\rel\" />
+    <Folder Include="ray\vsPoint_\coline\" />
     <Folder Include="rotation\be_\gtNegPi_\lePi\" />
     <Folder Include="rotation\be_\_clockwise\" />
     <Folder Include="rotation\co\be_\be_\" />
@@ -3029,18 +3794,15 @@
     <Folder Include="rotation\co_\" />
     <Folder Include="rotation\op_\convert_\" />
     <Folder Include="rotation_\acute\op_\" />
-    <Folder Include="rotation_\deg\" />
     <Folder Include="rotation_\deg_\nonneg_\leQuad_\special\" />
     <Folder Include="rotation_\direction\co_\" />
-    <Folder Include="rotation_\ltTau_\" />
-    <Folder Include="rotation_\measure\" />
     <Folder Include="rotation_\rounds\be_\" />
     <Folder Include="rotation_\_quarter\" />
-    <Folder Include="spread_\NewFolder1\" />
+    <Folder Include="splash_\NewFolder1\" />
     <Folder Include="sub\%28area%29\" />
-    <Folder Include="sub\morph_\flip_\" />
     <Folder Include="sub\stream_\fractal\" />
     <Folder Include="sub\stream_\fractal_\" />
+    <Folder Include="sub\trans_\flip_\" />
     <Folder Include="sub_\bounded_\bloc\" />
     <Folder Include="sub_\connected\" />
     <Folder Include="sub_\connected_\pathable\" />
@@ -3048,59 +3810,30 @@
     <Folder Include="sub_\directed_\dwelt_\" />
     <Folder Include="sub_\noncurve_\" />
     <Folder Include="surface\be_\_adj\" />
+    <Folder Include="surface\point_\" />
     <Folder Include="surface_\bounded_\nonholed\" />
     <Folder Include="surface_\gon\co_\surround_\nontangent_\" />
     <Folder Include="tend\to_\" />
     <Folder Include="tend\vsPoint\categorize_\" />
     <Folder Include="tend\vsPoint_\colinear\be_\contain~\" />
     <Folder Include="tend\vsPoint_\colinear\categorize_\" />
-    <Folder Include="tend_\edge\vsPoint\" />
     <Folder Include="tope\co_\" />
     <Folder Include="tope_\bloc\potence\" />
     <Folder Include="tope_\bloc\potence_\interpolate_\_bilinear\" />
     <Folder Include="tope_\bloc\_size\" />
+    <Folder Include="tope_\disc_\" />
     <Folder Include="tope_\gon_\hex_\simple_\" />
     <Folder Include="tope_\gon_\trigon_\" />
     <Folder Include="tope_\trigon\area_\NewFolder1\NewFolder1\" />
     <Folder Include="tope_\zone_\" />
     <Folder Include="tope_\_bloc_\NewFolder1\" />
-    <Folder Include="trace_\cloze_\" />
-    <Folder Include="trace_\trail_\" />
-    <Folder Include="track_\gon_\hepta_\" />
     <Folder Include="trails\" />
-    <Folder Include="trails_\started_\" />
-    <Folder Include="trail_\piecewise_\piecewise_\" />
-    <Folder Include="trail_\piecewise_\polyseg\" />
-    <Folder Include="trail_\polyseg_\di\be_\be_\" />
-    <Folder Include="trail_\polyseg_\di\be_\steps_\" />
-    <Folder Include="trans_\affine\" />
-    <Folder Include="trans_\affine_\orthogonal_\" />
-    <Folder Include="trans_\affine_\rebase_\flip\" />
-    <Folder Include="trans_\affine_\rebase_\rotate\" />
-    <Folder Include="trans_\affine_\similar_\rigid\" />
-    <Folder Include="trans_\affine_\similar_\scale\" />
-    <Folder Include="trans_\rebase\" />
-    <Folder Include="trans_\rebase_\invertible_\orthic_\axial_\" />
-    <Folder Include="trans_\rebase_\invertible_\orthic_\unial_\axial_\positive_\" />
-    <Folder Include="trans_\rebase_\scaleOnly_\" />
-    <Folder Include="trans_\rebase_\scale_\antihanded_\similar_\reflect_\flip\" />
-    <Folder Include="trans_\rebase_\scale_\handed_\" />
-    <Folder Include="trans_\rebase_\scale_\nonflip_\" />
-    <Folder Include="trans_\rebase_\scale_\similar_\" />
-    <Folder Include="trans_\rebase_\scale~\" />
-    <Folder Include="trans_\rebase_\shearOnly_\" />
-    <Folder Include="trans_\rebase_\shear_\orthic_\" />
-    <Folder Include="trans_\rebase_\shear_\uniform_\" />
-    <Folder Include="trans_\rebase_\skew_\" />
-    <Folder Include="trans_\_affine_\" />
-    <Folder Include="trans_\_perspect\homo\" />
-    <Folder Include="trans_\_rebase_\scale\" />
-    <Folder Include="trans_\_rebase_\shear\" />
-    <Folder Include="trans_\_rebase_\shear_\" />
+    <Folder Include="trav_\piecewise_\piecewise_\" />
+    <Folder Include="trav_\piecewise_\polyseg\" />
+    <Folder Include="trav_\polyseg_\orthic_\" />
     <Folder Include="vect\asAxis\" />
     <Folder Include="vect\as_\" />
     <Folder Include="vect\co_\nontilt_\orthogonal_\" />
-    <Folder Include="vect\op_\binary_\add_\" />
     <Folder Include="vect\op_\unary_\convert_\" />
     <Folder Include="vect\rotation_\" />
     <Folder Include="vect\to_\co_\decompose\" />
@@ -3115,6 +3848,8 @@
     <Folder Include="vect_\nonnil\vsPoint\_layout\" />
     <Folder Include="vect_\nonnil_\NewFolder1\" />
     <Folder Include="zone\circum\" />
+    <Folder Include="zone\co\op_\" />
+    <Folder Include="zone\of_\linear\" />
     <Folder Include="zone\shape\" />
     <Folder Include="zone\shape_\" />
     <Folder Include="zone\str\" />
@@ -3122,7 +3857,6 @@
     <Folder Include="zone_\bloc\re_\include_\" />
     <Folder Include="zone_\bloc_\byVect\" />
     <Folder Include="zone_\bloc_\std\warp_\" />
-    <Folder Include="zone_\construcT_\" />
     <Folder Include="zone_\disc\sected\" />
     <Folder Include="zone_\disc\vsPoint_\noncenter_\" />
     <Folder Include="zone_\gon\be_\normal\" />
@@ -3136,16 +3870,18 @@
     <Folder Include="zone_\gon\stokes\" />
     <Folder Include="zone_\gon\str\be_\disjoint\vow\" />
     <Folder Include="zone_\gon\vsPoint\has_\byRay_\bounding1st\" />
+    <Folder Include="zone_\gon\vsPoint\has_\byRay_\byWinding_\" />
     <Folder Include="zone_\gon\_stokes\" />
+    <Folder Include="zone_\gon_\convex\co\_distance_\" />
+    <Folder Include="zone_\gon_\convex\departure_\" />
     <Folder Include="zone_\gon_\convex\vsLead\_bisect\" />
-    <Folder Include="zone_\gon_\deduped\" />
-    <Folder Include="zone_\gon_\facade\" />
     <Folder Include="zone_\gon_\hepta_\_arrow\triviable_\perspect_\" />
     <Folder Include="zone_\gon_\normal\" />
     <Folder Include="zone_\gon_\points\grads_\" />
     <Folder Include="zone_\gon_\quad\morph_\NewFolder1\" />
     <Folder Include="zone_\gon_\quad_\canonic\morph_\horizon\" />
     <Folder Include="zone_\gon_\quad_\canonic_\convex\morph_\" />
+    <Folder Include="zone_\gon_\quad_\trape_\perpend\" />
     <Folder Include="zone_\gon_\quad_\trape_\perpend_\baseOne_\" />
     <Folder Include="zone_\gon_\simple_\convex\" />
     <Folder Include="zone_\gon_\simple_\trigon\" />
@@ -3160,12 +3896,27 @@
     <Folder Include="zone_\trigon\cathetus_\major\" />
     <Folder Include="zone_\trigon\cathetus_\minor\" />
     <Folder Include="zone_\trigon\cevas\concurrent\" />
+    <Folder Include="zone_\trigon\cevians_\splitter\" />
+    <Folder Include="zone_\trigon\cevians_\splitter_\concur8inner\_nagel\" />
+    <Folder Include="zone_\trigon\cevian\" />
+    <Folder Include="zone_\trigon\cevian_\splitters\" />
+    <Folder Include="zone_\trigon\cevian_\splitter\" />
     <Folder Include="zone_\trigon\co\" />
     <Folder Include="zone_\trigon\edges\lengths\" />
+    <Folder Include="zone_\trigon\edge\apex\" />
+    <Folder Include="zone_\trigon\edge\point_\mid\" />
     <Folder Include="zone_\trigon\hypotenuse\" />
-    <Folder Include="zone_\trigon\NewFolder1\" />
     <Folder Include="zone_\trigon\orthics\" />
+    <Folder Include="zone_\trigon\point_\inner\" />
+    <Folder Include="zone_\trigon\point_\outer\" />
+    <Folder Include="zone_\trigon\point_\sidal\" />
+    <Folder Include="zone_\trigon\vertex\cevian_\" />
     <Folder Include="zone_\trigon\vsPoint_\inner\" />
+    <Folder Include="zone_\trigon\vsPoint_\inner_\circumcenters\" />
+    <Folder Include="zone_\trigon\vsPoint_\inner_\orthocenters\" />
+    <Folder Include="zone_\trigon_\equilateral\point_\inner\legs\every\length\sum\theorem_\eqHeight\" />
+    <Folder Include="zone_\trigon_\equilateral\point_\inner\legs\every\length\sum\theorem_\_eqHeight\" />
+    <Folder Include="zone_\trigon_\equilateral\point_\inner\leg\" />
     <Folder Include="zone_\trigon_\oblique_\" />
     <Folder Include="zone_\trigon_\ortho\edges\" />
     <Folder Include="zone_\trigon_\ortho_\isocele\of_\" />
@@ -3173,12 +3924,15 @@
     <Folder Include="zone_\trigon_\ortho_\isocele_\" />
     <Folder Include="zone_\_gon\closure_\" />
     <Folder Include="zone_\_gon\vertexes\" />
-    <Folder Include="_curve\" />
     <Folder Include="_drawable_\" />
     <Folder Include="_line\" />
     <Folder Include="_line_\" />
     <Folder Include="_rotation\unit\" />
+    <Folder Include="_surface_\" />
     <Folder Include="_tope\ofLe1d_\of1d_\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="nilnul0\geometry\linear\tend_\IUnial.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="PostBuildMacros">
@@ -3198,8 +3952,8 @@
     <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
     <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
     <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
-    <_nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</_nilnulClockPrefixed>
-    <nilnulPatchRevision>$(nilnulDate)$(_nilnulClockPrefixed)</nilnulPatchRevision>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEventDependsOn>
@@ -3221,18 +3975,27 @@ if $(ConfigurationName) == Release (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
 	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+	)
 )</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
-    <Error Condition="!Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
-  <Import Project="..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\..\(packages)\EntityFramework.6.4.4\build\EntityFramework.targets')" />
-  <Import Project="..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\(packages)\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

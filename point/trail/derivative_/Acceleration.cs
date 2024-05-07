@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.point.trail
 {
 	/// <summary>
-	/// second derivatice.
+	/// second derivative. It's force applied to a given mass;
 	/// </summary>
 	class Acceleration
 	{

@@ -7,14 +7,14 @@ namespace nilnul.geometry.planar.vect.co.to_
 	/// </summary>
 	static public class _AsMatrixX
 	{
-		static public nilnul.num.real.matrix_.square_.Two_Two Fro(VectorI a, VectorI b) {
-			return new num.real.matrix_.square_.Two_Two(
+		static public nilnul.num.real.matrix_.square_.Secondary Fro(VectorI a, VectorI b) {
+			return new num.real.matrix_.square_.Secondary(
 				a.x,a.y,b.x,b.y	
 			);
 		}
 
-		static public nilnul.num.real.matrix_.square_.Two_Two ToMatrixRows(VectorI a, VectorI b) {
-			return new num.real.matrix_.square_.Two_Two(
+		static public nilnul.num.real.matrix_.square_.Secondary ToMatrixRows(VectorI a, VectorI b) {
+			return new num.real.matrix_.square_.Secondary(
 				a.x,a.y,b.x,b.y	
 			);
 		}
@@ -55,22 +55,22 @@ namespace nilnul.geometry.planar.vect.co.to_
 		}
 
 
-		static public nilnul.num.real.matrix_.square_.Two_Two Fro(IVector a, IVector b) {
-			return new num.real.matrix_.square_.Two_Two(
+		static public nilnul.num.real.matrix_.square_.Secondary Fro(IVector a, IVector b) {
+			return new num.real.matrix_.square_.Secondary(
 				a.point.x,a.point.y,b.point.x,b.point.y	
 			);
 
 		}
 
-		static public nilnul.num.real.matrix_.square_.Two_Two Fro(Vector1 a, Vector1 b) {
-			return new num.real.matrix_.square_.Two_Two(
+		static public nilnul.num.real.matrix_.square_.Secondary Fro(Vector1 a, Vector1 b) {
+			return new num.real.matrix_.square_.Secondary(
 				a.point.x,a.point.y,b.point.x,b.point.y	
 			);
 		}
 
 	
 
-		static public nilnul.num.real.matrix_.square_.Two_Two To(Co duo) {
+		static public nilnul.num.real.matrix_.square_.Secondary To(Co duo) {
 			return Fro(duo.Item1,duo.Item2);
 		}
 

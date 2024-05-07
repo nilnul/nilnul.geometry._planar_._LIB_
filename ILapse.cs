@@ -6,9 +6,22 @@ using System.Text;
 namespace nilnul.geometry.planar
 {
 	//[Obsolete("as curve is always directable, hence see: "+ nameof(planar.coil_.IGon))]
-	[Obsolete(nameof(ILoop))]
-	public interface ILapse : orbit_.ISimple, locus_.IEndAtStart
-		, ILoop
+	//[Obsolete(nameof(ILoop))]
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		lapse
+	///			,where "se" hints infinite or finite.
+	///			,lack direction
+	public interface ILapse
+		:
+		planar.curve.IUnDirected
+		//,
+		//orbit_.ISimple
+
+		//, locus_.IEndAtStart
+		//, ILoop
 	{
 	}
 }

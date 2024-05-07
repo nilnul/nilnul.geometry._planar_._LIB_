@@ -10,13 +10,13 @@ namespace nilnul.geometry.planar.crux_
 	/// there is no hole.
 	/// eg:
 	///		<see cref="planar.ISwath"/>
-	///		<see cref="spread_."/>
+	///		<see cref="splash_."/>
 	/// imaging an elastic point,
 	/// we can expand the point without tearing it, or glueing it.
 	/// 
 	/// The result would be:
 	/// a point (which is 0d simple),
-	/// <see cref="trace_.Simple"/>, which is 1d simple, also 0d simple
+	/// <see cref="trail_.Simple"/>, which is 1d simple, also 0d simple
 	/// or
 	/// ,<see cref="surface_.ISimple"/>
 	/// or

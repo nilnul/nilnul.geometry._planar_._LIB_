@@ -19,6 +19,7 @@ namespace nilnul.geometry.planar.cycle_.gon_.facade.vsPoint.sign_
 	///			when both are pointing upwards, the winding number is 1
 	///			when both pointing downards, the winding number is -1
 	/// </summary>
+	/// 
 	static public class _PointInsidePolygon
 	{
 

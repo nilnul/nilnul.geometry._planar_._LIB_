@@ -5,6 +5,12 @@ using System.Text;
 
 namespace nilnul.geometry.planar.zone_.gon_
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <remarks>
+	/// be_.bestagon;
+	/// </remarks>
 	 class Hexagon
 	{
 	}

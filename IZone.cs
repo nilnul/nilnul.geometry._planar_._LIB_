@@ -14,32 +14,48 @@ namespace nilnul.geometry.planar
 	///		two regions sharing one edge, can be regarded as one region.
 	/// </summary>
 	/// <remarks>
+	/// zone has no direction. the edge might has direction.
+	///   in other words, the zone implies a direction.
+	///  eg:
+	///		for a rect, the edges must cycle positively; otherwise, it's not zone, but a space with a rect hole;
+	///		
+	/// </remarks>
+	///   
 	/// alias:
+	///		hull
+	///		tray
 	///		patch
+	///		mask
 	///		shape
 	///			shape is invariant when translated, rotated, flipped
 	///		domain
 	///		zone
 	///		region
 	///		tract
+	///		zune
+	///		zine, magzine;
 	///	vs : curve_.cloze
 	///		cloze has direction
 	///		zone doesnot.
-	///		
-	/// </remarks>
-	/// zone has no direction. the edge might has direction.
-	///   in other words, the zone implies a direction.
-	public interface IZone :
-		//zone_.ISimple,
-		track_.IBoundaried      //,
-								//, ISwath
+	///
+
+	public interface IZone
+		:
+		cycle_.IProWinded
 		,
+		facet_.ISimple
+		,
+		//zone_.ISimple,
 		swath_.IBoundarable
 	//surface_.ISimple  //non simple surface can be composite (by subtraction), hence is not simple.
 	//,	///implied
 	//sub_.connected_.simple_.IRoadable   //implied
-
+	,
+		flank_.IBoundaried      //,
+								//, ISwath
+		
 
 	{
+		
 	}
 }

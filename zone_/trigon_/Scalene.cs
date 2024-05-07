@@ -12,4 +12,5 @@ namespace nilnul.geometry.planar.zone_.trigon_
 	public interface IScalene
 	{
 	}
+
 }

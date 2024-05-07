@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.geometry.planar.zone_.gon_.parlgrm_.rhombus_
+{
+	/// <summary>
+	/// <see cref="zone_.rect_.square"/>
+	/// </summary>
+	public interface ISquare
+		:IRhombus
+		,
+		IOrthic
+	{
+	}
+}

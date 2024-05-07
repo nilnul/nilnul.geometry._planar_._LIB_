@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,15 @@ namespace nilnul.geometry.planar.vect_.nonnil.co
 			//throw new NotImplementedException();
 		}
 
+		public double to(Complex c0, Complex c1)
+		{
+			return vect.co.to_.real_._CrossProductX.SurroundedOfParallelogram(
+				c0
+				,
+				c1
+			);
+
+		}
 
 		static public CrossProduct Singleton
 		{

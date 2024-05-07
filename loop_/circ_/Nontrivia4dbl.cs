@@ -10,7 +10,7 @@ using PointD = nilnul.geometry.planar.Point4dbl;
 namespace nilnul.geometry.planar.loop_.circ_
 {
 	/// <summary>
-	/// for triviable circ, <see cref="planar.trace_.cloze_.ICirc0point"/>
+	/// for triviable circ, <see cref="planar.trail_.cloze_.ICirc0point"/>
 	/// </summary>
 	public class Nontrivia4dbl
 		:loop_.simple_.convex_.quadratic_.conic_.IEllipse

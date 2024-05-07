@@ -8,7 +8,8 @@ namespace nilnul.geometry.planar.curve_.algebraics_.spline_.cubic_
 {
 	/**
 	 
-	A common set of final constraints is to assume that the second derivatives are zero at the endpoints. This means that the curve is a “straight line” at the end points. Explicitly,
+	A common set of final constraints is to assume that the second derivatives are zero at the endpoints. This means that the curve is a “straight line” at the end points.
+	Explicitly,
 
 S′′1(x1)=S′′n−1(xn)==0.
 	

@@ -10,7 +10,7 @@ namespace nilnul.geometry.planar.spread_
 	/// eg:
 	///		a cone at a plane
 	/// </summary>
-	public interface INonroadable : ISpread
+	public interface INonroadable : ISplash
 	{
 	}
 }

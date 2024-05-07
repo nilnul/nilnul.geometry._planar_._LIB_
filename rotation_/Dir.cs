@@ -22,6 +22,8 @@ namespace nilnul.geometry.planar.rotation_
 	/// alias:
 	///		direction
 	///			degree inside a turn.
+	///		inturn
+	///		
 	public class Direction : planar.rotation_.nonneg_.LtTau
 	{
 		public Direction(LtTau val) : base(val)

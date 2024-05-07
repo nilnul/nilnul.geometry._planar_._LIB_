@@ -17,7 +17,7 @@ namespace nilnul.geometry.planar
 	/// </remarks>
 	/// alias:
 	///		coil
-	///			ends with "il" like <see cref="planar.ITrail"/>
+	///			ends with "il" like <see cref="planar.ITrace"/>
 	public interface ICoil :
 ICurve, cloze_.ISpanned
 	{

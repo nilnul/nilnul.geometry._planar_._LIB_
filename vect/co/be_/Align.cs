@@ -41,7 +41,7 @@ namespace nilnul.geometry.planar.vect.co.be_
 	}
 	/// <summary>
 	/// one vector is zero; or
-	/// the two vectors is on the same line (may in opposite direction)
+	/// the two vectors is on the same line (may be in opposite direction)
 	/// </summary>
 	public class Align : BeI
 	{

@@ -22,6 +22,7 @@ namespace nilnul.geometry.planar.zone_.trigon
 	///		
 	/// try to form a 2d object from 1d object, by bundles all the out rays of every point to the apex.
 	///			this is analog to how we form 3d cone from 2d basis.
+	///	<seealso cref="edge.IApex"/>
 	///	
 	public interface IApex
 	{

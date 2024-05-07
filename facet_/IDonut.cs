@@ -9,6 +9,8 @@ namespace nilnul.geometry.planar.facet_
 	/// <summary>
 	/// only one hole
 	/// </summary>
+	/// alias:ring
+	///		donut, maybe it's stereo?
 	 interface IDonut:IHoled
 	{
 	}

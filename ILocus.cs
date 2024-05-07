@@ -13,7 +13,14 @@ namespace nilnul.geometry.planar
 	///		traject
 	///		locus
 	///			"l" is also the initial of "linear"
-	public interface ILocus : ITrace, manifold_.IDimOne
+	public interface ILocus
+		:
+		curl.IUnDirected
+		,
+		ILapse
+		,
+		ITrail
+		, manifold_.IDimOne
 	{
 	}
 }

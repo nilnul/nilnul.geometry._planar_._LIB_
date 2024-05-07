@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="nilnul.geometry.planar.ISurface" Collapsed="true">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISurface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IZone" Collapsed="true">
+    <Position X="7.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IZone.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ISwath">
+    <Position X="3.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISwath.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.IFacet" Collapsed="true">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFacet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.surface_.ISimple" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>surface_\Simple.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.surface_.IBoundarable" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>surface_\Boundarable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.track_.IBoundaried" Collapsed="true">
+    <Position X="6.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tract_\Boundaried.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.swath_.IBoundarable" Collapsed="true">
+    <Position X="3" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>swath_\Boundarable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.facet_.ISimple" Collapsed="true">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>facet_\Simple.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ISpread" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISpread.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.spread_.IRoadable" Collapsed="true">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>spread_\Roadable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

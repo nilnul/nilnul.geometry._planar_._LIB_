@@ -9,7 +9,12 @@ namespace nilnul.geometry.planar.curve_
 	/// <summary>
 	/// a str of segs pieced together
 	/// </summary>
-	///
+	///alias:
+	///		polyline
+	///		polyseg
+	///		bentline
+	///		foldline
+
 	public interface IPolystep:IPiecewise,curve_.IFinite
 	{
 	}

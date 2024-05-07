@@ -33,9 +33,13 @@ namespace nilnul.geometry.planar.point
 			return x.x == y.x && x.y == y.y;
 		}
 
-		static public bool Eq(Point4dblI x, Point4dblI y)
+		static public bool Eq(Point4dblI a, Point4dblI b)
 		{
-			return x.x == y.x && x.y == y.y;
+			if (object.ReferenceEquals(a,b))
+			{
+				return true;
+			}
+			return a.x == b.x && a.y == b.y;
 		}
 
 

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.coil_.gon_.conduit.be_
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	public class Facet4dbl
 		:
 		conduit.Be4dblI

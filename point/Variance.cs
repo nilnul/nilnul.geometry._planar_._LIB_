@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using R = nilnul.num.RealI;
 using r = nilnul.num.real;
+using System.Numerics;
 
 namespace nilnul.geometry.planar.point
 {
@@ -46,6 +47,9 @@ namespace nilnul.geometry.planar.point
 
 		}
 
-
+		 static public  double Variance(this Complex base1d)
+		{
+			return Variance(base1d.Real, base1d.Imaginary);
+		}
 	}
 }

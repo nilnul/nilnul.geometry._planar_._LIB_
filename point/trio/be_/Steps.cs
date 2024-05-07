@@ -8,7 +8,7 @@ namespace nilnul.geometry.planar.point.trio.be_
 {
 
 	//[Obsolete(nameof(_Angulated_pivot1stX) + ".  curve_.piecewise_.polystep_.Di can be less misleading; " + nameof(curve_.piecewise_.polystep_.IDi))]
-	[Obsolete(nameof(grad_.step.co_.Chain))]
+	[Obsolete(nameof(grad_.skid.co_.IChain))]
 	public class Steps :
 		nilnul.geometry.planar.point.trio.Be
 		,trio.BeDblI

@@ -10,6 +10,7 @@ namespace nilnul.geometry.planar.lead.vsPoint._layout
 	/// <summary>
 	/// when curves spins anti-clockwise, the direction is cannonical. the internal is called internal
 	/// </summary>
+	/// alias: position
 	public enum Sign
 	{
 		/// <summary>

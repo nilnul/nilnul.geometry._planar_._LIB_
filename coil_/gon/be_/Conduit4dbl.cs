@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.coil_.gon.be_
 {
+	/// <summary>
+	/// a <see cref="cycle_.gon_.Facade4dbl"/>, and many holes, each of which is a <see cref="cycle_.gon_.Antiwise4dbl"/>
+	/// </summary>
 	public class Conduit4dbl
 		:
 		gon.Be4dblI

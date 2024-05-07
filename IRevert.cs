@@ -5,7 +5,7 @@ using System.Text;
 
 namespace nilnul.geometry.planar
 {
-	public interface IRevert : trail_.IClosed
+	public interface IRevert : trav_.IClosed
 	{
 	}
 }

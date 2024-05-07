@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.cycle_.gon.co_.nonjoint.be_
 {
 	/// <summary>
-	/// 
+	/// left is in right or right is in left
 	/// </summary>
+	/// alias:
+	///		riple
 	///
-	[Obsolete(nameof(loop_.gon.co_.nonjoint.be_))]
+	[Obsolete(nameof(lop_.gon.co_.nonjoint.be_._Torus4dblX)+ " where the direction is not specified.")]
 
 	static public class _Torus4dblX
 	{
@@ -26,13 +28,13 @@ namespace nilnul.geometry.planar.cycle_.gon.co_.nonjoint.be_
 			cycle_.Polygon4dblI inner
 		)
 		{
-			return torus_._Seige4dblX._Be_assumeNonjoint(
+			return nest_._Seige4dblX._Be_assumeNonjoint(
 				outer
 				,
 				inner
 			)
 			||
-			torus_._Seige4dblX._Be_assumeNonjoint(
+			nest_._Seige4dblX._Be_assumeNonjoint(
 				inner
 				,
 				outer

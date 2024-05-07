@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.trace_
+namespace nilnul.geometry.planar.trail_
 {
 	/// <summary>
 	/// stay at a point at some time, just to another point (computed from previous points) at another time.

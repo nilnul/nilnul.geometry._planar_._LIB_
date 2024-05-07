@@ -9,6 +9,8 @@ namespace nilnul.geometry.linear
 	/// <summary>
 	/// </summary>
 	/// <see cref="Vw"/>
+	///
+	[Obsolete(nameof(IMorph))]
 	public interface ITrans: map_.ITrans
 	{
 	}

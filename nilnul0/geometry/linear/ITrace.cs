@@ -9,6 +9,8 @@ namespace nilnul.geometry.linear
 	/// <summary>
 	/// what's left by trail. undirected
 	/// </summary>
+	///
+	[Obsolete(nameof(ITrail))]
 	public interface ITrace
 		:trail.IIgnoreDirection
 	{

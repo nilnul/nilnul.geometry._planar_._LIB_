@@ -31,6 +31,25 @@ namespace nilnul.geometry.linear
 		static public PointDbl operator -(PointDbl x) {
 			return new PointDbl(-x.coord);
 		}
+
+		static public PointDbl operator *(double scale, PointDbl x) {
+			return new PointDbl(scale*x.coord);
+		}
+		static public PointDbl operator *( PointDbl x, double scale) {
+			return scale * x;
+		}
+		static public PointDbl operator +( PointDbl x, PointDblI y) {
+			return new PointDbl(x.coord+y.coord);
+		}
+
+		static public PointDbl operator +( PointDbl x, PointDbl y) {
+			return x + (PointDblI)y;
+		}
+
+		static public PointDbl operator +( PointDblI x, PointDbl y) {
+			return y+x;
+		}
+
 		static public bool operator ==(PointDblI x, PointDbl y) {
 			return x.coord == y.coord;
 		}

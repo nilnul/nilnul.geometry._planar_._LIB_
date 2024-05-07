@@ -76,11 +76,23 @@ namespace nilnul.geometry.planar.tope_
 		):this(point, new tope_. _bloc.SpreadDbl(h,v) )
 		{
 		}
+		public BlocDbl(double x, double y, double width, double height):this(
+			new Point4dbl(x,y), width,height
+		)
+		{
+				
+		}
+
+		public BlocDbl(double width, double height):this(0,0,width,height)
+		{
+				
+		}
 
 		public BlocDbl():this(new Point4dbl(),0,0)
 		{
 
 		}
+
 
 		/// <summary>
 		/// point#2

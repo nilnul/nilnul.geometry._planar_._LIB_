@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.cycle_.gon
 {
+	/// <summary>
+	/// <see cref=""/>
+	/// </summary>
 	static public class _StokesX
 	{
 		static public double Stokes(Polygon4dbl polygon) {
@@ -33,6 +36,16 @@ namespace nilnul.geometry.planar.cycle_.gon
 			return planar.coil_.gon._SurroundedX.Stokes(
 
 				enumerable
+
+			);
+
+		}
+
+		public static double _Stokes_0cycle(IEnumerable<Grad4dbl_byPointsI> c)
+		{
+			return planar.coil_.gon._SurroundedX._Surround_0coil(
+
+				c
 
 			);
 

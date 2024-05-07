@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.gon.co_.nonjoint.be_.torus_
+namespace nilnul.geometry.planar.cycle_.gon.co_.nonjoint.be_.nest_
 {
 	/// <summary>
 	/// the left seiges the right
 	/// </summary>
 	///
-	[Obsolete(nameof(loop_.gon.co_.nonjoint.be_.torus_))]
+	[Obsolete(nameof(lop_.gon.co_.nonjoint.be_.torus_._Seige4dblX)
+		//,true
+		)]
 
 	static public class _Seige4dblX
 	{
@@ -20,7 +22,7 @@ namespace nilnul.geometry.planar.cycle_.gon.co_.nonjoint.be_.torus_
 			cycle_.Polygon4dblI inner
 		)
 		{
-			return cycle_.gon.vsPoint.sign_._PointInsidePolygon.IsInsidePolygon(
+			return cycle_.gon.vsPoint.sign_._PointInsidePolygonX.IsInsidePolygon(
 					inner.vertexes.First()
 					,
 					outer

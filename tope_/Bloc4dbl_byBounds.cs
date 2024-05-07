@@ -97,6 +97,15 @@ namespace nilnul.geometry.planar.tope_
 
 		}
 
+		public Bloc4dbl_byBounds(double minX, double maxX, double minY, double maxY)
+			:this(
+				 new num.real.bound_.ClosedDbl(minX,maxX)
+				 ,
+				 new num.real.bound_.ClosedDbl(minY,maxY)
+			)
+		{
+		}
+
 
 		/// <summary>
 		/// point#2

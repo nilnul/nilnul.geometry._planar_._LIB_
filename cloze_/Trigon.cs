@@ -11,9 +11,12 @@ namespace nilnul.geometry.planar.cloze_
 	/// </summary>
 	/// vs:
 	///		trigon
-	///			which is a zone.
+	///			which is a zone; but gon is used under various namespaces to represent a troll, not a surface
 	///		whileas triangle is a curve.
-	public interface ITriangle:cloze_.IPolygon
+	public interface ITriangle
+		:
+
+		cloze_.IPolygon
 		,
 		cloze_.piecewise_.IPolygon
 		,

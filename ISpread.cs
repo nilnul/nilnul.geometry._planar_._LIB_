@@ -1,33 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace nilnul.geometry.planar
+﻿namespace nilnul.geometry.planar
 {
-	/// 
-	/// this might be non-manifold.And it could be constructed by other simpler objects. So we might leave this definition deferred on others, say <see cref="zone.co_.Tangent"/>
+	/// the encircling curve can be positivewise, or negativewise.
+	/// corresponding to one of the two sides of the surface.
 	/// <summary>
-	/// for example:
-	///		8 filled
-	///			the neighborhood of the intersection point is not homology to a 2d euler space. It cannot be mapped continuously(in 2d sense) to a 2d euler space.
+	/// no singular point. no singular curve.
+	/// 2d for every point.  This might be simple, or not
 	/// </summary>
 	/// <remarks>
-	///		
+	///		This is continuous. for noncontinous ones, see <see cref="ISpatter"/>
+	///		the <see cref="planar.coil_.polygon_.hex_.Annulus"/>'s direction will means the "inside" or outside a curve.
 	/// </remarks>
-	/// 
-	/// sweep
-	/// spasmodic
-	/// sprawl
-	/// sporadic
-	/// spew
-	/// spread
-	/// scattered
-	/// splatter
-	/// spatter
-	/// splash
-	public interface ISpread : manifold_.IDimTwo, ITrack
+	/// alias
+	/// :
+	///		spread
+	///			,roadable
+	///		region
+	///		face means there might be holes;
+	///		facet
+	///		plank
+	///	
+	public interface ISpread :
+		//drawable_.connected_.IConduitable
+		//,
+		//connected_.IConduitable
+		//,
+		//manifold_.IDimTwo
+		//,
+		splash_.IRoadable
+		//, ITract/// <see cref="planar.drawable_.connected_.IBroadable"/>
+	//,
+	//sub_.connected_.IRoadable
+
 	{
 	}
+
 }

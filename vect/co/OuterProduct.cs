@@ -18,6 +18,8 @@ namespace nilnul.geometry.planar.vect.co
 	///		x^y
 	///		
 	/// ).
+	///
+	/// <see cref="stereo.Clifford"/>, that is geometry algebra.
 	class OuterProduct
 	{
 

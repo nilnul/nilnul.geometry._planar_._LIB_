@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.facet_.gon
 {
 	/// <summary>
-	/// each hole of the gon can constrain  another set of <see cref="facet_.gon"/>. The nested can still be represented by a single polyline by conduit inner facet to outer facet with a conduit; note the conduit inside a facet is a cut to pass out bubbles, while the conduit inside a hole is a cut to connect the inner surrounded stuff.
+	/// each hole of the gon can constrain another set of <see cref="facet_.gon"/>. The nested can still be represented by a single polyline by conduit inner facet to outer facet with a conduit; note the conduit inside a facet is a cut to pass out bubbles, while the conduit inside a hole is a cut to connect the inner surrounded stuff.
 	/// But this is not prefered as:
 	///		we can separately handle them
 	///		there will be a line in the hollowed area. For <see cref="facet_.IGon"/>, the line hides in where is not hollow; but for hollowed area, the line is not hidden well.
@@ -25,6 +25,12 @@ namespace nilnul.geometry.planar.facet_.gon
 			set { _outer = value; }
 		}
 
+		/// <summary>
+		/// each is:
+		///		the hole, which is a negative gon
+		///		,
+		///		the inner gons in that hole
+		/// </summary>
 		private IEnumerable<(cycle_.gon_.Antiwise4dbl, IEnumerable<Nest>)> _inners;
 
 		public IEnumerable<(cycle_.gon_.Antiwise4dbl, IEnumerable<Nest>)> inners

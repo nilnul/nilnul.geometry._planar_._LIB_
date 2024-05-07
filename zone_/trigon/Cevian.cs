@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.zone_.trigon
 {
 	/// <summary>
-	/// a vertex to a point to the opposite line (including extensions.)
+	/// a vertex to an point inner (excluding vertex, or any extension) of the opposite edge;
 	/// </summary>
-	class Ceva
+	/// alias:
+	///		cevian
+	interface  ICevian
 	{
 	}
+
+	
+
 }

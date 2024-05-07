@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar
 {
 	/// <summary>
+	///  2d or 1d objects; excluding 0d points;
 	/// eg:
 	///		two zones connected by a line
 	/// </summary>
+	/// alias:
+	///		tract
 	/// region
 	/// zone
 	/// locale
@@ -19,9 +22,23 @@ namespace nilnul.geometry.planar
 	/// spot
 	/// connected
 	///		track
+	///		trek
+	///		trak
+	///		trac
+	///		
 	///
+	/// <see cref="linear.ILapse"/>
 	//[Obsolete(nameof(IConnected))]
-	public interface ITrack : crux_.INonsingular, crux_.IPathable
+	///
+	[Obsolete()]
+	public interface ITrack
+		:
+		INonPointal
+		//traject.IUnDirected
+		//,
+		//curve.IUnDirected
+		//,
+		//crux_.INonsingular, crux_.IPathable
 	{
 	}
 }

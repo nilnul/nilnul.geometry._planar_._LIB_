@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar._rotation.unit_
 {
 	/// <summary>
+	/// 360/12 <see cref="Deg4dbl"/>
 	/// </summary>
 	public class Hour4dbl : _rotation.Unit4dblA
 	{

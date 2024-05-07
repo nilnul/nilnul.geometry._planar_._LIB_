@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.facet_
 {
 	/// <summary>
-	/// the outer polygon is facade.
-	/// the inner polygon is negative.
-	/// the outer and the inner is injoint. (the hulls are not tangent.)
+	/// the hole is not necessarily circle. it can be any <see cref="IZone"/>
+	/// the outer edge is called hull; the inner is called hole;
 	/// </summary>
+	/// <remarks>
+	/// </remarks>
 	/// alias:
 	///		donut
 	///			for 3d
@@ -18,7 +19,7 @@ namespace nilnul.geometry.planar.facet_
 	///		torus
 	///
 	//[Obsolete("as zone is stokes positive, so the inner is not zone")]
-	 interface IHoled
+	public  interface IHoled:IFacet
 	{
 	}
 }

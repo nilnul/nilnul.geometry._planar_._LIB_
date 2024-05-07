@@ -9,15 +9,17 @@ namespace nilnul.geometry.planar.curve_.algebraics_.spline_
 
 	/**
  
- Two more equations are required to compute the coefficients of Si(x). These last two constraints are arbitrary, and they can be chosen to fit the circumstances of the interpolation being performed.
+ Two more equations are required to compute the coefficients of S[i](x). These last two constraints are arbitrary, and they can be chosen to fit the circumstances of the interpolation being performed.
 
 
 there are different ways to add the final two constraints.
 
-	A common set of final constraints is to assume that the second derivatives are zero at the endpoints. This means that the curve is a “straight line” at the end points. Explicitly,
+	A common set of final constraints is to assume that the second derivatives are zero at the endpoints. This means that the curve is a “straight line” at the end points. This is also consistent in physical spline: the steel band would get out to the wild in a straint posture if we apply no constraint.
 
-S′′1(x1)=S′′n−1(xn)==0.
-This only hold if we have two or more. If we only one piece, then there is no solution, as a cubic poly curve can have only one inflection point.
+	Explicitly,
+
+S′′1(x[1])=S′′[n−1](x[n])==0.
+This only holds if we have two or more pieces. If we have only one piece, then there is no solution, as a cubic poly curve can have only one inflection point.
 
  */
 
@@ -57,6 +59,7 @@ People who design car exteriors generally frown on cubic splines. They like to u
 	 The two most important reasons to use cubic splines instead of quadratic:
 
 Cubic splines are C2-continuous, which is handy sometimes
-Quadratic splines "ring" a lot. If you move one of the data points, it will make big changes to the whole curve all the way out to the ends. With cubic splines, if you move one of the data points the perturbations along the rest of the curve drop off quickly and decay exponentially -- with each point further away from the one you moved, the size of the change is multiplied by -0.268. (good luck finding that written down in an authoritative text, but it's true!)
+Quadratic splines "ring" a lot. If you move one of the data points, it will make big changes to the whole curve all the way out to the ends.
+	With cubic splines, if you move one of the data points the perturbations along the rest of the curve drop off quickly and decay exponentially -- with each point further away from the one you moved, the size of the change is multiplied by -0.268. (good luck finding that written down in an authoritative text, but it's true!)
 	Cubic spline is popular because it is the lowest degree that allows separate control on the two end points and two end derivatives and it is also the lowest degree that allows inflection points. */
 }

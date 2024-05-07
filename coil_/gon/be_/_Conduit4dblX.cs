@@ -20,6 +20,8 @@ namespace nilnul.geometry.planar.coil_.gon.be_
 	///			two disjoint cycles
 	///				might be one in the other
 	///				or not
+	///			,<see cref="facet_.gon_.conduit.INested"/>
+	///			, <see cref="facet_.gon_.conduit.INested"/>.opposite|contra
 	///		
 	static public class _Conduit4dblX
 	{
@@ -35,13 +37,13 @@ namespace nilnul.geometry.planar.coil_.gon.be_
 			double allowance = 0.001
 		)
 		{
-			var coils = coil_.gon.to_._Coils4dblX._Coils_assumeConduit(
+			var coils = coil_.gon.to_._Coils4dblX._CoilsByRemoveDuct_0coil(
 				_arrows_froPolyDifPoints.Select(g=>g.basis).ToArray()
 			);
 
 			return coils.All(
 				c=> coil_.gon.be_.poly_.Cycle4dbl.Singleton.be(c.Select(g=>g.basis))
-			);
+			); // either holes, or islands, or conduit.nest.
 
 		}
 

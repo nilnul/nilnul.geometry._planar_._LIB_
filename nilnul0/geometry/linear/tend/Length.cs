@@ -12,4 +12,9 @@ namespace nilnul.geometry.linear.span
 	public interface ILength
 	{
 	}
+
+	/// <summary>
+	/// the distance with unit
+	/// </summary>
+	public interface IDistance:nilnul.obj.IMeasure { }
 }

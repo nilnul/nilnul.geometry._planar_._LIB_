@@ -44,14 +44,14 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.planar.IZone" Collapsed="true">
-    <Position X="8.25" Y="16.75" Width="1.5" />
+    <Position X="11.25" Y="18.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Zone.cs</FileName>
+      <FileName>IZone.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="nilnul.geometry.planar.zone_.ISimple" Collapsed="true">
-    <Position X="11.5" Y="18.5" Width="1.5" />
+  <Interface Name="nilnul.geometry.planar.facet_.ISimple" Collapsed="true">
+    <Position X="11" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>facet_\Simple.cs</FileName>
@@ -83,7 +83,7 @@
     <Position X="12" Y="12.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Surface.cs</FileName>
+      <FileName>ISurface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.planar.spread_.IRoadable" Collapsed="true">
@@ -165,14 +165,6 @@
         <Point X="10.25" Y="12.75" />
       </Path>
     </InheritanceLine>
-    <InheritanceLine Type="nilnul.geometry.planar.manifold_.IDimTwo" FixedToPoint="true">
-      <Path>
-        <Point X="13" Y="11.306" />
-        <Point X="13" Y="11.681" />
-        <Point X="10.438" Y="11.681" />
-        <Point X="10.438" Y="12.75" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>tope_\TwoDim.cs</FileName>
@@ -200,15 +192,8 @@
       <FileName>drawable_\Connected.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="nilnul.geometry.planar.ITract" Collapsed="true">
-    <Position X="8.75" Y="9" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ITract.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Interface Name="nilnul.geometry.planar.tract_.IBoundaried" Collapsed="true">
-    <Position X="8" Y="15.25" Width="1.5" />
+    <Position X="5.5" Y="15.25" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>tract_\Boundaried.cs</FileName>
@@ -263,6 +248,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>crux_\INonsingular.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="nilnul.geometry.planar.ITract" Collapsed="true">
+    <Position X="7.75" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITract.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Microsoft YaHei UI" Size="9" />

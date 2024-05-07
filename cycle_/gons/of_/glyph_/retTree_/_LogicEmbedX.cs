@@ -29,7 +29,7 @@ namespace nilnul.geometry.planar.cycle_.gons.of_.glyph_.retTree_
 planar.cycle_.Polygon4dblI
 			>(
 //(x,y) =>
-cycle_.gon.co_.nonjoint.be_.torus_._Seige4dblX._Be_assumeNonjoint
+cycle_.gon.co_.nonjoint.be_.nest_._Seige4dblX._Be_assumeNonjoint
 			);
 
 			GraphicsPath characterPath = new GraphicsPath();

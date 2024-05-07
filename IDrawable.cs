@@ -14,6 +14,12 @@ namespace nilnul.geometry.planar
 	///		figure
 	///		tangible
 	///			for other objects to be tangent with this one at some point, the point has to be there.
+	///		<see cref="points_.dwelt"/>
+	///		nonhollow
+	///		palphable
+	///		tramp
+	///		trek
+	///		
 	public interface IDrawable:sub_.INonempty
 
 	{

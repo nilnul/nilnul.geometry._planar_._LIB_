@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.cycle_.gon_.facade.of_
 {
+	/// <summary>
+	/// <see cref="zone_.gon.of_.IOfCycle"/>
+	/// </summary>
+	///
+	///
 	 public class OfCycleByReverseIfNecessary
 		:
 		facade.OfI< cycle_.Polygon4dblI>
@@ -47,3 +52,7 @@ namespace nilnul.geometry.planar.cycle_.gon_.facade.of_
 
 	}
 }
+
+/*
+ 
+ */

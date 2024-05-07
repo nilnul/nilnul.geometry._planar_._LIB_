@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.grad_.step.co_
+namespace nilnul.geometry.planar.grad_.skid.co_
 {
 	/// <summary>
 	/// the ends/extrems are four distinct points.

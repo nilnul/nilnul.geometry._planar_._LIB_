@@ -13,6 +13,8 @@ namespace nilnul.geometry.linear
 		point.TwinDbl
 		//,
 		//IBar
+		,
+		ITend
 	{
 		public Tend4dbl(Tuple<PointDbl, PointDbl> tuple) : base(tuple.Item1,tuple.Item2)
 		{

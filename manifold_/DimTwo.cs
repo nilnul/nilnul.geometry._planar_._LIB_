@@ -15,7 +15,7 @@ namespace nilnul.geometry.planar.manifold_
 	/// use case:
 	///		in furniture, to make a board tenuale, it must be 2d every where.
 	/// </remarks>
-	/// also known as <see cref="planar.ISurface"/>
+	/// also known as <see cref="planar.ISpread"/>
 	/// 
 	public interface IDimTwo : IManifold
 	{

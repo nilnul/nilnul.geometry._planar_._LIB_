@@ -7,6 +7,11 @@ using nilnul.num;
 
 namespace nilnul.geometry.linear
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		lane
 	public interface ILine : trace_.IUnbounded { }
 
 }

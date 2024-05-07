@@ -9,7 +9,7 @@ namespace nilnul.geometry.planar.cycle_._gon_
 {
 	public interface Grads4dblI
 		:
-		trail_.piecewise_._polyseg_.Grads4dblI
+		trav_.piecewise_._polyseg_.Grads4dblI
 		
 	{
 

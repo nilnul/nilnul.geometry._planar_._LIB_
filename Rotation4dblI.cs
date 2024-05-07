@@ -16,7 +16,6 @@ using nilnul.obj._measure_;
 
 namespace nilnul.geometry.planar
 {
-	
 	public interface RotationOfDoubleI<T>
 		:
 		linear_._measured.Mark4dblI<T>

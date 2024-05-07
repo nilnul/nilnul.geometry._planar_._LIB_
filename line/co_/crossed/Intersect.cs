@@ -24,7 +24,7 @@ namespace nilnul.geometry.planar.line.co_.crossed
 		{
 			//
 			var determinantOfLine = nilnul.num.real.matrix_.square.to_.scalar_._DeterminantX.Determinant(
-				new num.real.matrix_.square_.Two_Two(a.points.en.begin.x, a.points.en.begin.y, a.points.en.end.x, a.points.en.end.y).val
+				new num.real.matrix_.square_.Secondary(a.points.en.begin.x, a.points.en.begin.y, a.points.en.end.x, a.points.en.end.y).val
 			);
 
 
@@ -34,7 +34,7 @@ namespace nilnul.geometry.planar.line.co_.crossed
 			var determinantOfLine1Y = DeterminantOfLineY(b);
 			var determinantOfLine1X = DeterminantOfLineX(b);
 
-			var denominator =new nilnul.num.real.matrix_.square_.Two_Two(
+			var denominator =new nilnul.num.real.matrix_.square_.Secondary(
 						determinantOfLineX, determinantOfLineY,
 						determinantOfLine1X, determinantOfLine1Y
 
@@ -43,12 +43,12 @@ namespace nilnul.geometry.planar.line.co_.crossed
 
 			return new planar.Point1(
 
-					new nilnul.num.real.matrix_.square_.Two_Two(
+					new nilnul.num.real.matrix_.square_.Secondary(
 						determinantOfLine, determinantOfLineX, determinantOfLine1, determinantOfLine1X).getDeterminant().ToReal()
 					/
 					denominator.ToReal()
 					,
-					new nilnul.num.real.matrix_.square_.Two_Two(
+					new nilnul.num.real.matrix_.square_.Secondary(
 						determinantOfLine, determinantOfLineY, determinantOfLine1, determinantOfLine1Y
 					).getDeterminant().ToReal()
 					/ denominator
@@ -106,7 +106,7 @@ namespace nilnul.geometry.planar.line.co_.crossed
 
 			return
 
-			new nilnul.num.real.matrix_.square_.Two_Two(a.points.en.begin.x, a.points.en.begin.y, a.points.en.end.x, a.points.en.end.y).getDeterminant();
+			new nilnul.num.real.matrix_.square_.Secondary(a.points.en.begin.x, a.points.en.begin.y, a.points.en.end.x, a.points.en.end.y).getDeterminant();
 
 		}
 		public static nilnul.num.RealI DeterminantOfLineX(Line a)
@@ -125,14 +125,14 @@ namespace nilnul.geometry.planar.line.co_.crossed
 		public static nilnul.num.RealI DeterminantOfPoint(planar.PointI1 p)
 		{
 			return
-new nilnul.num.real.matrix_.square_.Two_Two
+new nilnul.num.real.matrix_.square_.Secondary
 				(p.x, new nilnul.num.real_.Quotient(1), p.y, new nilnul.num.real_.Quotient(1)
 			).getDeterminant();
 
 		}
 		public static nilnul.num.RealI Determinant(nilnul.num.RealI x, nilnul.num.RealI y)
 		{
-			return new nilnul.num.real.matrix_.square_.Two_Two(
+			return new nilnul.num.real.matrix_.square_.Secondary(
 				x, new nilnul.num.real_.Quotient(1), y, new nilnul.num.real_.Quotient(1)
 			).getDeterminant();
 

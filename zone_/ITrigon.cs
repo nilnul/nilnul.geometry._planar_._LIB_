@@ -26,4 +26,6 @@ namespace nilnul.geometry.planar.zone_
 		,
 		ISimplex
 	{}
+
+
 }

@@ -9,4 +9,5 @@ namespace nilnul.geometry.planar.vect.co
 	public interface ToI<T>:nilnul.obj._to_.ToI<Co,T>
 	{
 	}
+
 }

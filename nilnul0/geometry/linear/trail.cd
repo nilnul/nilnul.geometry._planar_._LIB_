@@ -54,15 +54,14 @@
     <Position X="7.25" Y="25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\IUnspanned.cs</FileName>
-      <NewMemberFileName>nilnul0\geometry\linear\trail_\ISpanned.cs</NewMemberFileName>
+      <FileName>nilnul0\geometry\linear\trav_\IUnspanned.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.trail_.ISpanned" Collapsed="true">
     <Position X="15.5" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\ISpanned.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trav_\ISpanned.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.ICurve" Collapsed="true">
@@ -77,21 +76,21 @@
     <Position X="12.75" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\ClosedAtEnd.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trav_\ClosedAtEnd.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.trail_.IClosdAtStart" Collapsed="true">
     <Position X="15.75" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\ClosedAtStart.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trav_\ClosedAtStart.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.trail_.IClosd" Collapsed="true">
     <Position X="14.25" Y="16" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\Closed.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trav_\Closed.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.curve_.IInfinite" Collapsed="true">
@@ -126,15 +125,14 @@
     <Position X="8.25" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\IFinite.cs</FileName>
+      <FileName>nilnul0\geometry\linear\trav_\IFinite.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="nilnul.geometry.linear.trail_.IInfinite" Collapsed="true">
     <Position X="10.25" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>nilnul0\geometry\linear\trail_\IInfinite.cs</FileName>
-      <NewMemberFileName>nilnul0\geometry\linear\trail_\IUnbounded.cs</NewMemberFileName>
+      <FileName>nilnul0\geometry\linear\trav_\IInfinite.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Microsoft YaHei UI" Size="9" />

@@ -6,12 +6,27 @@ using System.Text;
 namespace nilnul.geometry.planar
 {
 
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		hoop
+	///		loop
+	///			, line back and forth
+	///			, oo like an 8
+	///			,p a point
+	///			
+	///		lup
+	///		
 	public interface ILoop :
-		trace_.IEndAtStart
+		lasso_.INonPoint
 		,
-		ILasso
+
+		trail_.IEndAtStart
 		,
 		ILoom
+		,
+		ILinger
 		
 	{}
 

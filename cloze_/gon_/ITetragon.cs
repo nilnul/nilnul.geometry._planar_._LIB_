@@ -5,7 +5,15 @@ using System.Text;
 
 namespace nilnul.geometry.planar.cloze_.gon_
 {
-	public interface  ITetragon
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		quadrilateral
+	///			,emphasis on the lateral, the edge.
+	///		tetragon
+	///			,emphasis on the inner region.
+	public interface  ITetragon:IGon
 	{
 	}
 }

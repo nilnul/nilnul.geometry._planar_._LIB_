@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace nilnul.geometry.planar.cloze_.gon
 {
 	/// <summary>
-	/// all polygon, including nilgon and monogon, can be drawn in the same algorithms.
+	/// all polygon, including nilgon and monogon, can be drawn in the same algorithms to svg.
 	/// </summary>
 	static public class _DrawX
 	{

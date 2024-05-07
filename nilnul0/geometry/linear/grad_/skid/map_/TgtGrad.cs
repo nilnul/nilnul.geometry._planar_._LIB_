@@ -13,7 +13,10 @@ namespace nilnul.geometry.linear.grad_.nontrivia.map_
 	/// alias:
 	///		affine transform in 1d.
 	/// </remarks>
+	/// <see cref="linear.morph_.Affine4dbl"/>
 	public class TgtGrad4Dbl
+		:
+	nilnul.num.real.op_.Unary4dblI
 	{
 		private grad_.Nontrivia4dbl	 _src;
 
@@ -33,6 +36,8 @@ namespace nilnul.geometry.linear.grad_.nontrivia.map_
 
 		 double _srcLengthCached;
 		double _tgtLengthCached;
+		double _scaleCached;
+		double _shiftCached;
 
 		public TgtGrad4Dbl(
 grad_.Nontrivia4dbl	 src0
@@ -44,6 +49,9 @@ GradDbl tgt0
 			this._tgt = tgt0;
 			_srcLengthCached = _src.distance;
 			_tgtLengthCached = _tgt.distance;
+			_scaleCached = _tgtLengthCached / _srcLengthCached;
+			_shiftCached = _tgt.component.coord - this._src.Item1.coord *_scaleCached;
+
 
 
 
@@ -51,34 +59,49 @@ GradDbl tgt0
 		}
 
 		public TgtGrad4Dbl(
-double srcStart, double srcEnd
-			,
-double tgtStart, double tgtEnd
-			
-			):this(
+			double srcStart, double srcEnd
+						,
+			double tgtStart, double tgtEnd
+		):this(
 				new Nontrivia4dbl(srcStart,srcEnd)
 				,
 				new GradDbl(tgtStart,tgtEnd)
-
-				)
+		)
 		{
-			
+		}
 
-
-
-
+		static public TgtGrad4Dbl OfShafts(
+			double anchor, double length
+			,
+			double anchor1, double length1
+		) {
+			return new TgtGrad4Dbl(
+				anchor, anchor +length
+				,
+				anchor1,anchor1 +length1
+			);
 		}
 
 		public double scale {
 			get {
-				return  _tgtLengthCached / this._src.distance ;
+				return  _scaleCached;
 			}
 		}
 
+	
+		/// <summary>
+		/// <see cref="trans(double)"/>
+		/// </summary>
 		public double shift {
 			get {
-				return _tgt.component.coord ;
+				return  _shiftCached;
 			}
+		}
+
+		public double op(double _inSrc)
+		{
+			return _inSrc * _scaleCached + _shiftCached;
+			//return ( _inSrc - this._src.Item1.coord) / this._src.distance * _tgtLengthCached + _tgt.component.coord;
 		}
 
 		/// <summary>
@@ -86,13 +109,13 @@ double tgtStart, double tgtEnd
 		/// </summary>
 		/// <param name="_inSrc">can be anywhere. not necessary in the src</param>
 		/// <returns></returns>
+		///
+		[Obsolete()]
 		public double trans(
 			double _inSrc
 		) {
-
-			return _inSrc / this._src.distance * _tgtLengthCached + _tgt.component.coord;
+			return op(_inSrc);
 		}
-
 
 
 	}

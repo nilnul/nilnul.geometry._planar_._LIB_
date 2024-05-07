@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry._2d
 {
-	public partial class LineSegmentInDouble
+	public class LineSegmentInDouble
 	{
 		private double _length;
 		public double length

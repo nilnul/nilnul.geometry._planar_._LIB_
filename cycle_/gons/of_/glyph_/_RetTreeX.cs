@@ -29,7 +29,7 @@ namespace nilnul.geometry.planar.cycle_.gons.of_.glyph_
 planar.cycle_.Polygon4dblI
 			>(
 //(x,y) =>
-loop_.gon.co_.nonjoint.be_.torus_._Seige4dblX._Be_assumeNonjoint
+lop_.gon.co_.nonjoint.be_.torus_._Seige4dblX._Be_assumeNonjoint
 			);
 
 			glyph_._RetCyclesX.Cycles(
@@ -56,7 +56,7 @@ planar.cycle_.Polygon4dblI
 planar.cycle_.Polygon4dblI
 			>(
 				//(x,y) =>
-cycle_.gon.co_.nonjoint.be_.torus_._Seige4dblX._Be_assumeNonjoint
+cycle_.gon.co_.nonjoint.be_.nest_._Seige4dblX._Be_assumeNonjoint
 			);
 
 

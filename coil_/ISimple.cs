@@ -9,4 +9,5 @@ namespace nilnul.geometry.planar.coil_
 	public interface ISimple : ICoil, curve_.ISimple
 	{
 	}
+
 }

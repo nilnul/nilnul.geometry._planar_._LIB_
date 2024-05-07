@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,7 +56,32 @@ namespace nilnul.geometry.planar
 				(float)point.y
 			);
 		}
+		static public Complex ToComplex(this Point4dblI point) {
+			return new Complex(
+				point.x
+				,
+				point.y
+			);
+		}
+
+		[Obsolete(nameof(ToImpl))]
 		static public Point4dbl ToOrthogonal(this Point4dblI point)
+		{
+			return point switch
+			{
+				Point4dbl a => a
+				 ,
+				_ => new Point4dbl(point.x, point.y)
+			}
+			;
+		}
+
+		/// <summary>
+		/// to an implementation, that is, class or struct, 
+		/// </summary>
+		/// <param name="point"></param>
+		/// <returns></returns>
+		static public Point4dbl ToImpl(this Point4dblI point)
 		{
 			return point switch
 			{
@@ -71,6 +98,11 @@ namespace nilnul.geometry.planar
 
 		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static Point4dbl ToPoint(this Complex c)
+		{
+			return c;
+		}
 	}
 
 }
