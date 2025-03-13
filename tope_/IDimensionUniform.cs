@@ -15,4 +15,5 @@ namespace nilnul.geometry.planar.tope_
 	}
 
 
+
 }

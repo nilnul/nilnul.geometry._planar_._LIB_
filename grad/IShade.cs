@@ -1,4 +1,4 @@
-﻿namespace nilnul.geometry.planar.grad
+namespace nilnul.geometry.planar.grad
 {
 	/// <summary>
 	/// a <see cref="cloze_.gon_.quad_.ITrapezoid"/> formed by the grad (start and the end points), the end projection to the main axis, the start point projection to the main axis
@@ -16,7 +16,7 @@
 	/// vs:
 	///		<see cref="grad.IShadow"/>, which is only one edge of this, and in opposite direction.
 	/// 
-	internal class IShade
+	internal class IShade:shadow_.IOntoMain
 	{
 	}
 

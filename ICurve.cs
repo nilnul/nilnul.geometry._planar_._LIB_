@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +9,9 @@ namespace nilnul.geometry.planar
 	/// for 2d, curve is the primary object. eg: when we draw something, we don't fill it. We can defer filling to nilnul.img
 	/// (for 3d, the primary object is surface|mesh)
 	///
+	/// A curve is a one-dimensional continuous and smooth path that can extend indefinitely in both directions or be bounded between two points. It has length but no thickness. Examples include lines, circles, parabolas, and more complex shapes.
+	/// A curve is represented by a continuous set of points often described by a function or a parametric equation.
+	/// (:per chatGpt)
 	/// <summary>
 	/// curve is a continuous, directed, spanned(the length is not nil) one-dimentional straint/nonstraight line.
 	/// It's ordered, and unorded curve is later defined on this as <see cref="nilnul.obj.TwinI{T}"/>: one must know order before he can ignore it.
@@ -44,7 +47,9 @@ namespace nilnul.geometry.planar
 	///		curve
 	///			'c' is also the start of <see cref="continuous"/>
 	public interface ICurve :
-			trav_.IDimOne       //trail_.INonpoint
+		troll_.IUnpoint
+			//trip_.IDimOne       //trail_.INonpoint
+
 	{
 	}
 }

@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.vow.ee_
+namespace nilnul.geometry.planar.cycle_.triangle.vow.ee_
 {
 	public class VowDefault<TVow>
 		:
-		planar.cycle_.trigon.vow.Ee4dbl<TVow>
+		planar.cycle_.triangle.vow.Ee4dbl<TVow>
 
-		where TVow : trigon.Vow4dblI, new()
+		where TVow : triangle.Vow4dblI, new()
 	{
 		public VowDefault(TriangleDbl val) : base(val, _obj.typ_.nilable_.unprimable_.singleton_.ByLazy<TVow>.Instance)
 		{

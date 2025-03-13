@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NonNeg = nilnul.num.real.double_.NonNegativeX2.Asserted;
 
-namespace nilnul.geometry.planar.cycle_.trigon.edges
+namespace nilnul.geometry.planar.cycle_.triangle.edges
 {
 	public  class LengthsDouble
 	{

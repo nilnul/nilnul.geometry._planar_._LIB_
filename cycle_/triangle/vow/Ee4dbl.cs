@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.vow
+namespace nilnul.geometry.planar.cycle_.triangle.vow
 {
 	public class Ee4dbl<TVow> :
 		nilnul.obj.vow.Ee1<planar.cycle_.TriangleDbl>

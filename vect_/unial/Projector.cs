@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.vect.op_.unary_;
+using nilnul.geometry.planar.vect.op_.unary_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.vect_.unital
 {
-
+	/// <summary>
+	/// <see cref=""/>
+	/// </summary>
 	public class Projector4dbl
 		:
 		nilnul.obj.Box_ofIn<planar.vect_.Unital4dblI>
+		,
+		vect.dich_._descarte_.IProject
 	{
 
 		public Projector4dbl(in Unital4dblI val) : base(val)
@@ -41,6 +45,11 @@ namespace nilnul.geometry.planar.vect_.unital
 
 
 
+		/// <summary>
+		/// the dot product
+		/// </summary>
+		/// <param name="x"></param>
+		/// <returns></returns>
 		public double scalar(
 				Vect4dblI x
 			)
@@ -51,6 +60,7 @@ namespace nilnul.geometry.planar.vect_.unital
 				Vect4dblI x
 			)
 		{
+			///
 			return  this.boxed.Scale(scalar(x) );
 		}
 

@@ -10,7 +10,7 @@ namespace nilnul.geometry.planar.curve_.piecewise_
 	/// a str of segs pieced together
 	/// </summary>
 	///
-	public interface IPolystep:IPiecewise,curve_.IFinite
+	public interface IPolystep:IPiecewise,curve_.IFiniteLong
 	{
 	}
 }

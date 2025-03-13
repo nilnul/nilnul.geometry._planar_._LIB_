@@ -10,7 +10,7 @@ namespace nilnul.geometry.planar.traject
 	/// <see cref="planar.traject"/>
 	/// </summary>
 	/// <see cref="planar.ITrack"/>
-	/// <see cref="planar.ITract"/>
+	/// <see cref="planar.ITrek"/>
 	public interface IUnDirected
 		:planar.ITrail
 	{

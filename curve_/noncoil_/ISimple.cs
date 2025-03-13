@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.curve_.noncoil_
 {
-	internal class ISimple
+	internal class ISimple:INoncoil
 	{
 	}
 }

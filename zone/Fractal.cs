@@ -12,6 +12,16 @@ namespace nilnul.geometry.planar.sub
 	/// <remarks>
 	/// creature can utilize this simple rule to grow, like a tree, a fragmented shell of snail/mollusk
 	/// </remarks>
+	/// 
+	/// <see cref="curve.stream_.Fractal"/>
+	/// <see cref="curve.fractal_"/>
+	/// <see cref="trail_.contiguous_.Fractal"/>
+	/// <see cref="sub_.IFractal"/>
+	/// <see cref="sub.IFractal"/>
+	///
+	/// <see cref="drawable_.IFractal"/>
+	/// 
+	/// <see cref="morph_.nonlinear_.LinearFractional"/>
 	interface IFractal
 	{
 

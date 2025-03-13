@@ -15,6 +15,7 @@ namespace nilnul.geometry.planar.curl_
 	///		segment
 	///		furl
 	///			,finite simple curl
+	///		<see cref="planar.IArch"/>
 	///		
 	internal class ISimple
 	{

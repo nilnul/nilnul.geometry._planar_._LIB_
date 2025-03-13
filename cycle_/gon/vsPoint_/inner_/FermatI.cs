@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.vsPoint_.inner_
+namespace nilnul.geometry.planar.cycle_.triangle.vsPoint_.inner_
 {
 	/// <summary>
 	/// a point the sum of the length of the edge from which to three vertices is the minimal.

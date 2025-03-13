@@ -13,7 +13,7 @@ namespace nilnul.geometry.planar.zone_
 	/// </summary>
 	/// the default is defined by one edge from 0 to positive x. a 3rd point inner the +y halfplane <see cref="planar.surface_.sected_.WaiPositive"/>.
 	public class TriangleDbl
-		: cycle_.trigon.be_.positive.vow.Ee4dbl
+		: cycle_.triangle.be_.positive.vow.Ee4dbl
 		,
 		planar.zone_.Trigon4dblI
 		,

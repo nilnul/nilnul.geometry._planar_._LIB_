@@ -17,7 +17,7 @@ namespace nilnul.geometry.planar.trail_
 	///		traject
 	/// 
 	public interface IDirected :
-		point.IMoving, ITrace, manifold_.INil0oneDimension
+		point.IMoving, ITrail, manifold_.INil0oneDimension
 	{
 
 	}

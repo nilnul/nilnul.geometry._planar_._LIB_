@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace nilnul.geometry.planar.morph_._affine
 	/// and the point to be transformed is augmented as (x,y,1)
 	/// so the resulting column is x*r + y*r1+ r2;
 	///
-	/// the benefits of row major can be domonstated by an example:
+	/// the benefits of row major can be demonstrated by an example:
 	/// If I have a point (p) and I want to Translate (T) and then Scale (S) I find it more readable with this notation:
 	/// transformedPoint = p*T*S
 	/// Rather than:
@@ -32,7 +33,7 @@ namespace nilnul.geometry.planar.morph_._affine
 	{
 
 		/// <summary>
-		/// note the matrix is right multipler: the matrix is placed to the right in multiplication.
+		/// note the matrix is right multiplier: the matrix is placed to the right in multiplication.
 		/// </summary>
 		/// <param name="linearMultiplier_2x2"></param>
 		/// <param name="shift_2x1"></param>
@@ -60,6 +61,10 @@ namespace nilnul.geometry.planar.morph_._affine
 		///		[[ a,c,0],[b,d,0],[e,f,1] ]
 		///		where [a,c] and [b,d] are the basis for the new vector space, and [e,f] is the new origin
 		/// </remarks>
+		///
+
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public System.Drawing.Drawing2D.Matrix Matrix_ofLinear_ofTranslate(
 
 			float[,] linearMultiplier_2x2
@@ -75,6 +80,34 @@ namespace nilnul.geometry.planar.morph_._affine
 				shift_2x1[0], shift_2x1[1]
 			);
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="rowwise">
+		/// row major.
+		///  submatrix is <see cref="morph_._rebase._Matrixed"/> which is row major: newI, newJ
+		///  ;
+		///  the 3rd row is: dx, dy, 1
+		///  
+		/// </param>
+		/// <returns></returns>
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		static public System.Drawing.Drawing2D.Matrix ToMatrix8float(
+
+			double[,] rowwise
+		)
+		{
+			return new System.Drawing.Drawing2D.Matrix(
+				(float)rowwise[0, 0], (float)rowwise[0, 1]
+				,
+				(float)rowwise[1, 0], (float)rowwise[1, 1]
+				,
+				(float)rowwise[2,0],(float)rowwise[2,1]
+			);
+		}
+
+
 		
 
 	}

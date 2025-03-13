@@ -122,6 +122,13 @@ Vector2.Dot(vector1.Normalize(), vector2.Normalize()) == -1 */
 				(point.x * point1.x + point.y * point1.y)
 				;
 		}
+		static public double Dbl(Point4dblI point, Point4dbl point1)
+		{
+			return
+				(point.x * point1.x + point.y * point1.y)
+				;
+		}
+
 		static public double Dbl(System.Numerics.Complex point, System.Numerics.Complex point1)
 		{
 			return
@@ -134,6 +141,7 @@ Vector2.Dot(vector1.Normalize(), vector2.Normalize()) == -1 */
 				(point.x * point1.x + point.y * point1.y)
 				;
 		}
+
 
 
 

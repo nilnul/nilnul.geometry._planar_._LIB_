@@ -17,6 +17,9 @@ namespace nilnul.geometry.planar.facet_
 	///			for 3d
 	///		holed.
 	///		torus
+	///	vs:
+	///		ussy
+	///			,<see cref="planar.cycle_.hole"/>, <see cref="cycle_.IConWinded"/>
 	///
 	//[Obsolete("as zone is stokes positive, so the inner is not zone")]
 	public  interface IHoled:IFacet

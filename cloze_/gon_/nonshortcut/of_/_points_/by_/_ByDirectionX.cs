@@ -5,7 +5,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using C = System.Numerics.Complex;
+
 using nilnul.num;
 using Complex = System.Numerics.Complex;
 using nilnul.num.complex;
@@ -36,13 +36,19 @@ namespace nilnul.geometry.planar.cloze_.gon_.nonshortcut.of_._points_.by_
 			int comp(C a, C b) {
 				if (a==mean)
 				{
+					if (b==mean)
+					{
+						return 0;
+					}
 					return -1;
 				}
+				/// hence a!=mean
 				if (b== mean)
 				{
 					return 1;
 				}
 
+				///  to convert all the points to polar
 				var aDisplace = a - mean;
 				var bDisplace = b - mean;
 

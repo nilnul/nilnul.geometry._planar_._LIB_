@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +28,8 @@ namespace nilnul.geometry.planar.morph_
 	/// </remarks>
 	/// the entity is unchanged. but we have new coordiante system established in addition to the new one.
 	/// <seealso cref="Stiff"/>
+	/// alias:
+	/// 
 	public interface IRigid:affine_.IRigid
 	{
 	}

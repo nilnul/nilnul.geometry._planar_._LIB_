@@ -1,0 +1,193 @@
+<!-- begin snippet: js hide: false console: true babel: false -->
+
+<html>
+
+<head>
+</head>
+<body>
+	<!-- language: lang-css -->
+	<style>
+
+		canvas {
+			border: 1px solid black
+		}
+	</style>
+	<!-- language: lang-html -->
+
+	<canvas id="canvas" width="200" height="180"></canvas>
+	<!--	language: lang - js-->
+
+	<script>
+		const ctx = canvas.getContext("2d");
+		const W = 200,
+			H = 180;
+		const TAU = Math.PI * 2;
+		const ellipse = {
+			x: W / 2,
+			y: H / 2,
+			rx: W / 3,
+			ry: W / 3,
+			rotate: 0,
+			startAng: 0,
+			endAng: Math.PI * 2,
+			dir: false,
+		};
+
+		function boundEllipseAll({
+			x,
+			y,
+			rx,
+			ry,
+			rotate
+		}) {
+			const xAx = Math.cos(rotate);
+			const xAy = Math.sin(rotate);
+			const w = ((rx * xAx) ** 2 + (ry * xAy) ** 2) ** 0.5;
+			const h = ((rx * xAy) ** 2 + (ry * xAx) ** 2) ** 0.5;
+			return {
+				x: -w + x,
+				y: -h + y,
+				w: w * 2,
+				h: h * 2
+			};
+		}
+
+		function boundEllipse({
+			x,
+			y,
+			rx,
+			ry,
+			rotate,
+			startAng,
+			endAng
+		}) {
+			const normalizeAng = ang => (ang % TAU + TAU) % TAU;
+			const getPoint = ang => {
+				const cA = Math.cos(ang);
+				const sA = Math.sin(ang);
+				return [cA * rx * xAx - sA * ry * xAy, cA * rx * xAy + sA * ry * xAx];
+			}
+			const extrema = a => { // from angle
+				var i = 0;
+				while (i < 4) {
+					const ang = normalizeAng(a + Math.PI * (i / 2));
+					if ((ang > startAng && ang < endAng) || (ang + TAU > startAng && ang + TAU < endAng)) {
+						const [xx, yy] = getPoint(ang);
+						minX = Math.min(minX, xx);
+						maxX = Math.max(maxX, xx);
+						minY = Math.min(minY, yy);
+						maxY = Math.max(maxY, yy);
+					}
+					i++;
+				}
+			}
+			// UPDATE bug fix (1) for full ellipse
+			const checkFull = startAng !== endAng; // Update fix (1)
+			startAng = normalizeAng(startAng);
+			endAng = normalizeAng(endAng);
+			(checkFull && startAng === endAng) && (endAng += TAU); // Update fix (1)
+			const xAx = Math.cos(rotate);
+			const xAy = Math.sin(rotate);
+			endAng += endAng < startAng ? TAU : 0;
+			const [sx, sy] = getPoint(startAng);
+			const [ex, ey] = getPoint(endAng);
+			var minX = Math.min(sx, ex);
+			var maxX = Math.max(sx, ex);
+			var minY = Math.min(sy, ey);
+			var maxY = Math.max(sy, ey);
+			//extrema(-Math.atan((ry * xAy) / (rx * xAx))); // Add x Axis extremas
+			extrema(Math.atan2(-(ry * xAy) ,  (rx * xAx))); // Add x Axis extremas
+			//extrema(-Math.atan((rx * xAx) / (ry * xAy))); // Add x Axis extremas
+
+
+			//extrema(-Math.atan((rx * xAy) / (ry * xAx))); // Add y Axis extremas
+			//extrema(-Math.atan2((rx * xAy), (ry * xAx))); // Add y Axis extremas
+
+			extrema(Math.atan2( (ry * xAx) , (rx * xAy) ) ); // Add y Axis extremas
+
+			const norm = (x, y) => Math.sqrt( x*x + y*y);
+			//extrema(
+			//	-Math.atan2(
+
+			//		norm(rx * xAy, ry * xAx)
+			//		,
+			//		norm (rx*xAx , ry*xAy)
+			//	)
+			//);
+
+			return {
+				x: minX + x,
+				y: minY + y,
+				w: maxX - minX,
+				h: maxY - minY
+			};
+		}
+
+		function drawExtent({
+			x,
+			y,
+			w,
+			h
+		}) {
+			ctx.moveTo(x, y);
+			ctx.rect(x, y, w, h);
+		}
+
+		function drawEllipse({
+			x,
+			y,
+			rx,
+			ry,
+			rotate,
+			startAng,
+			endAng,
+			dir
+		}) {
+			ctx.ellipse(x, y, rx, ry, rotate, startAng, endAng, dir);
+		}
+
+		function drawFullEllipse({
+			x,
+			y,
+			rx,
+			ry,
+			rotate,
+			dir
+		}) {
+			ctx.ellipse(x, y, rx, ry, rotate, 0, TAU, dir);
+		}
+		mainLoop(0);
+
+		function mainLoop(time) {
+			ctx.clearRect(0, 0, W, H);
+
+			// Animate ellipse
+			ellipse.startAng = time / 1000;
+			ellipse.endAng = time / 2000;
+			ellipse.rotate = Math.cos(time / 14000) * Math.PI * 2;
+			ellipse.ry = Math.cos(time / 6000) * (W / 4 - 10) + (W / 4);
+
+			// Draw full ellipse and bounding box.
+			ctx.strokeStyle = "#F008";
+			ctx.beginPath();
+			drawFullEllipse(ellipse);
+			drawExtent(boundEllipseAll(ellipse));
+			ctx.stroke();
+
+			// Draw ellipse segment and bounding box.
+			ctx.strokeStyle = "#0008";
+			ctx.beginPath();
+			drawEllipse(ellipse);
+			drawExtent(boundEllipse(ellipse));
+			ctx.stroke();
+
+			requestAnimationFrame(mainLoop)
+		}
+
+	</script>
+
+</body>
+</html>
+
+
+

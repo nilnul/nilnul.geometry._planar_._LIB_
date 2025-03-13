@@ -12,6 +12,7 @@ namespace nilnul.geometry.planar.drawable_
 	/// alias:
 	///		boundaried
 	///			boundary
+	///	<see cref=""/>
 	public interface IBoundaried
 		:IDrawable
 	{

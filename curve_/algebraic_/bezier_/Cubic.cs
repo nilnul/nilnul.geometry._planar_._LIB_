@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.point;
+using nilnul.geometry.planar.point;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,14 @@ namespace nilnul.geometry.planar.curve_.algebraic_.bezier_
 {
 	/// <summary>
 	/// note the mid points is not on the path; it is a control/clamping point.
+	/// for ABCD,
+	///		get the mid of AB,BC,CD: EFG
+	///		the get the curve by: <see cref="algebraic_.bezier_.Quadratic"/>
 	/// </summary>
 	/// <remarks>
 	///For some choices of P1 and P2 the curve may intersect itself, or contain a cusp.
 	/// </remarks>
+	/// 
 	public class Cubic4dbl
 		:
 		nilnul.obj.Box1<

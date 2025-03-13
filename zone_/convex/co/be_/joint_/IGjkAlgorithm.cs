@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.zone_.gon_.convex.co.be_.joint_
+namespace nilnul.geometry.planar.zone_.convex.co.be_.joint_
 {
 	/*
 	 see: youtube.com/watch?v=ajv46BSqcK4
@@ -18,6 +18,7 @@ The video covers a broad range of topics from Minkowski sums and differences to 
 	///	<summary>
 	/// use <see cref="planar.vect.set.op_.binary_.minkowski_.Minus"/>, and determine whether 0 is in the set.
 	/// </summary>
+	/// <see cref="convex.co.distance_.IGjkAlgorithm"/>
 	class IGjkAlgorithm
 	{
 

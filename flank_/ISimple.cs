@@ -8,8 +8,8 @@ namespace nilnul.geometry.planar.flank_
 {
 	public interface ISimple
 		:
-		ITrack
-		,
+		//ITrack
+		//,
 		ITope
 	{
 	}

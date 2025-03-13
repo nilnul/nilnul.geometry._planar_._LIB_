@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.dimed;
+using nilnul.geometry.dimed;
 
 namespace nilnul.geometry.planar.zone_
 {

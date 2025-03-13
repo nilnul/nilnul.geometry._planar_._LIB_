@@ -5,6 +5,7 @@
 	/// </summary>
 	/// alias:
 	///		intersected, which means the action, which might result nothing;
+	///		collision
 	interface IJoint { }
 
 

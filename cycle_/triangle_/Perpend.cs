@@ -11,7 +11,7 @@ namespace nilnul.geometry.planar.cycle_.trigon_
 {
 
 	public class Perpend :
-		planar.cycle_.trigon.be_.perpend.vow.Ee
+		planar.cycle_.triangle.be_.perpend.vow.Ee
 		,
 		TrigonI
 	{

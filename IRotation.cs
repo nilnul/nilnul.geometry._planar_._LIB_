@@ -6,7 +6,7 @@
 	/// alias:
 	///		corner
 	///		revolution
-	interface IRotation { }
+	public interface IRotation { }
 
 
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +14,8 @@ namespace nilnul.geometry.planar
 	///		lapse
 	///			,where "se" hints infinite or finite.
 	///			,lack direction
+	///
+	[Obsolete("in " + nameof(nilnul.rel.arch.str.be_.conn_) + " lapse mean empty or a lariate" )]
 	public interface ILapse
 		:
 		planar.curve.IUnDirected

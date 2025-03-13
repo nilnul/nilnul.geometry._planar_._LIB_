@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.theorem_.ceva_
+namespace nilnul.geometry.planar.cycle_.triangle.theorem_.ceva_
 {
 	/// <summary>
 	/// Trigonometric Form of Ceva's Theorem

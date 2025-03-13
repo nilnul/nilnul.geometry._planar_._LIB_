@@ -51,7 +51,7 @@ namespace nilnul.geometry.planar
 	//,	///implied
 	//sub_.connected_.simple_.IRoadable   //implied
 	,
-		flank_.IBoundaried      //,
+		flank_.IBroadable      //,
 								//, ISwath
 		
 

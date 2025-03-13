@@ -1,4 +1,4 @@
-﻿namespace nilnul.geometry.planar
+namespace nilnul.geometry.planar
 {
 	/// <summary>
 	/// a <see cref="planar.ICloze"/>, but direction is ignored.
@@ -11,8 +11,10 @@
 	///			it can be tangled, self intersecting.
 	///			it has no direction. you just fasten it in either or both direction, as you can use double/symmetric knot from two parallel run of rope.
 	///		lace
+	///		lariat
 	///		
 	///		lac
+	///		
 	public interface ILasso
 		:ILocus
 		, trail_.IEndAtStart
@@ -21,4 +23,6 @@
 	{
 
 	}
+
+
 }

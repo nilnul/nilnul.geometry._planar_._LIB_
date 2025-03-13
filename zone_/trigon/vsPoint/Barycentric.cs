@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.zone_.trigon.vsPoint
 {
 	/// <summary>
-	/// <see cref="cycle_.trigon.vsPoint.Barycentric"/>;
+	/// <see cref="cycle_.triangle.point.Barycentric"/>;
 	/// find the coordinates in terms of the three edges;
 	///
 	/// p =a + p(b-a) + q(c-a)    , where (p,q) is the coords of points with respect to (b-a), (c-a) as the basis.

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,7 @@ using r = nilnul.num.real;
 
 namespace nilnul.geometry.planar.point
 {
+
 	/// <summary>
 	/// distance from origion;
 	///		delta
@@ -15,6 +16,7 @@ namespace nilnul.geometry.planar.point
 	///		radis
 	///		departure
 	/// </summary>
+	/// 
 	static public class _DeviationX
 	{
 

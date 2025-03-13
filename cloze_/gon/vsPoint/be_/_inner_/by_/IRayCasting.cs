@@ -10,6 +10,8 @@ namespace nilnul.geometry.planar.cloze_.gon.vsPoint.be_._inner_.by_
 	/// <see cref="cycle_.gon.vsPoint.sign_._PointInsidePolygonX"/>
 	/// <see cref="lop_.gon.vsPoint.sign_._PointInsidePolygonX"/>
 	/// </summary>
+	/// see:
+	///		Svg fill rule: nonzero
 	internal class IRayCasting
 	{
 	}

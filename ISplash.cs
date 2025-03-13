@@ -31,7 +31,7 @@ namespace nilnul.geometry.planar
 	public interface ISplash
 		:
 		manifold_.IDimTwo
-		, ITrack
+		//, ITrack
 	{
 	}
 }

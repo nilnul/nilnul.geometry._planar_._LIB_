@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.morph_;
+using nilnul.geometry.planar.morph_;
 
 namespace nilnul.geometry.planar.morph_.rebase_
 {
@@ -19,4 +19,6 @@ namespace nilnul.geometry.planar.morph_.rebase_
 		,
 		IRebase
 	{ }
+
+
 }

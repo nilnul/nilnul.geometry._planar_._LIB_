@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,8 +34,11 @@ namespace nilnul.geometry.planar.vect
 
 		static public double Variance(this planar.Vect4dblI a) {
 			return vect.co.to_.real_._DotProductX.Square(a);
-
 		}
+		static public double Variance(this (double,double) a) {
+			return vect.co.to_.real_._DotProductX.Square(a);
+		}
+
 
 	}
 }

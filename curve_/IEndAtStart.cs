@@ -12,12 +12,13 @@ namespace nilnul.geometry.planar.curve_
 	///		circle
 	///		8 and <see cref="splash_.polygon_.tetra_.Butterfly"/>
 	/// </summary>
+	/// <remarks>
 	/// <see cref="planar.ICoil"/>
+	/// </remarks>
 	/// <see cref="planar.ICycle"/>
-	/// <see cref="planar.ICloze"/>
-	public interface IEndAtStart : IFinite
+	/// vs:
+	///		<see cref="planar.ICloze"/>, no point:<see cref="planar.cloze_.ISpanned"/>
+	public interface IEndAtStart : IFiniteLong
 	{
 	}
-
-	public interface INoncoil { }
 }

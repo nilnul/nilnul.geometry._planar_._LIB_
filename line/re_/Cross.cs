@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,11 @@ namespace nilnul.geometry.planar.line.re_
 	/// <summary>
 	/// 
 	/// </summary>
+	/// alias:
+	///		cross
+	///		concurrent
+	///		angular
+	///		
 	public class Inter : ReI
 	{
 		public bool re(LineI a, LineI b)

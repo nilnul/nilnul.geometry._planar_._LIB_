@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +17,9 @@ using nilnul.obj._measure._unit_;
 namespace nilnul.geometry.planar.sub._area.unit_.eng_
 {
 
+	/// <summary>
+	/// 
+	/// </summary>
 	public class Acre4dbl
 		:
 

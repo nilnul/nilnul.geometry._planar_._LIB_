@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon
+namespace nilnul.geometry.planar.cycle_.triangle
 {
 	/// <summary>
 	/// from a vertex to the a point at the oppsite edge.

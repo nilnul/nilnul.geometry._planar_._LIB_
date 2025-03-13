@@ -1,4 +1,4 @@
-﻿using nilnul.num;
+using nilnul.num;
 using nilnul.num.real_;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace nilnul.geometry.planar._rotation.unit_
 	/// </summary>
 	public class Turn4dbl : _rotation.Unit4dblA
 	{
-		
+		public const double MAGNITUDE = nilnul.num.real_._Tau4dblX.FULL;
 
 		public Turn4dbl() : base( nilnul.num.real_._Tau4dblX.FULL)
 		{

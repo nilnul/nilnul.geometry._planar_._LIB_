@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -103,6 +103,28 @@ namespace nilnul.geometry.planar
 		{
 			return c;
 		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static Point ToPoint8int(this Complex c)
+		{
+			return new Point(
+				(int) c.Real
+				,
+				(int)c.Imaginary
+			);
+		}
+
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static PointF ToPointFloat(this Complex c)
+		{
+			return new PointF(
+				(float)c.Real
+				,
+				(float)c.Imaginary
+			);
+		}
+
 	}
 
 }

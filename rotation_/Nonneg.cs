@@ -13,6 +13,7 @@ namespace nilnul.geometry.planar.rotation_
 		nilnul.num.real_.NonnegI radian { get; }
 	}
 
+
 	public class Nonneg :
 		nilnul.obj.Box<nilnul.num.real_.NonnegI>
 		,

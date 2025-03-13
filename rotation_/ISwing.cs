@@ -6,5 +6,7 @@
 	/// alias:
 	///		thrash
 	///		veer
-	interface ISwing { }
+	public interface ISwing:rotation_.geNegPi_.ILtPi { }
+
+
 }

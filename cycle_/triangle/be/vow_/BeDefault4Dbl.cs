@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.be.vow_
+namespace nilnul.geometry.planar.cycle_.triangle.be.vow_
 {
 	public class BeDefault4Dbl<TBe>
-		: trigon.be.Vow4dbl
-		where TBe : trigon.BeDoubleI, new()
+		: triangle.be.Vow4dbl
+		where TBe : triangle.BeDoubleI, new()
 
 	{
 		public BeDefault4Dbl() : base(_obj.typ_.nilable_.unprimable_.singleton_.ByLazy<TBe>.Instance)

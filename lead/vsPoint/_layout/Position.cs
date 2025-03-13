@@ -17,7 +17,9 @@ namespace nilnul.geometry.planar.lead.vsPoint._layout
 		/// 
 		/// </summary>
 		/// <remarks>
+		/// </remarks>
 		///	aliase:
+		///		conwind
 		///		brunt
 		///
 		/// Retract //restrict, reduce; reset, retract,rest, retract, 		//ship to turn downward the direction of perpendicular axis.
@@ -28,7 +30,7 @@ namespace nilnul.geometry.planar.lead.vsPoint._layout
 		///		as leeway is where the lead protects and gives, "restrict" is what the lead protects against, where in-city dwellers cannot go due to danger.
 		///
 		/// ///Restrict, same initial as right; 
-		/// </remarks>
+		/// 
 		Restrict		
 			,
 		Incident
@@ -45,6 +47,10 @@ namespace nilnul.geometry.planar.lead.vsPoint._layout
 		/// re: x-axis,
 		///		the y-axis, as an emergency semaphore lighting guide,  points for evacuees to where the leeway is
 		/// </remarks>
+		/// 
+		/// alias:
+		///		prowind
+		///			,positive
 		Leeway 
 		
 

@@ -20,7 +20,7 @@ namespace nilnul.geometry.planar.zone_.gon.co.be_
 				component1
 			);
 
-			if (!disjoint )
+			if (!disjoint ) ///two linear donot intersect. but on might be in the other.
 			{
 
 				return false;

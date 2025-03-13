@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.rotation_;
+using nilnul.geometry.planar.rotation_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ namespace nilnul.geometry.planar.rotation_.direction_
 	/// <summary>
 	/// <see cref="IAlignment"/>
 	/// </summary>
-	internal interface ILtPi:IDirective
+	public interface ILtPi:IDirective
 	{
 	}
 

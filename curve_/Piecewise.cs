@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ namespace nilnul.geometry.planar.curve_
 	/// </summary>
 	/// Pieces
 	///		piecewise without "wi" and "e"
+	///		pwc, piecewise curve
 	public interface IPiecewise
 		:ICurve
 	{

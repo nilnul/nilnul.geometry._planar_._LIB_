@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.cloze_
 {
-	public interface IFinite : curve_.IFinite, ICloze
+	public interface IFinite : curve_.IFiniteLong, ICloze
 	{
 	}
 }

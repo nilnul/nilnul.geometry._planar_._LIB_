@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,7 @@ using R = nilnul.num.Real;
 namespace nilnul.geometry.planar._area.unit_
 {
 	/// <summary>
-	/// 公顷
+	/// 公顷; 10000 sqMeters
 	/// </summary>
 	public class Hectare: UnitI
 	{

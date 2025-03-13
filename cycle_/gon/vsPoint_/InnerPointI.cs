@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon
+namespace nilnul.geometry.planar.cycle_.triangle
 {
 	/// <summary>
 	/// point in a triangle but not on the edge

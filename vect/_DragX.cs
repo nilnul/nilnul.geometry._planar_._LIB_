@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,11 +31,24 @@ namespace nilnul.geometry.planar.vect
 	///		wedge
 	///		blade
 	///		front
+	///		inner product
 	///	vs:
 	///		tensor
 	///		torgue
 	static public class _DragX
 	{
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="x"></param>
+		/// <param name="y"></param>
+		/// <returns></returns>
+		///
+		[MethodImpl( MethodImplOptions.AggressiveInlining)]
+		public static double Surround(double x, double y)
+		{
+			return x * y;
+		}
 		/// <summary>
 		/// surround of the drag
 		/// </summary>

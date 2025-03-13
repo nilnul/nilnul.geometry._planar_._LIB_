@@ -18,6 +18,11 @@ namespace nilnul.geometry.planar.zone_.convex.co.collision
 	///		for example, circle, we can use Sat for polygon, and ad-hoc for circle.
 	///		or we can convert circle to polygon.
 	/// </summary>
+	/// <see cref="co.distance_.IGjkAlgorithm"/>
+	/// <see cref=""/>
+	/// <see cref="planar.vect.set.op_.binary_.minkowski_.Minus"/>
+	/// <see cref="nilnul.geometry.planar.zone_.convex.co.be_.joint_.IGjkAlgorithm"/>
+	/// 
 	class ISeparatingAxisTheorem
 	{
 	}

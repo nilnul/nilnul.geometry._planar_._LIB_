@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using C = System.Numerics.Complex;
+
 using P = nilnul.geometry.planar.Point4dblI;
 
 

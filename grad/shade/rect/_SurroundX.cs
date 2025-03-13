@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.point;
+using nilnul.geometry.planar.point;
 using nilnul.geometry.planar.vect.co;
 using nilnul.geometry.planar.vect.drag.co;
 using System;
@@ -23,6 +23,8 @@ namespace nilnul.geometry.planar.grad.shade.rect
 		/// <param name="v1"></param>
 		/// <param name="v2"></param>
 		/// <returns></returns>
+		///
+		[Obsolete(nameof(_surround_._ByDeterminant9deltaX))]
 		static public double ByChangeOfEksSmaller(Vect4dblI v1, Vect4dblI v2)
 		{
 
@@ -31,8 +33,21 @@ namespace nilnul.geometry.planar.grad.shade.rect
 				_DeltaX.Minus(v1, v2)
 			;
 		}
+
+		/// <summary>
+		/// regarding the orient of the sign, consider a trivia case:
+		///		the grad: (1,0), (0,1)
+		///		,with (0,0), (1,0) to the grad, to the yAxis part downward forms a triangle.
+		///		The sign of the area shall be positive.
+		/// </summary>
+		/// <param name="x"></param>
+		/// <param name="y"></param>
+		/// <param name="x2"></param>
+		/// <param name="y2"></param>
+		/// <returns></returns>
 		public static double Surround(double x, double y, double x2, double y2)
 		{
+			///not only cross product, but also decline:
 			return (x - x2) * (y + y2);
 		}
 

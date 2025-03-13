@@ -8,6 +8,14 @@ using System.Xml.Linq;
 
 namespace nilnul.geometry.planar.curve_.circular_.semi
 {
+	/// <see cref="nilnul.geometry.planar.cloze_.circular_.semi._DrawX"/>
+	/// <summary>
+	/// </summary>
+	/// 
+	/// 
+	/// <see cref="nilnul.geometry.planar.curve_.elliptic_.arc._DrawX"/>
+	///  <see cref="nilnul.geometry.planar.ellipse.Extensions"/>
+
 	public class _DrawX
 	{
 

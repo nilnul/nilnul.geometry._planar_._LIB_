@@ -18,7 +18,7 @@ namespace nilnul.geometry.planar.trail_
 	/// 
 	public interface IUndirected
 		:
-	ITrace
+	ITrail
 		,
 				point.IMoving
 

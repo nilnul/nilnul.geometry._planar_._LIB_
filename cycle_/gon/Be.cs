@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon
+namespace nilnul.geometry.planar.cycle_.triangle
 {
 	public interface IBe
 		:nilnul.obj.BeI1<planar.cycle_.TrigonI>

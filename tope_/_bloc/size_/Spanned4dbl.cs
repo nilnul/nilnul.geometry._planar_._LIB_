@@ -96,6 +96,15 @@ namespace nilnul.geometry.planar.tope_._bloc.size_
 
 			);
 		}
+		public System.Drawing.SizeF toSizeFloat() {
+			return new System.Drawing.SizeF(
+				(float)this.width.dblen.ee
+				,
+				(float)this.height.dblen.ee
+
+			);
+		}
+
 		public override string ToString()
 		{
 			return string.Format("{0}*{1}", boxed.Item1.ToString() ,boxed.Item2.ToString());

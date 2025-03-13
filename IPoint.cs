@@ -8,6 +8,9 @@ namespace nilnul.geometry.planar
 		//IConnected
 		//	nilnul.geometry.linear.IPoint
 		//,
+		trip_.INilLength
+		,
+
 		tope_.IBoundaried, ICloze, IGrad, ILoop, ITend
 	{
 

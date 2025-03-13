@@ -8,11 +8,16 @@ using System.Xml.Linq;
 
 namespace nilnul.geometry.planar.curve_.elliptic_.arc
 {
+	/// <summary>
+	/// </summary>
+	/// 
+	/// <see cref="nilnul.geometry.planar.ellipse.Extensions"/>
+	/// <see cref="planar.cloze_.ellipse.arc.draw_._SvgX"/>
 	public class _DrawX
 	{
 
 	
-		static public XElement Draw(elliptic_.Arc convexRounded)
+		static public XElement Draw(elliptic_.Arc8dbl convexRounded)
 		{
 			return 
 new XElement(
@@ -33,7 +38,7 @@ new XElement(
 								convexRounded.minor
 
 							} {convexRounded.rotation}
-							{nilnul.bit.to_.Int.Singleton.to(convexRounded.large)} {bit.to_.Int.Singleton.to(convexRounded.clockwise)}
+							{nilnul.bit.to_.Int.Singleton.to(convexRounded.large)} {bit.to_.Int.Singleton.to(convexRounded.sweep)}
 
 							{convexRounded.end.ToTxt_bare(",")}
 							
@@ -53,5 +58,7 @@ new XElement(
 
 
 		}
+
+
 	}
 }

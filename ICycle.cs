@@ -12,6 +12,8 @@ namespace nilnul.geometry.planar
 	/// </summary>
 	/// <remarks>
 	/// </remarks>
+	/// alias:
+	///		ussy
 	public interface ICycle : coil_.ISimple
 	{
 	}

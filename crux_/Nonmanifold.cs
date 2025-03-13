@@ -11,7 +11,7 @@ namespace nilnul.geometry.planar.crux_
 	/// </summary>
 	///
 	[Obsolete(nameof(crux_.INonsingular))]
-	public interface INonmanifold:ITrack
+	public interface INonmanifold:ICrux
 	{
 	}
 }

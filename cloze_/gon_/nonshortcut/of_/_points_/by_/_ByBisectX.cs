@@ -5,7 +5,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
-using C = System.Numerics.Complex;
+
 using nilnul.num;
 using Complex = System.Numerics.Complex;
 using nilnul.num.complex;

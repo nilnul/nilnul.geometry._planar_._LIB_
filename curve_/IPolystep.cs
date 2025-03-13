@@ -15,7 +15,7 @@ namespace nilnul.geometry.planar.curve_
 	///		bentline
 	///		foldline
 
-	public interface IPolystep:IPiecewise,curve_.IFinite
+	public interface IPolystep:IPiecewise,curve_.IFiniteLong
 	{
 	}
 }

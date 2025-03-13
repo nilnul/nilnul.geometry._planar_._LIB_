@@ -158,6 +158,9 @@ namespace nilnul.geometry.planar.zone_
 		public Rectangle toRect() {
 			return new Rectangle(_point.toPointInt(), size.toSizeInt());
 		}
+		public RectangleF toRectFloat() {
+			return new RectangleF(_point.toPointF(), size.toSizeFloat());
+		}
 
 	}
 }

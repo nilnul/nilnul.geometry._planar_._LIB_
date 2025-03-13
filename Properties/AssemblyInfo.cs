@@ -2,6 +2,8 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
+
+
 /// defined by (x,y)
 ///
 ///base on time, as the moving point trajectory, or the direction of a curve/cloze, is defined using time, the one-direction one-dimensional continuous parameter.

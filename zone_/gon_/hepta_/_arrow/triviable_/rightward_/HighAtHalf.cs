@@ -19,6 +19,9 @@ namespace nilnul.geometry.planar.zone_.gon_.hepta_._arrow.triviable_.rightward_
 
 		private planar.tope_._bloc.SpreadDbl _headIncrementHalves;
 
+		/// <summary>
+		/// 
+		/// </summary>
 		public planar.tope_._bloc.SpreadDbl headIncrementHalves
 		{
 			get { return _headIncrementHalves; }
@@ -63,7 +66,7 @@ namespace nilnul.geometry.planar.zone_.gon_.hepta_._arrow.triviable_.rightward_
 				var lowest =new Point4dbl(
 					_tailHalfHigh.width.realee
 					,
-					_tailHalfHeightNeg
+					//_tailHalfHeightNeg
 
 					-_headHeightHalf
 				);

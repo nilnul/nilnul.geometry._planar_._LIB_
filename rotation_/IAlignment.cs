@@ -1,13 +1,17 @@
-﻿namespace nilnul.geometry.planar.rotation_
+namespace nilnul.geometry.planar.rotation_
 {
 	/// <summary>
-	/// <see cref="line_.originated_"/>
+	/// <see cref="line_.IOriginated"/>
 	/// </summary>
+	/// <remarks>
+	///
+	/// </remarks>
 	/// alias:
 	///		linear
 	///		,
 	///		sectant
-	interface IAlignment
+	///		orient
+	public interface IAlignment
 		:direction_.ILtPi
 	{ }
 }

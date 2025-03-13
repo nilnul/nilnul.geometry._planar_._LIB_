@@ -11,6 +11,8 @@ namespace nilnul.geometry.planar
 {
 
 	public class Point4dbl : IEquatable<Point4dbl>, Point4dblI
+		,
+		_troll_.Fn4dblI
 	{
 		private double _x;
 
@@ -291,6 +293,18 @@ namespace nilnul.geometry.planar
 		public static Point4dbl Of(Complex c)
 		{
 			return new Point4dbl(c.Real, c.Imaginary);
+		}
+
+		/// <summary>
+		/// this is still continous if we see it as a pair of function:
+		///		, t=> x
+		///		, t=> y
+		/// </summary>
+		/// <param name="time"></param>
+		/// <returns></returns>
+		public C locus(double time)
+		{
+			return planar.PointX.ToComplex(this);
 		}
 	}
 }

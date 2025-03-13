@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +11,32 @@ namespace nilnul.geometry.planar.vect.drag.co
 	/// </summary>
 	/// alias:
 	///		vs
+	///		delta
+	///		diff
+	///		gain
 	static public class _DeltaX
 	{
 		/// <summary>
-		///  a^2 + b^2
+		/// 
+		/// </summary>
+		/// <param name="x"></param>
+		/// <param name="y"></param>
+		/// <param name="x2"></param>
+		/// <param name="y2"></param>
+		/// <returns></returns>
+		/// alias:
+		///		decline
+		public static double Minus(double x, double y, double x2, double y2)
+		{
+			return nilnul.geometry.planar.vect._DragX.Surround(x, y)
+				-
+nilnul.geometry.planar.vect._DragX.Surround(x, y)			;
+
+
+			//throw new NotImplementedException();
+		}
+
+		/// <summary>
 		/// </summary>
 		/// <param name="v1">
 		///
@@ -32,6 +54,10 @@ namespace nilnul.geometry.planar.vect.drag.co
 		/// <param name="v1"></param>
 		/// <param name="v2"></param>
 		/// <returns></returns>
+		/// alias:
+		///		diff
+		///		delta
+		///		
 		static public double Gain(Vect4dblI v1, Vect4dblI v2) {
 			return Minus(v2,v1);
 		}

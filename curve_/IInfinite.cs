@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +9,13 @@ namespace nilnul.geometry.planar.curve_
 	/// <summary>
 	/// the length is infinite
 	/// </summary>
+	/// <remarks>
+	///		<see cref="planar.IOrbit"/>
+	///
+	/// </remarks>
 	/// alias:
-	///		curl
-	public interface IInfinite : ICurve
+	///		<see cref="curve_.celestial.co_.disjoint.IHyperbola"/>
+	public interface IInfiniteLong : ICurve
 	{
 	}
 }

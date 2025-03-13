@@ -4,7 +4,7 @@ using R = nilnul.num.Real;
 namespace nilnul.geometry.planar
 {
 
-	public interface IRay : curve_.IInfinite
+	public interface IRay : curve_.IInfiniteLong
 	{
 
 	}

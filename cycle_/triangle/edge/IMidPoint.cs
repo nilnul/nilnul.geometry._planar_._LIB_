@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.edge
+namespace nilnul.geometry.planar.cycle_.triangle.edge
 {
 	/// <summary>
 	/// 

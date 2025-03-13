@@ -8,7 +8,7 @@
 	/// vs:
 	///		
 	internal class ISegment
-		:planar.ITraverse
+		:planar.ITrip
 	{
 	}
 

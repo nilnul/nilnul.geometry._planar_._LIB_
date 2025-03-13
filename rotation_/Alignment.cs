@@ -1,4 +1,4 @@
-﻿using nilnul.num;
+using nilnul.num;
 using nilnul.num.real_.nonneg_;
 using System;
 using System.Collections.Generic;
@@ -16,6 +16,7 @@ using Rx = nilnul.num.RealIX;
 
 namespace nilnul.geometry.planar.rotation_
 {
+
 	/// <summary>
 	/// a rotation in [0,pi). measure the angle of a line with respect to the line on xAxis.
 	/// </summary>
@@ -25,6 +26,7 @@ namespace nilnul.geometry.planar.rotation_
 	/// alias:
 	///		alignment
 	///		sweep
+	///		<see cref="planar.rotation_.IDirective"/> which is lt tau;
 	public class Alignment :
 		planar.rotation_.nonneg_.LtPi
 

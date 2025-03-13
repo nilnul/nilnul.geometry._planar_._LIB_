@@ -11,7 +11,10 @@ namespace nilnul.geometry.planar
 	/// eg:
 	///		two zones connected by a line
 	/// </summary>
+	/// 
 	/// alias:
+	///		track
+	///			,as in track record.
 	///		tract
 	/// region
 	/// zone

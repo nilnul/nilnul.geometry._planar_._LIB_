@@ -11,7 +11,7 @@ namespace nilnul.geometry.planar.cycle_.trigon_
 	/// the trigon's points are in postive rotation
 	/// </summary>
 	public class Positive4dbl
-		: trigon.be_.positive.vow.Ee4dbl
+		: triangle.be_.positive.vow.Ee4dbl
 		,
 		planar.zone_.Trigon4dblI
 	{
@@ -27,7 +27,7 @@ namespace nilnul.geometry.planar.cycle_.trigon_
 
 			
 			return new Positive4dbl(
-				cycle_.trigon.op_.unary_.EnsureFacade.Singleton.op(val)
+				cycle_.triangle.op_.unary_.EnsureFacade.Singleton.op(val)
 			);
 		}
 

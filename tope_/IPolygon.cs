@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.geometry.planar.tope_
 {
 
-	public interface IPolygon:ITrack
+	public interface IPolygon:ITope
 	{
 	}
 }

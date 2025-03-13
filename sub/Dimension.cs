@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +9,10 @@ namespace nilnul.geometry.planar.sub
 	/// <summary>
 	/// Hausdorff dimension is in [0,2]
 	/// </summary>
+	/// <remarks>
+	/// scale the figure, 
+	/// </remarks>
+	/// <see cref="palp.IHausdorffDimension"/>
 	class Dimension
 	{
 	}

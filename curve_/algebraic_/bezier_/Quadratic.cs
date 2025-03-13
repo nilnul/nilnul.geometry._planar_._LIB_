@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.point;
+using nilnul.geometry.planar.point;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +10,18 @@ namespace nilnul.geometry.planar.curve_.algebraic_.bezier_
 	/// <summary>
 	/// note the mid point is not on the path; it is a control/clamping point.
 	/// </summary>
+	/// <remarks>
+	/// get the mid of AB, and BC: DE, then get the mid of DE.
+	/// 
+	/// </remarks>
 	public class Quadratic
 		:
 		nilnul.obj.Box1<
 
 		planar.point.TrioD
 			>
+		,
+		_troll_.Fn4dblI
 	{
 		public Quadratic(TrioD val) : base(val)
 		{
@@ -41,5 +47,16 @@ namespace nilnul.geometry.planar.curve_.algebraic_.bezier_
 
 		}
 
+		public C locus(double time)
+		{
+			double c = (1 - time);
+			return c * c * boxed.a.ToComplex()
+				+ 2 * c * time * boxed.b.ToComplex()
+				+ time * time * boxed.c.ToComplex();
+
+			/// this is lerp(
+			///		lerp(a,b), lerp(b,c)
+			/// );
+		}
 	}
 }

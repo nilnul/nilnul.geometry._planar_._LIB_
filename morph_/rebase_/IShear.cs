@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.morph_.matrixed_
+namespace nilnul.geometry.planar.morph_.rebase_
 {
 	/// <summary>
 	/// no scale; just shear.
@@ -15,6 +15,6 @@ namespace nilnul.geometry.planar.morph_.matrixed_
 	/// </summary>
 	public interface IShear
 		:
-		matrixed_.IShearOnly { }
+		morph_.IShearOnly { }
 	
 }

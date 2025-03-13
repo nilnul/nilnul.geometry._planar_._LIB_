@@ -160,6 +160,14 @@ namespace nilnul.geometry.planar.tope_
 		public Rectangle toRect() {
 			return new Rectangle(_point.toPointInt(), size1.toSizeInt());
 		}
+		public RectangleF toRect8float() {
+			return new RectangleF(
+				_point.toPointF()
+				,
+				size1.toSize8float()
+			);
+		}
+
 
 	}
 }

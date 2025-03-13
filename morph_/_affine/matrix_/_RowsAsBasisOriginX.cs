@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +49,8 @@ namespace nilnul.geometry.planar.morph_._affine.matrix_
 		///		In 3d, we can shift the origin in one plane to another plane by a vector pointing from the first plane to the second plane. [e,f,1] is such a vector, where [e,f] shifts the projected origin to a new origin, the "1" elevated all the points to the projected plane. the projection is by skewed beams of sunshine such that the origin is shifted.
 		///		
 		/// </remarks>
+		///
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public System.Drawing.Drawing2D.Matrix _Matrix_ofOriginBasises(
 			float  newHorizonX, float newHorizonY
 
@@ -67,6 +70,7 @@ namespace nilnul.geometry.planar.morph_._affine.matrix_
 			);
 		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public System.Drawing.Drawing2D.Matrix _Matrix_ofOriginBasises(
 			float[] newHorizon
 
@@ -88,6 +92,7 @@ namespace nilnul.geometry.planar.morph_._affine.matrix_
 		}
 
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public System.Drawing.Drawing2D.Matrix _Matrix_ofOrigin_ofBasisesInCols(
 			float[,] rowAsBasis
 			,

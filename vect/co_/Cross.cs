@@ -10,7 +10,10 @@ namespace nilnul.geometry.planar.vect.co_
 	/// the cross product is not nil.
 	/// <seealso cref="vect_.nonnil.co_.Cross"/>
 	/// </summary>
+	/// 
+	/// <!---->
 	/// <remarks>
+	/// as a matrix, this is invertible.
 	/// usage:
 	///		this can be taken as the basis for a cordination system.
 	/// </remarks>

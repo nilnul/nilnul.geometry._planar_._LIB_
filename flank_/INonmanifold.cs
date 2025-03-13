@@ -9,7 +9,7 @@ namespace nilnul.geometry.planar.flank_
 	/// <summary>
 	/// eg: a curve connected with a zone.
 	/// </summary>
-	public interface INonmanifold : ITrack
+	public interface INonmanifold : IFlank
 	{
 	}
 }

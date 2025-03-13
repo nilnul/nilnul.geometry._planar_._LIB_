@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.be
+namespace nilnul.geometry.planar.cycle_.triangle.be
 {
 	public class Vow4dbl
 		:
 		obj.be.Vow4<TriangleDbl>
 		,
-		planar.cycle_.trigon.Vow4dblI
+		planar.cycle_.triangle.Vow4dblI
 
 
 	{

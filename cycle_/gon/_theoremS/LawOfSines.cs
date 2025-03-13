@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 
 
-namespace nilnul.geometry.planar.cycle_.trigon._theoremS
+namespace nilnul.geometry.planar.cycle_.triangle._theoremS
 {
 	public partial class LawOfSines
 	{

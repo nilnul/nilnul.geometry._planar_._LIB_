@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.vsPoint_.inner_
+namespace nilnul.geometry.planar.cycle_.triangle.vsPoint_.inner_
 {
 	/// <summary>
 	/// In a triangle ABC with sides a, b, and c, where the vertices are in counterclockwise order, there is exactly one point P such that the line segments AP, BP, and CP form the same angle, ω, with the respective sides c, a, and b

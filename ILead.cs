@@ -13,7 +13,7 @@ namespace nilnul.geometry.planar
 	/// alias:
 	///		lead
 	///			as in follow the lead.
-	public interface ILead : curve_.IInfinite
+	public interface ILead : curve_.IInfiniteLong
 	{
 	}
 

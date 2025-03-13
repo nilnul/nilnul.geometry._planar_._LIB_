@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -154,6 +154,14 @@ Vector2.Dot(vector1.Normalize(), vector2.Normalize()) == -1 */
 			return Dbl((Vector4dblI)vector, vectorDbl);
 		}
 
+		public static double Square(double a, double b)
+		{
+			return a*a + b*b;
+		}
+		public static double Square((double, double) a)
+		{
+			return Square(a.Item1,a.Item2);
+		}
 
 		static public double Square(Vector4dblI point)
 		{
@@ -181,6 +189,7 @@ Vector2.Dot(vector1.Normalize(), vector2.Normalize()) == -1 */
 
 
 		}
+
 		public static double Square(Point4dbl pointDbl1)
 		{
 			return Square(pointDbl1 as Point4dblI);
@@ -202,8 +211,5 @@ Vector2.Dot(vector1.Normalize(), vector2.Normalize()) == -1 */
 			return Dbl(tgtBasis.point,point2proj);
 		}
 
-		
-
-	
 	}
 }

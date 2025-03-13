@@ -1,4 +1,4 @@
-﻿//using nilnul.geometry.planar._bloc;
+//using nilnul.geometry.planar._bloc;
 using nilnul.geometry.planar.tope_._bloc.size_;
 using nilnul.geometry.planar.vect_;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.vect.op_.binary_
+namespace nilnul.geometry.planar.vect.of_.binary_
 {
 	static public class _AddX
 	{
@@ -112,5 +112,23 @@ namespace nilnul.geometry.planar.vect.op_.binary_
 				point.y+size.height.dblen
 			);
 		}
+
+		public static (double x, double y) Op(double x, double y, double x1, double y1)
+		{
+			return (
+				x+x1
+				,
+				y+y1
+			);
+		}
+		public static (double x, double y) Op((double x, double y) vect, (double x, double y) vect1)
+		{
+			return Op (
+				vect.x,vect.y,vect1.x,vect1.y
+
+			);
+		}
+
+
 	}
 }

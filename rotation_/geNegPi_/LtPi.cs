@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.rotation_.geNegPi_
 {
+	/// <summary>
+	/// <see cref="rotation_.ISwing"/>
+	/// </summary>
 	public class LtPi : planar.rotation.be.en_.BeDefaulted<planar.rotation.be_.geNegPi_.LtPi>
 	{
 		public LtPi(RotationI1 val) : base(val)

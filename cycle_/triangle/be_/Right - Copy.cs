@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Triangle = nilnul.geometry.planar.zone_.TriangleDbl;
 
-namespace nilnul.geometry.planar.cycle_.trigon.be_
+namespace nilnul.geometry.planar.cycle_.triangle.be_
 {
 	public class RightDbl
 		: nilnul.obj.be_.FroFunc<TriangleDbl>
 		,
-		trigon.BeDoubleI
+		triangle.BeDoubleI
 	{
 
 		static public bool Eval(TriangleDbl triangle)

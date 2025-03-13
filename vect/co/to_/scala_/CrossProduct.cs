@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -57,8 +57,12 @@ namespace nilnul.geometry.planar.vect.co.to_.real_
 			/// = rs (sin(b) cos(a) - cos(b)sin(a) )
 			/// = r cos(a) * s*sin(b) - r*sin(a) * s*cos(b)
 			/// = x1 * y2 - y1 * x2
+			/// 
+			///  for such vect.co:
+			///		(5,1), (2,4)
+			///	, the cross product will be 5*4 -1*2, it is the shape of <see cref="geometry.planar.cycle_.gon_.Six"/> which might be concaved, from one rect minus the inner one;
 
-			return to_._AsMatrixX.GetDeterminant(x, y);
+			return to_._AsMatrixX.GetDeterminant(x, y);  /// vs: <see cref="vect.drag.co._DeltaX"/>
 		}
 		static public double SurroundedOfParallelogram(geometry.planar.Vect4dbl x, Vect4dbl y)
 		{

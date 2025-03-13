@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.line.vsPoint
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias: pedal
+	///		foot
+	///			,might be confused with the unit <see cref="geometry.linear_._measured.unit_.eng_.Foot"/>
+	///
+	static public class _PedalX
+	{
+
+	}
 	static public class _Foot4perpendX
 	{
 		static public planar.Point4dbl Foot4perpend(

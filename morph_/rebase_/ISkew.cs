@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,9 @@ namespace nilnul.geometry.planar.morph_.rebase_
 	/// eg:
 	///		a rect is transformed into a parlgrm of the same height.
 	/// </summary>
+	/// <remarks>
+	/// this involves both slant and scale.
+	/// </remarks>
 	public interface ISkew
 	{
 

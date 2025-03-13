@@ -3,6 +3,6 @@
 	/// <summary>
 	/// singular. 0d or 1d
 	/// </summary>
-	/// <see cref="ITraverse"/>
+	/// <see cref="ITrip"/>
 	public interface ISingleDimensionable { }
 }

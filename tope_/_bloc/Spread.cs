@@ -59,6 +59,15 @@ namespace nilnul.geometry.planar.tope_._bloc
 
 			);
 		}
+		public System.Drawing.SizeF toSize8float() {
+			return new System.Drawing.SizeF(
+				(float)this.width.realee.ee
+				,
+				(float)this.height.realee.ee
+
+			);
+		}
+
 
 		public SpreadDbl(CoDbl val) : base(val)
 		{

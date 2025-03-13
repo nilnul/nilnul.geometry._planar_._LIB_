@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.be
+namespace nilnul.geometry.planar.cycle_.triangle.be
 {
 	public class VowDbl<TBe>
 		:nilnul.obj.be.vow_.xpN_.fail_.bE_.Defaultable< planar.cycle_.TriangleDbl, TBe>
 		,
-		planar.cycle_.trigon.Vow4dblI
-		where TBe: trigon.BeDoubleI,new()
+		planar.cycle_.triangle.Vow4dblI
+		where TBe: triangle.BeDoubleI,new()
 	{
 
 	}

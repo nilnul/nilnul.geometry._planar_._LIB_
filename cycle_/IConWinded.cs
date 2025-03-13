@@ -5,6 +5,8 @@
 	/// </summary>
 	/// alias:
 	///		hole
+	///		ussy
+	/// <see cref="planar.facet_.IHoled"/>
 	///	vs:
 	///		<see cref="IProWinded"/>
 	internal class IConWinded

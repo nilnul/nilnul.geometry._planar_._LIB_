@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.area_
+namespace nilnul.geometry.planar.cycle_.triangle.area_
 {
 	 class ICrossProduct
 	{

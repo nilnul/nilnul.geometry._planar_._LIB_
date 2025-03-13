@@ -1,4 +1,4 @@
-﻿namespace nilnul.geometry.planar.rotation_
+namespace nilnul.geometry.planar.rotation_
 {
 	/// <summary>
 	/// [0,360)deg
@@ -12,7 +12,7 @@
 	///		directed
 	///		direction
 	///		
-	interface IDirective
-		:rotation_.nonneg_.ILtTau
+	public interface IDirective
+		:rotation_.unneg_.ILtTau
 	{ }
 }

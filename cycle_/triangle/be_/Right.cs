@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Triangle = nilnul.geometry.planar.zone_.TriangleDbl;
 
-namespace nilnul.geometry.planar.cycle_.trigon.be_
+namespace nilnul.geometry.planar.cycle_.triangle.be_
 {
 	/// <summary>
 	/// 
@@ -14,7 +14,7 @@ namespace nilnul.geometry.planar.cycle_.trigon.be_
 	public class Right
 		:
 
-		trigon.BeA
+		triangle.BeA
 	{
 
 		//static public bool Be(TriangleI triangle)

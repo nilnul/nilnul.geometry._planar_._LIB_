@@ -19,7 +19,8 @@ namespace nilnul.geometry.planar
 	/// alias:
 	///		circuit
 	///		recycle
-	public interface ICloze : trav_.IEndAtStart
+	///		ussy
+	public interface ICloze : trip_.IEndAtStart
 	{
 	}
 }

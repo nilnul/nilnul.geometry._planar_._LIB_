@@ -1,4 +1,4 @@
 ﻿namespace nilnul.geometry.planar
 {
-	public interface ICurl:curve_.IFinite { }
+	public interface ICurl:curve_.IFiniteLong { }
 }

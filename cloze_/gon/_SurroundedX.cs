@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -90,31 +90,41 @@ namespace nilnul.geometry.planar.cloze_.gon
 			return _Surround_0started( (IEnumerable< Complex>) a);
 		}
 
+
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		public static double _SurroundDoubled_0cloze(IEnumerable< ((double,double),(double,double))> a)
 		{
-			return (a).Select(
-				x =>
-				nilnul.geometry.planar.grad.shade.rect._SurroundX.Surround(x)
+			return twin._SurroundedX._Surround_0cloze(a);
+			//return (a).Select(
+			//	x =>
+			//	nilnul.geometry.planar.grad.shade.rect._SurroundX.Surround(x)
 				
-			).Sum();
+			//).Sum();
 		}
 
 
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		public static double _SurroundDoubled_0cloze(IEnumerable<(Point4dblI basis, Point4dblI finish)> enumerable)
 		{
-			return _SurroundDoubled_0cloze(
-				enumerable.Select(
-					g=>(
-						(g.basis.x,g.basis.y)
-						,
-						(g.finish.x,g.finish.y)
-					)
-				)
-			);
+
+			return twin._SurroundedX._Surround_0cloze(enumerable);
+
+			//return _SurroundDoubled_0cloze(
+			//	enumerable.Select(
+			//		g=>(
+			//			(g.basis.x,g.basis.y)
+			//			,
+			//			(g.finish.x,g.finish.y)
+			//		)
+			//	)
+			//);
 		}
 
+
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		public static double _SurroundDoubled_0cloze(IEnumerable<Grad4dbl_byPointsI> c)
 		{
+			return twin._SurroundedX._Surround_0cloze(c);
 			return _SurroundDoubled_0cloze(
 				c.Select( a=>(a.basis,a.finish))
 			);
@@ -126,6 +136,7 @@ namespace nilnul.geometry.planar.cloze_.gon
 			).Sum();
 
 		}
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		public static double _SurroundDoubled_0started(IEnumerable< (double,double)> a)
 		{
 			return _SurroundDoubled_0cloze( _Grads4dblX._CoEs_0dwelt(a));
@@ -136,6 +147,7 @@ namespace nilnul.geometry.planar.cloze_.gon
 		/// </summary>
 		/// <param name="points"></param>
 		/// <returns></returns>
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		static public double _StokesDoubled_ofStarted(this IEnumerable<Point4dblI> points) {
 
 			return _SurroundDoubled_0started(
@@ -145,6 +157,7 @@ namespace nilnul.geometry.planar.cloze_.gon
 	
 		}
 
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		static public double _SurroundDoubled_0started(this IEnumerable<Complex> points) {
 			return _SurroundDoubled_0started(
 				points.Select(p=>(p.Real,p.Imaginary))
@@ -152,6 +165,9 @@ namespace nilnul.geometry.planar.cloze_.gon
 
 	
 		}
+
+
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		public static double _SurroundDoubled_0started(params Complex[] a)
 		{
 			return _SurroundDoubled_0started(
@@ -163,6 +179,7 @@ namespace nilnul.geometry.planar.cloze_.gon
 
 
 
+		[Obsolete(nameof(twin._SurroundedX._Surround_0cloze) )]
 		static public double _StokesDoubled_ofStarted(params Point4dblI[] points) {
 			return _StokesDoubled_ofStarted(
 				(IEnumerable<Point4dblI>)points

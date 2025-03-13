@@ -9,7 +9,7 @@ namespace nilnul.geometry.planar.cloze_._gon_
 {
 	public interface Grads4dblI
 		:
-		trav_.piecewise_._polyseg_.Grads4dblI
+		trip_.piecewise_._polyseg_.Grads4dblI
 		
 	{
 

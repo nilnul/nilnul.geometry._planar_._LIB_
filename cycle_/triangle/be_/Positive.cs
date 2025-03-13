@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.be_
+namespace nilnul.geometry.planar.cycle_.triangle.be_
 {
 	/// <summary>
 	/// allowing negative trigon such that in some cases like <see cref="nameof(planar.zone_.gon_.tetra_.simple_.convex_.trape_.Perpend)"/>, it is convenient 
 	/// </summary>
-	public class Positive : nilnul.geometry.planar.cycle_.trigon.BeDoubleI
+	public class Positive : nilnul.geometry.planar.cycle_.triangle.BeDoubleI
 		,
 		Be4dblI
 	{

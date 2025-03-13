@@ -1,0 +1,25 @@
+﻿using nilnul.geometry.planar.vect;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.geometry.planar.vect_.nonnil.co.rotation
+{
+	/// <summary>
+	/// two nonnil vector:u,v
+	/// u X v =
+	/// E(|u|, a) X E(|v|, b)	//polar form
+	/// =
+	/// E(|u||v|, b-a)
+	/// = |u||v| * cos(b-a)+ |u||v| * sin(b-a) * i
+	/// = |u||v| * u.v / (|u||v|) + |u||v| * sin(b-a) * i
+	/// = u.v +  |u||v| * sin(b-a) * i
+	/// </summary>
+	/// <see cref=""/>
+	static  class _SinX
+	{
+	
+	}
+}

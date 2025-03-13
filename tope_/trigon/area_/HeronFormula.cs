@@ -1,4 +1,4 @@
-﻿using nilnul.geometry.planar.cycle_.trigon.edges;
+﻿using nilnul.geometry.planar.cycle_.triangle.edges;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,7 +61,7 @@ namespace nilnul.geometry.planar.tope_.trigon.area_
 
 		static public double Area_ofCycle(double a, double b, double c)
 		{
-			return Area(new cycle_.trigon. edges.LengthsDouble(a, b, c));
+			return Area(new cycle_.triangle. edges.LengthsDouble(a, b, c));
 
 		}
 

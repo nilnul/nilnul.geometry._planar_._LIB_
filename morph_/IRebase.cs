@@ -1,4 +1,4 @@
-﻿namespace nilnul.geometry.planar.morph_
+namespace nilnul.geometry.planar.morph_
 {
 	/// <summary>
 	/// a new basis is provided for the coords. the coords is interpretated using the new basis, then the result is interpreted using the old axises system.
@@ -54,7 +54,8 @@
 	///		linear
 	///
 	public interface IRebase:
-		matrixed_.IInvertible
+		planar.IMorph
+		//matrixed_.IInvertible
 
 		//trans_.affine_.IRebase
 		,

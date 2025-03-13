@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.lead.vsPoint
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		pedal
+	///		foot
+	///		leg
 	static public class _Foot4perpendX
 	{
 		static public Point4dblI Foot4perpend(

@@ -8,6 +8,9 @@ using P = nilnul.geometry.planar.Point4dbl;
 
 namespace nilnul.geometry.planar.cloze_.gon_.orthy.of_.steps_
 {
+	/// <summary>
+	/// derive last two edges
+	/// </summary>
 	static public class _DeriveLastX
 	{
 		/// <summary>

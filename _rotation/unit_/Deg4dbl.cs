@@ -1,4 +1,4 @@
-﻿using nilnul.num;
+using nilnul.num;
 using nilnul.num.real_;
 using System;
 using System.Collections.Generic;
@@ -14,10 +14,11 @@ namespace nilnul.geometry.planar._rotation.unit_
 	public class Deg4dbl : _rotation.Unit4dblA
 	{
 
+		public const double MAGNITUDE = Turn4dbl.MAGNITUDE/ 360;
 		public Deg4dbl()
 			:
 			base(
-				Turn4dbl.Singleton.magnitude.dblen.ee/360 
+				MAGNITUDE
 			)
 		{
 		}

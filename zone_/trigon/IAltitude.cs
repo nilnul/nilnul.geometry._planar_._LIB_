@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.geometry.planar.zone_.trigon
+{
+	/// <summary>
+	/// 高
+	/// </summary>
+	/// alias:
+	///		height, which might mean the height of the bounding rectangle;
+	class IAltitude
+	{
+	}
+}

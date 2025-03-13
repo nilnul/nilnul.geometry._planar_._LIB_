@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.geometry.planar.cycle_.trigon.op_.unary_
+namespace nilnul.geometry.planar.cycle_.triangle.op_.unary_
 {
 	public class EnsureFacade :
 		UnaryI
 	{
 		public Triangle4dblI op(Triangle4dblI par)
 		{
-			if (trigon.be_.Positive.Singleton.be(par))
+			if (triangle.be_.Positive.Singleton.be(par))
 			{
 				return par;
 			}

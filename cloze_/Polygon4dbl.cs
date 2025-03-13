@@ -1,5 +1,5 @@
 ﻿using nilnul.geometry.planar.point.str_;
-using nilnul.geometry.planar.trav_.piecewise_._polyseg_;
+using nilnul.geometry.planar.trip_.piecewise_._polyseg_;
 using System;
 using System.Collections.Generic;
 using System.Linq;

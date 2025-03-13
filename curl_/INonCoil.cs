@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar.curl_
 {
+	/// <summary>
+	/// <see cref="planar.ICling"/>
+	/// 
+	/// </summary>
 	public interface INonCoil:ICurl
 	{
 	}
