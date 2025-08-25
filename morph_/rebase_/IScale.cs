@@ -1,4 +1,4 @@
-﻿namespace nilnul.geometry.planar.morph_
+namespace nilnul.geometry.planar.morph_
 {
 	/// <summary>
 	/// the newbasis's azimuth is the same as old one respectively.
@@ -15,4 +15,6 @@
 		matrixed_.IScaleOnly
 
 	{ }
+
+
 }

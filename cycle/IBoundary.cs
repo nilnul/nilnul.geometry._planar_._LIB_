@@ -7,5 +7,6 @@ namespace nilnul.geometry.planar.cycle
 	///		verge
 	///		side
 	///		boundary
+	///		border
 	interface IBoundary { }
 }

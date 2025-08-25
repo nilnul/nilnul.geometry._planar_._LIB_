@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace nilnul.geometry.planar._troll
 {
+	/// <see cref="_sub.locus_.IContinuous"/>
 	/// <summary>
-	/// 
+	/// as there is a bijection between a line and a plane, a locus can be used to describe a surface. (actually it can be used to define 3d soids). We can use as a "point cloud";
+	/// eg:
+	///		split a real number, say: 123.456
+	///		,by odd even offset from the point,:
+	///			13.5
+	///			2.46
+	///		
+	/// But the mapping is not continuous.
 	/// </summary>
 	/// <remarks>
 	/// it can be incontinuous:
@@ -24,7 +32,7 @@ namespace nilnul.geometry.planar._troll
 	///		world
 	///		universe
 	///		
-	internal interface ILocus
+	public interface ILocus:_sub.locus_.IContinuous
 	{
 	}
 

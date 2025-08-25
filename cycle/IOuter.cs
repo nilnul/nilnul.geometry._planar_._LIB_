@@ -1,4 +1,10 @@
-﻿namespace nilnul.geometry.planar.cycle
+namespace nilnul.geometry.planar.cycle
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		external
+	///		
 	interface IOuter { }
 }

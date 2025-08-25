@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,7 @@ namespace nilnul.geometry.planar.tend_
 	///		seg
 	///		edge
 	///		span
+	///			,spine
 	///		bar
 	///		
 	public interface IEdge

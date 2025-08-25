@@ -13,7 +13,8 @@ namespace nilnul.geometry.planar.curve_.roulette_
 	/// Fourier Series can used here to describe the cog
 	/// </remarks>
 	/// alias:
-	///		cog, like teeth moving on another gear, in gear box. 
+	///		cog, like teeth moving on another gear, in gear box.
+	///		spirograph, drawing by rotating one cog along the other.
 	///		
     class ICirc9circ:IRoulette
     {

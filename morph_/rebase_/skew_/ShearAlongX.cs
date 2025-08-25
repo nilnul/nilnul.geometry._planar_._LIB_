@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +10,17 @@ namespace nilnul.geometry.planar.morph_.matrixed_.shear_.slant_
 
 	/// <summary>
 	/// shear only one axis
+	/// </summary>
 	/// alias:
 	///		skew/slant
-	/// </summary>
+	///		slope
+	/// 
 	public class ShearAlongX
 	{
 
 		/// <summary>
 		/// matrix is at the left in multiplication.
+		/// colwise
 		/// </summary>
 		/// <param name="k"></param>
 		/// <returns></returns>

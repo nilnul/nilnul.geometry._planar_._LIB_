@@ -18,7 +18,12 @@ namespace nilnul.geometry.planar.zone_.gon_
 	///The mirror image of an asymmetric polyform is not considered a distinct polyform(polyforms are "double sided").
 	/// </remarks>
 	/// <see cref="gon_.perpend_.IPolyomino"/>
-    internal class IPolyform
+    public interface IPolyform
+		:
+		zone_.IPolygon
+		///IGon
     {
     }
+
+
 }

@@ -1,12 +1,16 @@
-﻿namespace nilnul.geometry.planar.rotation_
+namespace nilnul.geometry.planar.rotation_
 {
 	/// <summary>
-	/// <see cref="planar.curl_.elbow"/>, where the rotation can be expressed as in: [0,pi] with (0,-pi), that is:  (-pi,pi]
+	/// [-pi, pi)
 	/// </summary>
+	/// 
 	/// alias:
 	///		thrash
 	///		veer
+	///	vs:
+	///		phase, (-pi, pi], this is [-pi, pi)
 	public interface ISwing:rotation_.geNegPi_.ILtPi { }
+
 
 
 }

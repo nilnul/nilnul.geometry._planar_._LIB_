@@ -1,8 +1,8 @@
-﻿using System.Numerics;
+using System.Numerics;
 
 namespace nilnul.geometry.planar._troll_
 {
-	internal interface Fn4dblI
+	public interface Fn4dblI
 	{
 		///en.wikipedia.org/wiki/Space-filling_curve
 		/// Jordan in 1887 introduced the following rigorous definition, which has since been adopted as the precise description of the notion of a curve:

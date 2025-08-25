@@ -1,10 +1,9 @@
-﻿namespace nilnul.geometry.planar.rotation_
+using System;
+
+namespace nilnul.geometry.planar.rotation_
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	/// alias:
-	///		swirl
+
+	[Obsolete(nameof(IPhase))]
 	public interface ISwivel:rotation_.gtNegPi_.ILePi { }
 
 

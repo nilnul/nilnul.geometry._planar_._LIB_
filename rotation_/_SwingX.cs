@@ -1,7 +1,10 @@
-﻿using System;
+using System;
 
 namespace nilnul.geometry.planar.rotation_
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	static public class _SwingX {
 		static public double _Swing_0rotation(double rotation) {
 			return swing.of_._rotation_.by_._ByShiftX._Swing_0rotation(

@@ -12,7 +12,10 @@ namespace nilnul.geometry.planar.surface
 	/// <remarks>
 	/// the surface being tiled might be boundaried or unboundaried.
 	/// </remarks>
-	class ITessellation
+	/// alias:
+	///		tiling
+	///		tessellation
+	public interface ITessellation
     {
     }
 }

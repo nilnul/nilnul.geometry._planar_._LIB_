@@ -4,7 +4,7 @@ namespace nilnul.geometry.planar.rotation_
 	/// <see cref="line_.IOriginated"/>
 	/// </summary>
 	/// <remarks>
-	///
+	/// [0, pi)
 	/// </remarks>
 	/// alias:
 	///		linear

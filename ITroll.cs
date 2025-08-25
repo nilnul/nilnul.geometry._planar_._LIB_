@@ -68,7 +68,7 @@ namespace nilnul.geometry.planar
 	///
 	public interface ITroll
 		:
-		_troll.locus_.ICrux
+		_troll.ILocus
 		//tope_.INil0oneDimension
 		//crux_.IUniformDimension
 		//,

@@ -119,53 +119,44 @@
     <PackageLicenseFile>License.txt</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.241123.135147\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.math._calculus_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.math._calculus_._LIB_.1.1.250208.114502\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.math._calculus_._LIB_.1.1.250413.152254\lib\net48\nilnul.math._calculus_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num.real._func_._LIB_.1.1.250302.90628\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num.real._func_._LIB_.1.1.250413.134211\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.250222.101628\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.250804.55522\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num.real._stream_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\nilnul.num.real._stream_._LIB_.1.0.250211.94435\lib\net48\nilnul.num.real._stream_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._complex_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._complex_._LIB_.1.1.250226.163750\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._complex_._LIB_.1.1.250804.43243\lib\net48\nilnul.num._complex_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.241104.100014\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.250329.142625\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.250313.131820\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.250715.43409\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.250313.133324\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.250803.30255\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.250131.95404\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.250417.141758\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.250224.152829\lib\net48\nilnul._character_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.250403.154606\lib\net48\nilnul._character_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._collective_._LIB__, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._collective_._LIB__.1.0.241202.181605\lib\net48\nilnul._collective_._LIB__.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._collective_._LIB__.1.0.250314.91731\lib\net48\nilnul._collective_._LIB__.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._geometry_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._geometry_._LIB_.1.0.250306.82121\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._geometry_._LIB_.1.0.250321.131336\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.241212.85916\lib\net48\nilnul._num_._LIB_.dll</HintPath>
@@ -174,25 +165,28 @@
       <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.241212.85916\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.250313.102236\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.250804.43209\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._relation_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._relation_._LIB_.1.0.250219.42755\lib\net48\nilnul._relation_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._relation_._LIB_.1.0.250323.170516\lib\net48\nilnul._relation_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.250212.104800\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.250424.44336\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.250118.94723\lib\net48\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.250305.31021\lib\net48\nilnul._time_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.250713.164734\lib\net48\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.250209.133640\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.250728.52243\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\nilnul._xml_._LIB_.1.1.250227.70442\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="sergeyBochkanov._alglib_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\sergeyBochkanov._alglib_._LIB_.1.1.250326.50838\lib\net48\sergeyBochkanov._alglib_._LIB_.dll</HintPath>
     </Reference>
     <!--<Reference Include="nilnul._geometry_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <HintPath>..\..\.deps\nilnul._geometry_._LIB_.1.0.240820.201007\lib\net48\nilnul._geometry_._LIB_.dll</HintPath>
@@ -208,17 +202,6 @@
   <HintPath>..\..\.deps\nilnul._geometry_._LIB_.1.0.240818.52656\lib\net481\nilnul._geometry_._LIB_.dll</HintPath>
 </Reference>-->
     <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Immutable, Version=9.0.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Collections.Immutable.9.0.3\lib\net462\System.Collections.Immutable.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Drawing" />
@@ -226,25 +209,9 @@
       <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
-    </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
@@ -262,9 +229,6 @@
     </Reference>
     <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.241016.32119\lib\net48\_nilnul_._LIB_.dll</HintPath>
-    </Reference>
-    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\_nilnul_._LINQ_.1.1.241016.32253\lib\net48\_nilnul_._LINQ_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -412,6 +376,9 @@
     <Compile Include="curve_\roulette_\cog_\hypo_\IHypoCycloid.cs" />
     <Compile Include="curve_\roulette_\cog_\hypo_\IPentoid.cs" />
     <Compile Include="curve_\roulette_\ICirc9circ.cs" />
+    <Compile Include="curve_\roulette_\IFourier.cs" />
+    <Compile Include="curve_\roulette_\IUnFourier.cs" />
+    <Compile Include="curve_\roulette_\trochoid_\cyc_\Brachistochrone .cs" />
     <Compile Include="curve_\simple_\IFinite.cs" />
     <Compile Include="curve_\simple_\IInfinite.cs" />
     <Compile Include="curl_\ITautochrone.cs" />
@@ -425,6 +392,7 @@
     <Compile Include="cycle_\circ\IDegenerate.cs" />
     <Compile Include="cycle_\circ\arc\CentralAngle.cs" />
     <Compile Include="cycle_\circ\inscribe_\gon_\IRegular.cs" />
+    <Compile Include="cycle_\circ_\IUnial.cs" />
     <Compile Include="cycle_\ellipse\Eccentricity.cs" />
     <Compile Include="cycle_\ellipse\IOuter.cs" />
     <Compile Include="cycle_\gon\corner\ICoast.cs" />
@@ -432,6 +400,7 @@
     <Compile Include="cycle_\gon\corner_\concave\IBight.cs" />
     <Compile Include="cycle_\gon\corner_\convex\ICape.cs" />
     <Compile Include="cycle_\gon\edges\every\mid\IMidPointGon.cs" />
+    <Compile Include="cycle_\gon_\quad\be_\_ReflectiveX.cs" />
     <Compile Include="cycle_\IPiecewise.cs" />
     <Compile Include="cycle_\piecewise_\IProwind.cs" />
     <Compile Include="cycle_\triangle\center\co_\circum9ortho\theorem_\Sylvester.cs" />
@@ -444,6 +413,7 @@
     <Compile Include="cycle_\triangle\center_\_SymmedianX.cs" />
     <Compile Include="cycle_\triangle\circumcircle\verge\Foots.cs" />
     <Compile Include="cycle_\triangle\cleavers\Intersected.cs" />
+    <Compile Include="cycle_\triangle\dot_\_as_\IBaryCentric.cs" />
     <Compile Include="cycle_\triangle\edges\every\mid\Circle.cs" />
     <Compile Include="cycle_\triangle\edge\mid\Cleaver.cs" />
     <Compile Include="cycle_\triangle\edge\_ExcircleX.cs" />
@@ -459,10 +429,10 @@
     <Compile Include="cycle_\triangle\inner_\orthocenter\_SpikeX.cs" />
     <Compile Include="cycle_\triangle\IVerge.cs" />
     <Compile Include="cycle_\triangle\midgon\Incircle.cs" />
-    <Compile Include="cycle_\triangle\point\cevas\Theorem.cs" />
-    <Compile Include="cycle_\triangle\point\IsotomicConjugate.cs" />
-    <Compile Include="cycle_\triangle\point\ISpike.cs" />
-    <Compile Include="cycle_\triangle\point\trilinear\tro\be_\_colinear_\by_\Determinant.cs" />
+    <Compile Include="cycle_\triangle\dot\cevas\Theorem.cs" />
+    <Compile Include="cycle_\triangle\dot\IsotomicConjugate.cs" />
+    <Compile Include="cycle_\triangle\dot\ISpike.cs" />
+    <Compile Include="cycle_\triangle\dot\trilinear\tro\be_\_colinear_\by_\Determinant.cs" />
     <Compile Include="cycle_\triangle\splitters\NagelPoint.cs" />
     <Compile Include="cycle_\triangle\verge\ICeva.cs" />
     <Compile Include="cycle_\triangle\vertex\pedal\IMidpoint.cs" />
@@ -477,15 +447,15 @@
     <Compile Include="cycle_\triangle\midgon\inner_\Orthocenter.cs" />
     <Compile Include="cycle_\triangle\midgon\Perimeter.cs" />
     <Compile Include="cycle_\triangle\MidSegment.cs" />
-    <Compile Include="cycle_\triangle\point\co_\OrthoCentroid.cs" />
-    <Compile Include="cycle_\triangle\point\co_\orthocentroid\Circle.cs" />
-    <Compile Include="cycle_\triangle\point\IAntiPedalGon.cs" />
-    <Compile Include="cycle_\triangle\point\IPedalTrigon.cs" />
-    <Compile Include="cycle_\triangle\point\IsogonalConjugate.cs" />
-    <Compile Include="cycle_\triangle\point\pedal\CircumCircle.cs" />
+    <Compile Include="cycle_\triangle\dot\co_\OrthoCentroid.cs" />
+    <Compile Include="cycle_\triangle\dot\co_\orthocentroid\Circle.cs" />
+    <Compile Include="cycle_\triangle\dot\IAntiPedalGon.cs" />
+    <Compile Include="cycle_\triangle\dot\IPedalTrigon.cs" />
+    <Compile Include="cycle_\triangle\dot\IsogonalConjugate.cs" />
+    <Compile Include="cycle_\triangle\dot\pedal\CircumCircle.cs" />
     <Compile Include="cycle_\triangle\circumcircle\verge\pedals\theorem_\SimsonLine.cs" />
-    <Compile Include="cycle_\triangle\point\theorem_\Ceva.cs" />
-    <Compile Include="cycle_\triangle\point_\DeLongchamps.cs" />
+    <Compile Include="cycle_\triangle\dot\theorem_\Ceva.cs" />
+    <Compile Include="cycle_\triangle\dot_\DeLongchamps.cs" />
     <Compile Include="cycle_\triangle\centers\theorem_\EulerTend.cs" />
     <Compile Include="cycle_\triangle\verge_\Midpoints.cs" />
     <Compile Include="cycle_\triangle\vertex\ICeva.cs" />
@@ -497,17 +467,20 @@
     <Compile Include="cycle_\triangle\vertices\every\splitter\NagelPoint.cs" />
     <Compile Include="cycle_\triangle\vertices\every\symmedian\LemoinePoint.cs" />
     <Compile Include="cycle_\triangle\vertices\every\symmedian\lemoine\TriLinear.cs" />
-    <Compile Include="cycle_\triangle\point\TrilinearCoordinates.cs" />
+    <Compile Include="cycle_\triangle\dot\TrilinearCoordinates.cs" />
     <Compile Include="cycle_\triangle\sidelines\_InconicX.cs" />
     <Compile Include="cycle_\triangle\_IncircleX.cs" />
     <Compile Include="line\re_\ICross.cs" />
     <Compile Include="line_\IOriginated.cs" />
+    <Compile Include="locus\IDot.cs" />
     <Compile Include="morph\IOutput.cs" />
     <Compile Include="morph_\affine_\rebase_\_LeftwardX.cs" />
     <Compile Include="morph_\IBijective.cs" />
     <Compile Include="morph_\IPerspective.cs" />
     <Compile Include="morph_\IRegress.cs" />
+    <Compile Include="morph_\rebase_\INegSymmetric.cs" />
     <Compile Include="morph_\rebase_\IOrthonorm.cs" />
+    <Compile Include="morph_\rebase_\IRotate.cs" />
     <Compile Include="morph_\rebase_\orthonorm_\IConhand.cs" />
     <Compile Include="morph_\rebase_\orthonorm_\IProhand.cs" />
     <Compile Include="morph_\rebase_\shear_\IInvertible.cs" />
@@ -521,6 +494,9 @@
     <Compile Include="morph_\_rebase\_MatrixX.cs" />
     <Compile Include="morph_\_rebase_\ICoordinate.cs" />
     <Compile Include="morph_\_rebase_\IProjection.cs" />
+    <Compile Include="morph_\rebase_\_PolarizeX.cs" />
+    <Compile Include="nilnul0\num\real\bi_\PhaseX.cs" />
+    <Compile Include="orbit_\celestial_\ISerpent.cs" />
     <Compile Include="palp\hull_\IOrthogonal.cs" />
     <Compile Include="palp\IHausdorffDimension.cs" />
     <Compile Include="palp\peri_\gon_\rect_\IMinimal.cs" />
@@ -721,9 +697,17 @@
     <Compile Include="rotation_\align\re_\ICross.cs" />
     <Compile Include="rotation_\align\re_\IEq.cs" />
     <Compile Include="rotation_\direction\co_\IPerpend.cs" />
+    <Compile Include="rotation_\IPhase.cs" />
     <Compile Include="rotation_\unneg_\ILePi.cs" />
+    <Compile Include="sub\ITiling.cs" />
     <Compile Include="sub\be_\IMirrorAboutLine.cs" />
+    <Compile Include="sub\IDot.cs" />
+    <Compile Include="surface\dot_\ITrich.cs" />
+    <Compile Include="surface\IScalar.cs" />
     <Compile Include="surface\ITessellation.cs" />
+    <Compile Include="surface_\plane\ITessellation.cs" />
+    <Compile Include="surface_\plane\tessell_\IRegular.cs" />
+    <Compile Include="surface_\plane\tessell_\regular_\ISquare.cs" />
     <Compile Include="tend_\edge\co\be_\ISaltire.cs" />
     <Compile Include="tend_\edge\IKakeyaSet.cs" />
     <Compile Include="tend_\edge\kakeya_\IBesicovitch.cs" />
@@ -743,6 +727,7 @@
     <Compile Include="trip_\INilLength.cs" />
     <Compile Include="trip_\INonnilLength.cs" />
     <Compile Include="troll\ICusp.cs" />
+    <Compile Include="troll_\eg_\ICarleySextic.cs" />
     <Compile Include="troll_\IAlgebraic.cs" />
     <Compile Include="troll_\IConfined.cs" />
     <Compile Include="troll_\IConvergent.cs" />
@@ -1281,7 +1266,7 @@
     <Compile Include="nilnul0\geometry\_planar\_orient\Li_.cs" />
     <Compile Include="nilnul0\num\Complex4dbl.cs" />
     <Compile Include="nilnul0\num\complex\func_\IUnary.cs" />
-    <Compile Include="nilnul0\num\complex\matrix_\sym_\vandermonde_\cycle\DiscreteFourierTransform.cs" />
+    <Compile Include="nilnul0\num\complex\matrix_\sym_\vandermonde_\cycle\IDiscreteFourierTransform.cs" />
     <Compile Include="nilnul0\num\complex\matrix_\sym_\vandermonde_\_DiscreteFourierTransformMatrixX.cs" />
     <Compile Include="nilnul0\num\complex\of_\IReal.cs" />
     <Compile Include="nilnul0\num\complex\of_\real_\continuous_\clopen_\ICloze.cs" />
@@ -1296,15 +1281,15 @@
     <Compile Include="nilnul0\num\complex\str_\unital_\Evenly.cs" />
     <Compile Include="nilnul0\num\complex_\Polar.cs" />
     <Compile Include="nilnul0\num\complex_\polar\func_\IUnary.cs" />
-    <Compile Include="nilnul0\num\complex_\polar\func_\unary\stream_\fourier\ISeries.cs" />
-    <Compile Include="nilnul0\num\complex_\polar\func_\unary\stream_\IFourier.cs" />
+    <Compile Include="nilnul0\num\complex_\polar\fn\stream_\fourier\ISeries.cs" />
+    <Compile Include="nilnul0\num\complex_\polar\fn\stream_\IFourier.cs" />
     <Compile Include="nilnul0\num\complex_\polar\op_\UnaryI.cs" />
-    <Compile Include="nilnul0\num\complex_\polar\op_\unary_\Stdize.cs" />
+    <Compile Include="nilnul0\num\complex_\polar\op_\Stdize.cs" />
     <Compile Include="nilnul0\num\complex_\polar_\Std.cs" />
     <Compile Include="nilnul0\num\complex_\polar_\Unital.cs" />
     <Compile Include="nilnul0\num\complex_\polar_\_UnitalX.cs" />
     <Compile Include="nilnul0\num\real\matrix_\sq_\Tertiary.cs" />
-    <Compile Include="nilnul0\num\real\of_\binary_\trigonometic_\Agrad.cs" />
+    <Compile Include="nilnul0\num\real\bi_\trigonometic_\Agrad.cs" />
     <Compile Include="nilnul0\num\real\of_\unary_\cos\ITheorem.cs" />
     <Compile Include="nilnul0\num\real\of_\unary_\cos\theorem_\eq_\Prod2sum.cs" />
     <Compile Include="nilnul0\num\real\of_\unary_\cos\theorem_\IEq.cs" />
@@ -1323,8 +1308,7 @@
     <Compile Include="rotation_\IClockwise.cs" />
     <Compile Include="rotation_\IHours.cs" />
     <Compile Include="rotation_\ISun.cs" />
-    <Compile Include="space\IThirteenGon.cs" />
-    <Compile Include="space\tiling_\IThirteenGon.cs" />
+    <Compile Include="sub\tiling_\IThirteenGon.cs" />
     <Compile Include="splash_\INonroadable.cs" />
     <Compile Include="splash_\Roadable.cs" />
     <Compile Include="spread_\INoSelfJoint.cs" />
@@ -1332,13 +1316,19 @@
     <Compile Include="spread_\Roadable.cs" />
     <Compile Include="sub\be_\IRadialSymmetry.cs" />
     <Compile Include="sub\ITransform.cs" />
-    <Compile Include="sub\_area\NewFolder1\Unit4dblA.cs" />
-    <Compile Include="sub\_area\NewFolder1\Unit4dblI.cs" />
-    <Compile Include="sub\_area\Unit4dblA.cs" />
-    <Compile Include="sub\_area\Unit4dblI.cs" />
-    <Compile Include="sub\_area\unit_\EngAsSqInchEs4Dbl.cs" />
-    <Compile Include="sub\_area\unit_\EngAsSqInch4Dbl.cs" />
-    <Compile Include="sub\_area\_unit_\NewFolder1\AsSqMeters4DblI.cs" />
+    <Compile Include="zone_\gon_\IPolyomino.cs" />
+    <Compile Include="zone_\gon_\omino_\IDomino.cs" />
+    <Compile Include="zone_\gon_\omino_\IPento.cs" />
+    <Compile Include="zone_\gon_\omino_\ITetromino.cs" />
+    <Compile Include="zone_\gon_\polyform_\IOfSquares.cs" />
+    <Compile Include="zone_\rect_\IDomino.cs" />
+    <Compile Include="_area\NewFolder1\Unit4dblA.cs" />
+    <Compile Include="_area\NewFolder1\Unit4dblI.cs" />
+    <Compile Include="_area\Unit4dblA.cs" />
+    <Compile Include="_area\Unit4dblI.cs" />
+    <Compile Include="_area\unit_\EngAsSqInchEs4Dbl.cs" />
+    <Compile Include="_area\unit_\EngAsSqInch4Dbl.cs" />
+    <Compile Include="_area\_unit_\NewFolder1\AsSqMeters4DblI.cs" />
     <Compile Include="surface\inner\be_\ISpreadable.cs" />
     <Compile Include="swath_\Boundarable.cs" />
     <Compile Include="tope_\bloc\diag_\ICross.cs" />
@@ -1375,8 +1365,8 @@
     <Compile Include="cycle_\gon\vsPoint_\inner_\FermatI.cs" />
     <Compile Include="cycle_\gon\_theoremS\LawOfCos.cs" />
     <Compile Include="cycle_\gon\_theoremS\LawOfSines.cs" />
-    <Compile Include="cycle_\triangle\point\parametric_\Basised.cs" />
-    <Compile Include="cycle_\triangle\point\parametric_\Barycentric.cs" />
+    <Compile Include="cycle_\triangle\dot\parametric_\Basised.cs" />
+    <Compile Include="cycle_\triangle\dot\parametric_\Barycentric.cs" />
     <Compile Include="cycle_\triangle_\IPrism.cs" />
     <Compile Include="cycle_\triangle_\Isocele.cs" />
     <Compile Include="cycle_\triangle_\Obtuse.cs" />
@@ -1599,12 +1589,12 @@
     <Compile Include="morph_\IRebase.cs" />
     <Compile Include="sub\Area4dblI.cs" />
     <Compile Include="sub\AreaI.cs" />
-    <Compile Include="sub\IArea.cs" />
-    <Compile Include="sub\_area\unit_\Eng4dblI.cs" />
-    <Compile Include="sub\_area\unit_\eng_\Acre4dbl.cs" />
-    <Compile Include="sub\_area\unit_\eng_\SqFt4Dbl.cs" />
-    <Compile Include="sub\_area\unit_\eng_\SqYard4Dbl.cs" />
-    <Compile Include="sub\_area\unit_\_eng_\SqInch4DblI.cs" />
+    <Compile Include="IArea.cs" />
+    <Compile Include="_area\unit_\Eng4dblI.cs" />
+    <Compile Include="_area\unit_\eng_\Acre4dbl.cs" />
+    <Compile Include="_area\unit_\eng_\SqFt4Dbl.cs" />
+    <Compile Include="_area\unit_\eng_\SqYard4Dbl.cs" />
+    <Compile Include="_area\unit_\_eng_\SqInch4DblI.cs" />
     <Compile Include="morph_\rebase_\axial_\INonneg.cs" />
     <Compile Include="morph_\rebase_\axial_\Reflect.cs" />
     <Compile Include="morph_\rebase_\axial_\reflect_\Upward.cs" />
@@ -1832,7 +1822,7 @@
     <Compile Include="trip_\piecewise_\_polyseg_\Grads4dblI.cs" />
     <Compile Include="trip_\_polyseg_\Grads4dblI.cs" />
     <Compile Include="trip_\_polyseg_\Vertexes4dbl.cs" />
-    <Compile Include="morph_\IMatrix.cs" />
+    <Compile Include="morph_\_rebase_\IMatrix.cs" />
     <Compile Include="morph_\rebase_\IScale.cs" />
     <Compile Include="morph_\rebase_\IInvertible.cs" />
     <Compile Include="morph_\rebase_\regress_\Nil.cs" />
@@ -2686,13 +2676,13 @@
     <Compile Include="vect_\nonnil_\Polar4dbl.cs" />
     <Compile Include="vect_\NewFolder1\Polar4dbl.cs" />
     <Compile Include="vect_\polar\co\to_\scalar_\DotProduct.cs" />
-    <Compile Include="sub\_area\Unit4dbl.cs" />
-    <Compile Include="sub\_area\unit_\ChnI.cs" />
-    <Compile Include="sub\_area\unit_\EngI.cs" />
+    <Compile Include="_area\Unit4dbl.cs" />
+    <Compile Include="_area\unit_\ChnI.cs" />
+    <Compile Include="_area\unit_\EngI.cs" />
     <Compile Include="grad\Vector.cs" />
     <Compile Include="grad_\skid\vsPoint\LayoutDbl.cs" />
-    <Compile Include="sub\_area\unit_\SqMm.cs" />
-    <Compile Include="sub\_area\_unit_\AsSqMeters4DblI.cs" />
+    <Compile Include="_area\unit_\SqMm.cs" />
+    <Compile Include="_area\_unit_\AsSqMeters4DblI.cs" />
     <Compile Include="point\Traject.cs" />
     <Compile Include="point\trail_\Contaguous.cs" />
     <Compile Include="point\trail_\contiguous_\FiniteLength.cs" />
@@ -2725,6 +2715,7 @@
     <Compile Include="zone_\_gon_\Grads4dblI.cs" />
     <Compile Include="cycle_\_gon_\VowedVertexes4dblI.cs" />
     <Compile Include="zone_\_gon_\Vertexes4dbl.cs" />
+    <Compile Include="_area\IUnit.cs" />
     <Compile Include="_curve\Func.cs" />
     <Compile Include="_cloze_\Func.cs" />
     <Compile Include="_curve\literature_\MathCurveCom.cs" />
@@ -2735,6 +2726,8 @@
     <Compile Include="_grad_\VectDbl.cs" />
     <Compile Include="_grad_\_polar_\VectDbl.cs" />
     <Compile Include="_lead_\AzimuthI.cs" />
+    <Compile Include="_locus_\IIsDefined.cs" />
+    <Compile Include="_locus_\ITime.cs" />
     <Compile Include="_morph_\OfCoord.cs" />
     <Compile Include="_point\coord_\ICurvilinear.cs" />
     <Compile Include="_point\coord_\IParallogram.cs" />
@@ -2842,15 +2835,15 @@
     <Compile Include="nilnul0\geometry\planar_\measured\_bloc\size_\Photo.cs" />
     <Compile Include="curve_\roulette_\ITrochoid.cs" />
     <Compile Include="curve_\roulette_\trochoid_\Cycloid.cs" />
-    <Compile Include="sub\_area\UnitI.cs" />
-    <Compile Include="sub\_area\unit\op_\Convert.cs" />
-    <Compile Include="sub\_area\unit_\Hectare.cs" />
-    <Compile Include="sub\_area\unit_\Are.cs" />
-    <Compile Include="sub\_area\unit_\eng_\Acre.cs" />
-    <Compile Include="sub\_area\unit_\eng_\Rood.cs" />
-    <Compile Include="sub\_area\unit_\eng_\Perch.cs" />
-    <Compile Include="sub\_area\unit_\eng_\SqYard.cs" />
-    <Compile Include="sub\_area\_unit_\AsMeters.cs" />
+    <Compile Include="_area\UnitI.cs" />
+    <Compile Include="_area\unit\op_\Convert.cs" />
+    <Compile Include="_area\unit_\Hectare.cs" />
+    <Compile Include="_area\unit_\Are.cs" />
+    <Compile Include="_area\unit_\eng_\Acre.cs" />
+    <Compile Include="_area\unit_\eng_\Rood.cs" />
+    <Compile Include="_area\unit_\eng_\Perch.cs" />
+    <Compile Include="_area\unit_\eng_\SqYard.cs" />
+    <Compile Include="_area\_unit_\AsMeters.cs" />
     <Compile Include="GradDblI.cs" />
     <Compile Include="grad\convert_\DisplaceX.cs" />
     <Compile Include="grad\co\InnerProduct.cs" />
@@ -2882,7 +2875,7 @@
     <Compile Include="morph_\affine_\flip\Str.cs" />
     <Compile Include="sub\trans_\Flip.cs" />
     <Compile Include="morph_\rebase_\IOrthogonal.cs" />
-    <Compile Include="morph_\_MatrixX.cs" />
+    <Compile Include="morph_\_rebase_\_MatrixX.cs" />
     <Compile Include="morph_\rebase_\Scale.cs" />
     <Compile Include="map_\_linear\Matrixed.cs" />
     <Compile Include="map_\matrixed_\Trans.cs" />
@@ -2945,7 +2938,7 @@
     <Compile Include="IMap.cs" />
     <Compile Include="map_\IProj.cs" />
     <Compile Include="map_\Trans4dblI.cs" />
-    <Compile Include="nilnul0\num\real\convert_\OfRotation.cs" />
+    <Compile Include="nilnul0\num\real\op_\OfRotation.cs" />
     <Compile Include="PointD.cs" />
     <Compile Include="PointI1.cs" />
     <Compile Include="sub_\directed_\connected_\polygon\_GradsX.cs" />
@@ -3126,7 +3119,7 @@
     <Compile Include="rotation_\DirectionDbl.cs" />
     <Compile Include="rotation_\gtNegPi_\LePi.cs" />
     <Compile Include="rotation_\geNegPi_\LtPi.cs" />
-    <Compile Include="rotation_\Grad.cs" />
+    <Compile Include="rotation_\_GradX.cs" />
     <Compile Include="rotation_\gtNegPi_\lePi_\forward\Sign.cs" />
     <Compile Include="rotation_\gtNegPi_\lePi_\forward\_sign\Trich.cs" />
     <Compile Include="rotation_\unneg_\LtTau - Copy.cs" />
@@ -3314,26 +3307,26 @@
     <Compile Include="_rotation\unit_\ITurn.cs" />
     <Compile Include="_rotation\unit_\Turn4dbl.cs" />
     <Compile Include="_rotation\unit_\_measure\Radian.cs" />
-    <Compile Include="rotation_\nonneg\be_\NonReflex.cs" />
-    <Compile Include="rotation_\nonneg\be_\Reflex.cs" />
-    <Compile Include="rotation_\nonneg\be_\Right.cs" />
-    <Compile Include="rotation_\nonneg\be_\Obtuse.cs" />
-    <Compile Include="rotation_\nonneg\be_\Acute.cs" />
-    <Compile Include="rotation_\nonneg\be_\Straight.cs" />
+    <Compile Include="rotation_\unneg\be_\NonReflex.cs" />
+    <Compile Include="rotation_\unneg\be_\Reflex.cs" />
+    <Compile Include="rotation_\unneg\be_\Right.cs" />
+    <Compile Include="rotation_\unneg\be_\Obtuse.cs" />
+    <Compile Include="rotation_\unneg\be_\Acute.cs" />
+    <Compile Include="rotation_\unneg\be_\Straight.cs" />
     <Compile Include="angle\BiSector.cs" />
     <Compile Include="rotation_\unneg_\ltQuarter\co\be_\Complement.cs" />
     <Compile Include="rotation\co\be_\Explement.cs" />
-    <Compile Include="rotation_\nonneg\nonReflex\rel\Rel.cs" />
+    <Compile Include="rotation_\unneg\nonReflex\rel\Rel.cs" />
     <Compile Include="rotation_\unneg_\ltPi\co\be_\Supplement.cs" />
     <Compile Include="_rotation\unit_\_measure\RadianI.cs" />
     <Compile Include="zone_\trigon\CosineRule.cs" />
     <Compile Include="_rotation\unit_\_measure\TurnX.cs" />
-    <Compile Include="sub\_area\unit_\chn_\ChineseMu.cs" />
-    <Compile Include="sub\_area\unit_\DecAre.cs" />
-    <Compile Include="sub\_area\unit_\DeciAre.cs" />
-    <Compile Include="sub\_area\unit_\CentiAre.cs" />
-    <Compile Include="sub\_area\unit_\eng_\SquareFt.cs" />
-    <Compile Include="sub\_area\unit_\SquareKm.cs" />
+    <Compile Include="_area\unit_\chn_\ChineseMu.cs" />
+    <Compile Include="_area\unit_\DecAre.cs" />
+    <Compile Include="_area\unit_\DeciAre.cs" />
+    <Compile Include="_area\unit_\CentiAre.cs" />
+    <Compile Include="_area\unit_\eng_\SquareFt.cs" />
+    <Compile Include="_area\unit_\SquareKm.cs" />
     <Compile Include="grad\str\_SurroundedX.cs" />
     <Compile Include="loop_\circ_\Nontrivia4dbl.cs" />
     <Compile Include="line\be_\HasPoint.cs" />
@@ -3448,7 +3441,7 @@
     <Compile Include="zone_\trigon\be_\AcuteI.cs" />
     <Compile Include="cycle_\gon_\quad_\ConcaveQuadrilateralI.cs" />
     <Compile Include="cycle_\gon_\quad_\ConvexQuadrilateralI.cs" />
-    <Compile Include="cycle_\gon_\quad_\concave\DartI.cs" />
+    <Compile Include="cycle_\gon_\quad_\concave_\DartI.cs" />
     <Compile Include="EquilateralI.cs" />
     <Compile Include="cycle_\gon_\quad_\convex_\KiteI.cs" />
     <Compile Include="cycle_\parlgrm_\rhombus_\LozengeI.cs" />
@@ -3498,22 +3491,43 @@
     <Compile Include="surface\of_\ClozeCurve.cs" />
     <Compile Include="tope_\curve_\MovingPoint.cs" />
     <Compile Include="_rotation\unit_\_\Hour.cs" />
+    <Compile Include="_sub\ILocus.cs" />
+    <Compile Include="_sub\locus\op_\IFourier.cs" />
+    <Compile Include="_sub\locus\que\sigma_\IFourier.cs" />
+    <Compile Include="_sub\locus\str\amass_\IFourier.cs" />
+    <Compile Include="_sub\locus\to_\IFourier.cs" />
+    <Compile Include="_sub\locus_\borel_\IContinuous8continuous.cs" />
+    <Compile Include="_sub\locus_\borel_\unconsec_\eg_\Dirichlet.cs" />
+    <Compile Include="_sub\locus_\conn_\IDwelt.cs" />
+    <Compile Include="_sub\locus_\consec\op_\IFourier.cs" />
+    <Compile Include="_sub\locus_\consec_\eg_\IRect.cs" />
+    <Compile Include="_sub\locus_\consec_\eg_\rect\to_\IFourier.cs" />
+    <Compile Include="_sub\locus_\consec_\IIndiscrete.cs" />
+    <Compile Include="_sub\locus_\contig_\IContinuous.cs" />
+    <Compile Include="_sub\locus_\crux_\ISpanned.cs" />
+    <Compile Include="_sub\locus_\IContiguous.cs" />
+    <Compile Include="_sub\locus_\IContinuous.cs" />
+    <Compile Include="_surface\IIsReached.cs" />
+    <Compile Include="_surface\ILocus.cs" />
     <Compile Include="_troll\ILocus.cs" />
-    <Compile Include="_troll\locus_\borel_\consec_\IDwelt.cs" />
-    <Compile Include="_troll\locus_\borel_\dwelt_\IContiguous.cs" />
-    <Compile Include="_troll\locus_\borel_\IConnected.cs" />
-    <Compile Include="_troll\locus_\borel_\IConsecutive.cs" />
-    <Compile Include="_troll\locus_\borel_\IDwelt.cs" />
-    <Compile Include="_troll\locus_\borel_\IInterval.cs" />
-    <Compile Include="_troll\locus_\borel_\interval_\contig_\IContinuous.cs" />
-    <Compile Include="_troll\locus_\borel_\interval_\IContiguos.cs" />
-    <Compile Include="_troll\locus_\borel_\interval_\IContinuous.cs" />
-    <Compile Include="_troll\locus_\IBorel.cs" />
-    <Compile Include="_troll\locus_\ICrux.cs" />
-    <Compile Include="_troll\locus_\IEmpty.cs" />
-    <Compile Include="_troll\locus_\unconsec_\IPiecewise.cs" />
-    <Compile Include="_troll\locus_\unconsec_\IUnPiecewise.cs" />
-    <Compile Include="_troll\locus_\unconsec_\unpwc_\eg_\IDirichlet.cs" />
+    <Compile Include="_sub\locus_\consec_\IDwelt.cs" />
+    <Compile Include="_sub\locus_\borel_\dwelt_\IContiguous.cs" />
+    <Compile Include="_sub\locus_\IConnected.cs" />
+    <Compile Include="_sub\locus_\IConsecutive.cs" />
+    <Compile Include="_sub\locus_\borel_\IDwelt.cs" />
+    <Compile Include="_sub\locus_\borel_\IInterval.cs" />
+    <Compile Include="_sub\locus_\interval_\contig_\IContinuous.cs" />
+    <Compile Include="_sub\locus_\interval_\IContiguos.cs" />
+    <Compile Include="_sub\locus_\interval_\IContinuous.cs" />
+    <Compile Include="_sub\locus_\IBorel.cs" />
+    <Compile Include="_sub\locus_\ICrux.cs" />
+    <Compile Include="_sub\locus_\IEmpty.cs" />
+    <Compile Include="_sub\locus_\_consec_\IPiecewise.cs" />
+    <Compile Include="_sub\locus_\borel_\_unconsec_\IUnPiecewise.cs" />
+    <Compile Include="_sub\locus_\borel_\unconsec_\eg_\IDirichlet.cs" />
+    <Compile Include="_troll\locus\to_\fourier_\IDiscrete.cs" />
+    <Compile Include="_troll\locus\to_\fourier_\IFinite.cs" />
+    <Compile Include="_troll\locus\to_\IFourier.cs" />
     <Compile Include="_troll_\Fn4dblI.cs" />
     <Compile Include="_troll_\fn\of_\OfReal.cs" />
     <Compile Include="_troll_\fn_\IBonded.cs" />
@@ -3657,10 +3671,10 @@
     <Folder Include="cycle_\parlgrm\" />
     <Folder Include="cycle_\parlgrm_\nonrhombus_\_rhomboid\" />
     <Folder Include="cycle_\triangle\chord_\" />
-    <Folder Include="cycle_\triangle\point\pedals\" />
-    <Folder Include="cycle_\triangle\point\pedal_\" />
-    <Folder Include="cycle_\triangle\point\trilinear\str\" />
-    <Folder Include="cycle_\triangle\point_\inside_\" />
+    <Folder Include="cycle_\triangle\dot\pedals\" />
+    <Folder Include="cycle_\triangle\dot\pedal_\" />
+    <Folder Include="cycle_\triangle\dot\trilinear\str\" />
+    <Folder Include="cycle_\triangle\dot_\inside_\" />
     <Folder Include="cycle_\triangle\sect_\" />
     <Folder Include="cycle_\triangle\verge_\midpoints\" />
     <Folder Include="cycle_\triangle\vertex\ceva_\splitter\" />
@@ -3741,6 +3755,7 @@
     <Folder Include="morph_\affine_\_as_\" />
     <Folder Include="morph_\rebase_\orthic_\axial_\" />
     <Folder Include="morph_\rebase_\orthic_\unial_\axial_\positive_\" />
+    <Folder Include="morph_\rebase_\polar_\" />
     <Folder Include="morph_\rebase_\scale_\antihanded_\similar_\reflect_\flip\" />
     <Folder Include="morph_\rebase_\scale_\handed_\" />
     <Folder Include="morph_\rebase_\scale_\nonflip_\" />
@@ -3816,6 +3831,7 @@
     <Folder Include="rotation_\deg_\nonneg_\leQuad_\special\" />
     <Folder Include="rotation_\rounds\be_\" />
     <Folder Include="rotation_\_quarter\" />
+    <Folder Include="space\" />
     <Folder Include="splash_\NewFolder1\" />
     <Folder Include="sub\%28area%29\" />
     <Folder Include="sub\stream_\fractal\" />
@@ -3828,7 +3844,6 @@
     <Folder Include="sub_\directed_\dwelt_\" />
     <Folder Include="sub_\noncurve_\" />
     <Folder Include="surface\be_\_adj\" />
-    <Folder Include="surface\point_\" />
     <Folder Include="surface_\bounded_\nonholed\" />
     <Folder Include="surface_\gon\co_\surround_\nontangent_\" />
     <Folder Include="tend\to_\" />
@@ -3869,13 +3884,11 @@
     <Folder Include="vect_\unnil\co\rotation_\" />
     <Folder Include="vect_\unnil\co_\cross_\ortho\" />
     <Folder Include="vect_\unnil\vsPoint\_layout\" />
-    <Folder Include="zones_\NewFolder1\" />
     <Folder Include="zone\circum\" />
     <Folder Include="zone\co_\joint\" />
     <Folder Include="zone\co_\joint_\nontangent_\" />
     <Folder Include="zone\eg\" />
     <Folder Include="zone\of_\linear\" />
-    <Folder Include="zone\partition\theorem_\" />
     <Folder Include="zone\shape\" />
     <Folder Include="zone\shape_\" />
     <Folder Include="zone\str\" />
@@ -3903,7 +3916,6 @@
     <Folder Include="zone_\gon_\convex\departure_\" />
     <Folder Include="zone_\gon_\convex\vsLead\_bisect\" />
     <Folder Include="zone_\gon_\hepta_\_arrow\triviable_\perspect_\" />
-    <Folder Include="zone_\gon_\normal\" />
     <Folder Include="zone_\gon_\points\grads_\" />
     <Folder Include="zone_\gon_\quad\morph_\NewFolder1\" />
     <Folder Include="zone_\gon_\quad_\canonic\morph_\horizon\" />
@@ -3960,6 +3972,9 @@
     <Folder Include="_line\" />
     <Folder Include="_line_\by_\" />
     <Folder Include="_rotation\unit\" />
+    <Folder Include="_sub\locus\ral_\ord_\" />
+    <Folder Include="_sub\locus\seq\" />
+    <Folder Include="_sub\locus\stream\" />
     <Folder Include="_surface_\" />
     <Folder Include="_tope\ofLe1d_\of1d_\" />
   </ItemGroup>
@@ -4027,6 +4042,7 @@ if $(ConfigurationName) == Release (
     </PropertyGroup>
     <Error Condition="!Exists('..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
     <Error Condition="!Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
     <!--<Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
     <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
@@ -4038,6 +4054,7 @@ if $(ConfigurationName) == Release (
   <Import Project="..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <Import Project="..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

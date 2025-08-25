@@ -9,6 +9,10 @@ namespace nilnul.geometry.planar.curve_.roulette_.trochoid_
 	/// <summary>
 	/// the point on (not inside or outside) a cirle rolling along a straight line
 	/// </summary>
+	/// <remarks>
+	/// eg:
+	///		some roller coster can be designed;
+	/// </remarks>
 	/// <see cref="planar.cycle_.ICycloid"/>
 	/// <see cref="curve_.roulette_.fixedCirC_.outsidE_.rollingCirC_.IEpitrochoid"/>
 	public interface ICycloid : ITrochoid

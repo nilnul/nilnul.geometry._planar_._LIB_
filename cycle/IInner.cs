@@ -12,6 +12,9 @@ namespace nilnul.geometry.planar.cycle
 	/// <remarks>
 	/// the inner stokes might be positive or negative.
 	/// </remarks>
+	/// alias:
+	///		internal
+	///		
 	internal class IInner
 	{
 	}
